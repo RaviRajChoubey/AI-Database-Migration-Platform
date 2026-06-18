@@ -6450,3 +6450,16 @@
 2026-06-17 16:49:35,858 - INFO - Exported 1 procedures
 2026-06-17 16:49:35,872 - INFO - Rollback script generated successfully
 2026-06-17 16:49:36,002 - INFO - Migration Completed
+2026-06-18 14:48:01,050 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-18 14:48:01,052 - INFO - Added job "test_job" to job store "default"
+2026-06-18 14:48:01,052 - INFO - Scheduler started
+2026-06-18 14:48:01,122 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-06-18 14:48:01,123 - WARNING - Run time of job "run_scheduled_migration (trigger: date[2026-06-15 12:02:00 IST], next run at: 2026-06-15 12:02:00 IST)" was missed by 3 days, 2:46:01.122979
+2026-06-18 14:48:01,123 - INFO - Removed job job_17
+2026-06-18 14:48:01,124 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-06-18 14:48:01,124 - INFO - Removed job job_18
+2026-06-18 14:48:01,124 - WARNING - Run time of job "run_scheduled_migration (trigger: date[2026-06-15 12:07:00 IST], next run at: 2026-06-15 12:07:00 IST)" was missed by 3 days, 2:41:01.124553
+2026-06-18 14:48:01,130 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-06-18 14:48:01,131 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-06-18 14:48:01,131 - INFO - Removed job job_20
+2026-06-18 14:48:01,138 - WARNING - Run time of job "run_scheduled_migration (trigger: date[2026-06-15 12:45:00 IST], next run at: 2026-06-15 12:45:00 IST)" was missed by 3 days, 2:03:01.138504
