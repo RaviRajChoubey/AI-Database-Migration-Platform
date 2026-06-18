@@ -1,0 +1,17 @@
+{
+    "int": "INTEGER",
+    "bigint": "BIGINT",
+    "varchar": "VARCHAR",
+    "text": "TEXT",
+    "longtext": "TEXT",
+    "date": "DATE",
+    "datetime": "TIMESTAMP",
+    "float": "REAL",
+    "double": "DOUBLE PRECISION",
+    "decimal": "NUMERIC",
+    "tinyint": "SMALLINT",
+    "json": "JSONB",
+    "blob": "BYTEA",
+    "mediumblob": "BYTEA",
+    "longblob": "BYTEA"
+}

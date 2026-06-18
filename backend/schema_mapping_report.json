@@ -1,0 +1,191 @@
+{
+    "schema_mapping": [
+        {
+            "table": "customers",
+            "column": "customer_id",
+            "source_type": "INT",
+            "suggested_type": "INT",
+            "recommendation": "No change required",
+            "is_primary_key": true
+        },
+        {
+            "table": "customers",
+            "column": "customer_name",
+            "source_type": "VARCHAR(100)",
+            "suggested_type": "VARCHAR(100)",
+            "recommendation": "Preserve length constraint",
+            "is_primary_key": false
+        },
+        {
+            "table": "customers",
+            "column": "city",
+            "source_type": "VARCHAR(50)",
+            "suggested_type": "VARCHAR(50)",
+            "recommendation": "Preserve length constraint",
+            "is_primary_key": false
+        },
+        {
+            "table": "products",
+            "column": "product_id",
+            "source_type": "INT",
+            "suggested_type": "INT",
+            "recommendation": "No change required",
+            "is_primary_key": true
+        },
+        {
+            "table": "products",
+            "column": "product_name",
+            "source_type": "VARCHAR(100)",
+            "suggested_type": "VARCHAR(100)",
+            "recommendation": "Preserve length constraint",
+            "is_primary_key": false
+        },
+        {
+            "table": "products",
+            "column": "price",
+            "source_type": "DECIMAL",
+            "suggested_type": "DECIMAL",
+            "recommendation": "Preserve precision and scale",
+            "is_primary_key": false
+        },
+        {
+            "table": "orders",
+            "column": "order_id",
+            "source_type": "INT",
+            "suggested_type": "INT",
+            "recommendation": "No change required",
+            "is_primary_key": true
+        },
+        {
+            "table": "orders",
+            "column": "customer_id",
+            "source_type": "INT",
+            "suggested_type": "INT",
+            "recommendation": "No change required",
+            "is_primary_key": false
+        },
+        {
+            "table": "orders",
+            "column": "product_id",
+            "source_type": "INT",
+            "suggested_type": "INT",
+            "recommendation": "No change required",
+            "is_primary_key": false
+        },
+        {
+            "table": "orders",
+            "column": "quantity",
+            "source_type": "INT",
+            "suggested_type": "INT",
+            "recommendation": "No change required",
+            "is_primary_key": false
+        },
+        {
+            "table": "ai_test",
+            "column": "cust_id",
+            "source_type": "INT",
+            "suggested_type": "INT",
+            "recommendation": "No change required",
+            "is_primary_key": true
+        },
+        {
+            "table": "ai_test",
+            "column": "cust_name",
+            "source_type": "VARCHAR(100)",
+            "suggested_type": "VARCHAR(100)",
+            "recommendation": "Preserve length constraint",
+            "is_primary_key": false
+        },
+        {
+            "table": "ai_test",
+            "column": "prod_name",
+            "source_type": "VARCHAR(100)",
+            "suggested_type": "VARCHAR(100)",
+            "recommendation": "Preserve length constraint",
+            "is_primary_key": false
+        },
+        {
+            "table": "ai_test",
+            "column": "qty",
+            "source_type": "INT",
+            "suggested_type": "INT",
+            "recommendation": "No change required",
+            "is_primary_key": false
+        },
+        {
+            "table": "ai_test",
+            "column": "addr",
+            "source_type": "VARCHAR(200)",
+            "suggested_type": "VARCHAR(200)",
+            "recommendation": "Preserve length constraint",
+            "is_primary_key": false
+        },
+        {
+            "table": "ai_test",
+            "column": "dob",
+            "source_type": "DATE",
+            "suggested_type": "DATE",
+            "recommendation": "No change required",
+            "is_primary_key": false
+        }
+    ],
+    "foreign_keys": [
+        {
+            "table": "orders",
+            "column": "customer_id",
+            "suggestion": "Likely Foreign Key -> customers.customer_id"
+        },
+        {
+            "table": "orders",
+            "column": "product_id",
+            "suggestion": "Likely Foreign Key -> products.product_id"
+        }
+    ],
+    "rename_suggestions": [
+        {
+            "table": "ai_test",
+            "column": "cust_id",
+            "suggested_name": "customer_id"
+        },
+        {
+            "table": "ai_test",
+            "column": "cust_name",
+            "suggested_name": "customer_name"
+        },
+        {
+            "table": "ai_test",
+            "column": "prod_name",
+            "suggested_name": "product_name"
+        },
+        {
+            "table": "ai_test",
+            "column": "qty",
+            "suggested_name": "quantity"
+        },
+        {
+            "table": "ai_test",
+            "column": "addr",
+            "suggested_name": "address"
+        },
+        {
+            "table": "ai_test",
+            "column": "dob",
+            "suggested_name": "date_of_birth"
+        }
+    ],
+    "risk_analysis": {
+        "overall_risk": "LOW",
+        "risk_score": 22,
+        "issues": [
+            "2 foreign keys detected",
+            "6 column rename recommendations"
+        ]
+    },
+    "ai_summary": {
+        "summary": [
+            "2 foreign keys detected",
+            "6 rename recommendations"
+        ],
+        "recommendation": "Schema is safe for migration."
+    }
+}

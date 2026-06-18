@@ -1,0 +1,30 @@
+[
+    {
+        "table": "customers",
+        "source_rows": 2,
+        "target_rows": 2,
+        "difference": 0,
+        "audit_status": "PASS"
+    },
+    {
+        "table": "products",
+        "source_rows": 2,
+        "target_rows": 2,
+        "difference": 0,
+        "audit_status": "PASS"
+    },
+    {
+        "table": "orders",
+        "source_rows": 2,
+        "target_rows": 2,
+        "difference": 0,
+        "audit_status": "PASS"
+    },
+    {
+        "table": "ai_test",
+        "source_rows": 1,
+        "target_rows": 1,
+        "difference": 0,
+        "audit_status": "PASS"
+    }
+]

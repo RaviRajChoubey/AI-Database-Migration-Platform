@@ -1,0 +1,71 @@
+body {
+  margin: 0;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+
+  font-family: "Segoe UI", sans-serif;
+
+  background:
+    linear-gradient(135deg,
+      #0f172a,
+      #111827,
+      #1e293b);
+
+  color: white;
+
+  min-height: 100vh;
+
+  background-attachment: fixed;
+}
+
+body::before {
+
+  content: "";
+
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-image:
+    radial-gradient(rgba(255, 255, 255, 0.05) 1px,
+      transparent 1px);
+
+  background-size: 30px 30px;
+
+  pointer-events: none;
+}
+
+.download-btn {
+
+  width: 100%;
+
+  padding: 12px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #1E3A5F;
+
+  color: white;
+
+  cursor: pointer;
+
+  font-weight: bold;
+
+  transition: 0.3s;
+
+}
+
+.download-btn:hover {
+
+  background: #2E5A88;
+
+  transform: translateY(-2px);
+
+}

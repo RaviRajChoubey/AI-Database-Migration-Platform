@@ -1,0 +1,29 @@
+{
+    "tables": [
+        {
+            "table": "customers",
+            "source_rows": 2,
+            "target_rows": 2,
+            "status": "PASSED"
+        },
+        {
+            "table": "products",
+            "source_rows": 2,
+            "target_rows": 2,
+            "status": "PASSED"
+        },
+        {
+            "table": "orders",
+            "source_rows": 2,
+            "target_rows": 2,
+            "status": "PASSED"
+        },
+        {
+            "table": "ai_test",
+            "source_rows": 1,
+            "target_rows": 1,
+            "status": "PASSED"
+        }
+    ],
+    "overall_status": "PASSED"
+}

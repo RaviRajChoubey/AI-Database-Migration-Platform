@@ -1,0 +1,52 @@
+.kpi-card {
+    background: #13294B;
+    border-radius: 10px;
+    padding: 16px 20px;
+    min-height: 120px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .25);
+
+    transition: all .3s ease;
+}
+
+.kpi-card:hover {
+    transform: translateY(-2px);
+}
+
+.kpi-card h3 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #b8c7e0;
+}
+
+.kpi-card h1 {
+    margin: 6px 0 0 0;
+    font-size: 42px;
+    font-weight: 700;
+    color: white;
+}
+
+select {
+    font-size: 18px !important;
+    font-weight: 600;
+}
+
+option {
+    font-size: 18px;
+    padding: 12px;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    transform: scale(1.5);
+    cursor: pointer;
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+    transform: scale(1.5);
+    cursor: pointer;
+}

@@ -1,0 +1,648 @@
+2026-06-03 13:04:46,245 - INFO - Created table: employee
+2026-06-03 13:04:46,247 - INFO - Migrated 3 rows from employee
+2026-06-03 13:04:46,250 - INFO - employee: MySQL=3, PostgreSQL=6
+2026-06-03 13:04:46,287 - INFO - Created table: employee_master
+2026-06-03 13:04:46,295 - INFO - Migrated 3 rows from employee_master
+2026-06-03 13:04:46,298 - INFO - employee_master: MySQL=3, PostgreSQL=3
+2026-06-03 13:07:29,480 - INFO - Created table: department
+2026-06-03 13:07:29,483 - INFO - Migrated 3 rows from department
+2026-06-03 13:07:29,486 - INFO - department: MySQL=3, PostgreSQL=3
+2026-06-03 13:07:29,488 - INFO - Created table: employee
+2026-06-03 13:07:29,490 - INFO - Migrated 3 rows from employee
+2026-06-03 13:07:29,492 - INFO - employee: MySQL=3, PostgreSQL=9
+2026-06-03 13:07:29,494 - INFO - Created table: employee_master
+2026-06-03 13:07:29,496 - INFO - Migrated 3 rows from employee_master
+2026-06-03 13:07:29,499 - INFO - employee_master: MySQL=3, PostgreSQL=6
+2026-06-03 15:03:45,712 - INFO - Migrated 3 rows from department
+2026-06-03 15:03:45,717 - INFO - department: MySQL=3, PostgreSQL=3
+2026-06-03 15:03:45,727 - INFO - Migrated 3 rows from employee
+2026-06-03 15:03:45,729 - INFO - employee: MySQL=3, PostgreSQL=3
+2026-06-03 15:03:45,740 - INFO - Migrated 3 rows from employee_master
+2026-06-03 15:03:45,742 - INFO - employee_master: MySQL=3, PostgreSQL=3
+2026-06-03 15:06:05,217 - ERROR - Error in department: duplicate key value violates unique constraint "department_pkey"
+DETAIL:  Key (dept_id)=(1) already exists.
+
+2026-06-03 15:06:05,218 - ERROR - Error in employee: current transaction is aborted, commands ignored until end of transaction block
+
+2026-06-03 15:06:05,220 - ERROR - Error in employee_master: current transaction is aborted, commands ignored until end of transaction block
+
+2026-06-03 15:06:05,221 - ERROR - Error in student_course: current transaction is aborted, commands ignored until end of transaction block
+
+2026-06-03 15:29:01,142 - INFO - Migrated 50 rows from student_course
+2026-06-03 15:29:01,145 - INFO - student_course: MySQL=50, PostgreSQL=50
+2026-06-03 15:33:22,377 - INFO - Migrated 5 rows from project_assignment
+2026-06-03 15:33:22,382 - INFO - project_assignment: MySQL=5, PostgreSQL=5
+2026-06-03 15:33:22,392 - INFO - Migrated 50 rows from student_course
+2026-06-03 15:33:22,396 - INFO - student_course: MySQL=50, PostgreSQL=50
+2026-06-03 15:39:25,158 - INFO - Migrated 3 rows from customers
+2026-06-03 15:39:25,161 - INFO - customers: MySQL=3, PostgreSQL=3
+2026-06-03 15:39:25,169 - INFO - Migrated 5 rows from project_assignment
+2026-06-03 15:39:25,172 - INFO - project_assignment: MySQL=5, PostgreSQL=5
+2026-06-03 15:39:25,183 - INFO - Migrated 50 rows from student_course
+2026-06-03 15:39:25,186 - INFO - student_course: MySQL=50, PostgreSQL=50
+2026-06-03 15:47:47,469 - INFO - Migrated 4 rows from customers
+2026-06-03 15:47:47,472 - INFO - customers: MySQL=4, PostgreSQL=4
+2026-06-03 15:47:47,481 - INFO - Migrated 5 rows from project_assignment
+2026-06-03 15:47:47,485 - INFO - project_assignment: MySQL=5, PostgreSQL=5
+2026-06-03 15:47:47,497 - INFO - Migrated 50 rows from student_course
+2026-06-03 15:47:47,500 - INFO - student_course: MySQL=50, PostgreSQL=50
+2026-06-03 15:48:41,100 - INFO - Migrated 4 rows from customers
+2026-06-03 15:48:41,105 - INFO - customers: MySQL=4, PostgreSQL=4
+2026-06-03 15:48:41,115 - INFO - Migrated 5 rows from project_assignment
+2026-06-03 15:48:41,118 - INFO - project_assignment: MySQL=5, PostgreSQL=5
+2026-06-03 15:48:41,131 - INFO - Migrated 50 rows from student_course
+2026-06-03 15:48:41,134 - INFO - student_course: MySQL=50, PostgreSQL=50
+2026-06-03 15:48:41,149 - INFO - Migrated 10 rows from test_batch
+2026-06-03 15:48:41,154 - INFO - test_batch: MySQL=10, PostgreSQL=10
+2026-06-03 16:02:00,460 - INFO - Migrated 4 rows from customers
+2026-06-03 16:02:00,464 - INFO - customers: MySQL=4, PostgreSQL=4
+2026-06-03 16:02:00,475 - INFO - Migrated 2 rows from departments
+2026-06-03 16:02:00,478 - INFO - departments: MySQL=2, PostgreSQL=2
+2026-06-03 16:02:00,487 - INFO - Migrated 3 rows from employees_fk
+2026-06-03 16:02:00,489 - INFO - employees_fk: MySQL=3, PostgreSQL=3
+2026-06-03 16:02:00,495 - INFO - Migrated 5 rows from project_assignment
+2026-06-03 16:02:00,498 - INFO - project_assignment: MySQL=5, PostgreSQL=5
+2026-06-03 16:02:00,511 - INFO - Migrated 50 rows from student_course
+2026-06-03 16:02:00,514 - INFO - student_course: MySQL=50, PostgreSQL=50
+2026-06-03 16:02:00,524 - INFO - Migrated 10 rows from test_batch
+2026-06-03 16:02:00,526 - INFO - test_batch: MySQL=10, PostgreSQL=10
+2026-06-03 16:08:27,512 - INFO - Migrated 4 rows from customers
+2026-06-03 16:08:27,515 - INFO - customers: MySQL=4, PostgreSQL=4
+2026-06-03 16:08:27,524 - INFO - Migrated 2 rows from departments
+2026-06-03 16:08:27,527 - INFO - departments: MySQL=2, PostgreSQL=2
+2026-06-03 16:08:27,533 - INFO - Migrated 1 rows from documents
+2026-06-03 16:08:27,536 - INFO - documents: MySQL=1, PostgreSQL=1
+2026-06-03 16:08:27,545 - INFO - Migrated 2 rows from employee_json
+2026-06-03 16:08:27,547 - INFO - employee_json: MySQL=2, PostgreSQL=2
+2026-06-03 16:08:27,554 - INFO - Migrated 3 rows from employees_fk
+2026-06-03 16:08:27,555 - INFO - employees_fk: MySQL=3, PostgreSQL=3
+2026-06-03 16:08:27,563 - INFO - Migrated 5 rows from project_assignment
+2026-06-03 16:08:27,566 - INFO - project_assignment: MySQL=5, PostgreSQL=5
+2026-06-03 16:08:27,578 - INFO - Migrated 50 rows from student_course
+2026-06-03 16:08:27,581 - INFO - student_course: MySQL=50, PostgreSQL=50
+2026-06-03 16:08:27,587 - INFO - Migrated 10 rows from test_batch
+2026-06-03 16:08:27,590 - INFO - test_batch: MySQL=10, PostgreSQL=10
+2026-06-03 16:35:19,714 - INFO - Migrated 4 rows from customers
+2026-06-03 16:35:19,718 - INFO - customers: MySQL=4, PostgreSQL=4
+2026-06-03 16:35:19,735 - INFO - Migrated 2 rows from departments
+2026-06-03 16:35:19,740 - INFO - departments: MySQL=2, PostgreSQL=2
+2026-06-03 16:35:19,746 - INFO - Migrated 1 rows from documents
+2026-06-03 16:35:19,750 - INFO - documents: MySQL=1, PostgreSQL=1
+2026-06-03 16:35:19,766 - INFO - Migrated 2 rows from employee_index
+2026-06-03 16:35:19,769 - INFO - employee_index: MySQL=2, PostgreSQL=2
+2026-06-03 16:35:19,780 - INFO - Migrated 2 rows from employee_json
+2026-06-03 16:35:19,785 - INFO - employee_json: MySQL=2, PostgreSQL=2
+2026-06-03 16:35:19,804 - INFO - Migrated 3 rows from employees_fk
+2026-06-03 16:35:19,808 - INFO - employees_fk: MySQL=3, PostgreSQL=3
+2026-06-03 16:35:19,819 - INFO - Migrated 5 rows from project_assignment
+2026-06-03 16:35:19,824 - INFO - project_assignment: MySQL=5, PostgreSQL=5
+2026-06-03 16:35:19,836 - INFO - Migrated 50 rows from student_course
+2026-06-03 16:35:19,841 - INFO - student_course: MySQL=50, PostgreSQL=50
+2026-06-03 16:35:19,855 - INFO - Migrated 10 rows from test_batch
+2026-06-03 16:35:19,860 - INFO - test_batch: MySQL=10, PostgreSQL=10
+2026-06-03 16:40:56,571 - INFO - Migrated 4 rows from customers
+2026-06-03 16:40:56,575 - INFO - customers: MySQL=4, PostgreSQL=4
+2026-06-03 16:40:56,587 - INFO - Migrated 2 rows from departments
+2026-06-03 16:40:56,590 - INFO - departments: MySQL=2, PostgreSQL=2
+2026-06-03 16:40:56,596 - INFO - Migrated 3 rows from employees_fk
+2026-06-03 16:40:56,601 - INFO - employees_fk: MySQL=3, PostgreSQL=3
+2026-06-03 17:02:05,839 - INFO - Migrated 4 rows from customers
+2026-06-03 17:02:05,842 - INFO - customers: MySQL=4, PostgreSQL=4
+2026-06-03 17:02:05,855 - INFO - Migrated 2 rows from departments
+2026-06-03 17:02:05,859 - INFO - departments: MySQL=2, PostgreSQL=2
+2026-06-03 17:02:05,866 - INFO - employee_multi_index: MySQL=0, PostgreSQL=0
+2026-06-03 17:02:05,873 - INFO - Migrated 3 rows from employees_fk
+2026-06-03 17:02:05,875 - INFO - employees_fk: MySQL=3, PostgreSQL=3
+2026-06-03 17:15:20,893 - ERROR - Error creating table users: 'MigrationTool' object has no attribute 'get_foreign_keys'
+2026-06-03 17:15:20,896 - ERROR - Error creating indexes for users: relation "users" does not exist
+
+2026-06-03 17:15:20,900 - ERROR - Error in users: relation "users" does not exist
+
+2026-06-04 11:46:08,721 - ERROR - Error creating table users: 'MigrationTool' object has no attribute 'get_foreign_keys'
+2026-06-04 11:46:08,728 - ERROR - Error creating indexes for users: relation "users" does not exist
+
+2026-06-04 11:46:08,731 - ERROR - Error in users: relation "users" does not exist
+
+2026-06-04 11:49:48,369 - ERROR - Error creating table users: 'MigrationTool' object has no attribute 'get_foreign_keys'
+2026-06-04 11:49:48,372 - ERROR - Error creating indexes for users: relation "users" does not exist
+
+2026-06-04 11:49:48,374 - ERROR - Error in users: relation "users" does not exist
+
+2026-06-04 11:53:40,994 - ERROR - Error creating table users: 'MigrationTool' object has no attribute 'get_foreign_keys'
+2026-06-04 11:53:40,996 - ERROR - Error creating indexes for users: relation "users" does not exist
+
+2026-06-04 11:53:40,998 - ERROR - Error in users: relation "users" does not exist
+
+2026-06-04 12:01:55,390 - ERROR - Error creating table users: 'MigrationTool' object has no attribute 'get_foreign_keys'
+2026-06-04 12:01:55,394 - ERROR - Error creating indexes for users: relation "users" does not exist
+
+2026-06-04 12:01:55,397 - ERROR - Error in users: relation "users" does not exist
+
+2026-06-04 12:10:51,954 - INFO - Migrated 2 rows from users
+2026-06-04 12:10:51,956 - INFO - users: MySQL=2, PostgreSQL=2
+2026-06-04 12:21:52,123 - INFO - Migrated 2 rows from active_users
+2026-06-04 12:21:52,124 - INFO - active_users: MySQL=2, PostgreSQL=2
+2026-06-04 12:21:52,134 - INFO - Migrated 2 rows from users
+2026-06-04 12:21:52,136 - INFO - users: MySQL=2, PostgreSQL=2
+2026-06-04 12:31:28,599 - INFO - Migrated 2 rows from users
+2026-06-04 12:31:28,601 - INFO - users: MySQL=2, PostgreSQL=2
+2026-06-04 12:35:56,623 - INFO - Migrated 4 rows from products
+2026-06-04 12:35:56,628 - INFO - products: MySQL=4, PostgreSQL=4
+2026-06-04 12:40:03,030 - INFO - Migrated 4 rows from products
+2026-06-04 12:40:03,033 - INFO - products: MySQL=4, PostgreSQL=4
+2026-06-04 12:51:51,059 - INFO - Migrated 2 rows from employees_check
+2026-06-04 12:51:51,065 - INFO - employees_check: MySQL=2, PostgreSQL=2
+2026-06-04 12:51:51,072 - INFO - Migrated 4 rows from products
+2026-06-04 12:51:51,076 - INFO - products: MySQL=4, PostgreSQL=4
+2026-06-04 12:55:33,366 - INFO - Migrated 2 rows from employees_check
+2026-06-04 12:55:33,371 - INFO - employees_check: MySQL=2, PostgreSQL=2
+2026-06-04 12:55:33,377 - INFO - Migrated 4 rows from products
+2026-06-04 12:55:33,382 - INFO - products: MySQL=4, PostgreSQL=4
+2026-06-04 12:58:38,554 - INFO - Migrated 2 rows from employees_check
+2026-06-04 12:58:38,558 - INFO - employees_check: MySQL=2, PostgreSQL=2
+2026-06-04 12:58:38,566 - INFO - Migrated 4 rows from products
+2026-06-04 12:58:38,570 - INFO - products: MySQL=4, PostgreSQL=4
+2026-06-04 13:04:51,956 - INFO - Migrated 2 rows from employees_check
+2026-06-04 13:04:51,961 - INFO - employees_check: MySQL=2, PostgreSQL=2
+2026-06-04 13:04:51,970 - INFO - Migrated 4 rows from products
+2026-06-04 13:04:51,973 - INFO - products: MySQL=4, PostgreSQL=4
+2026-06-04 13:11:18,573 - INFO - Migrated 2 rows from employees_check
+2026-06-04 13:11:18,578 - INFO - employees_check: MySQL=2, PostgreSQL=2
+2026-06-04 13:11:18,586 - INFO - Migrated 4 rows from products
+2026-06-04 13:11:18,590 - INFO - products: MySQL=4, PostgreSQL=4
+2026-06-04 13:12:23,579 - INFO - Migrated 2 rows from employees_check
+2026-06-04 13:12:23,586 - INFO - employees_check: MySQL=2, PostgreSQL=2
+2026-06-04 13:12:23,597 - INFO - Migrated 2 rows from orders
+2026-06-04 13:12:23,602 - INFO - orders: MySQL=2, PostgreSQL=2
+2026-06-04 13:12:23,610 - INFO - Migrated 4 rows from products
+2026-06-04 13:12:23,619 - INFO - products: MySQL=4, PostgreSQL=4
+2026-06-04 14:03:32,440 - INFO - Migrated 2 rows from employees_check
+2026-06-04 14:03:32,445 - INFO - employees_check: MySQL=2, PostgreSQL=2
+2026-06-04 14:03:32,454 - INFO - Migrated 2 rows from orders
+2026-06-04 14:03:32,459 - INFO - orders: MySQL=2, PostgreSQL=2
+2026-06-04 14:03:32,468 - INFO - Migrated 4 rows from products
+2026-06-04 14:03:32,473 - INFO - products: MySQL=4, PostgreSQL=4
+2026-06-04 14:06:25,508 - INFO - Migrated 2 rows from employees_check
+2026-06-04 14:06:25,512 - INFO - employees_check: MySQL=2, PostgreSQL=2
+2026-06-04 14:06:25,520 - INFO - Migrated 2 rows from orders
+2026-06-04 14:06:25,524 - INFO - orders: MySQL=2, PostgreSQL=2
+2026-06-04 14:06:25,530 - INFO - Migrated 4 rows from products
+2026-06-04 14:06:25,534 - INFO - products: MySQL=4, PostgreSQL=4
+2026-06-04 14:19:15,642 - INFO - audit_log: MySQL=0, PostgreSQL=0
+2026-06-04 14:19:15,658 - INFO - Migrated 2 rows from employees_check
+2026-06-04 14:19:15,662 - INFO - employees_check: MySQL=2, PostgreSQL=2
+2026-06-04 14:19:15,673 - INFO - Migrated 4 rows from products
+2026-06-04 14:19:15,676 - INFO - products: MySQL=4, PostgreSQL=4
+2026-06-04 14:24:54,033 - INFO - audit_log: MySQL=0, PostgreSQL=0
+2026-06-04 14:24:54,041 - INFO - Migrated 2 rows from employees_check
+2026-06-04 14:24:54,046 - INFO - employees_check: MySQL=2, PostgreSQL=2
+2026-06-04 14:24:54,052 - INFO - Migrated 4 rows from products
+2026-06-04 14:24:54,056 - INFO - products: MySQL=4, PostgreSQL=4
+2026-06-04 14:30:47,879 - INFO - audit_log: MySQL=0, PostgreSQL=0
+2026-06-04 14:30:47,888 - INFO - Migrated 2 rows from employees_check
+2026-06-04 14:30:47,891 - INFO - employees_check: MySQL=2, PostgreSQL=2
+2026-06-04 14:49:54,580 - INFO - audit_log: MySQL=0, PostgreSQL=0
+2026-06-04 14:49:54,592 - INFO - Migrated 10 rows from employee_validation
+2026-06-04 14:49:54,598 - INFO - employee_validation: MySQL=10, PostgreSQL=10
+2026-06-04 14:49:54,607 - INFO - Migrated 2 rows from employees_check
+2026-06-04 14:49:54,612 - INFO - employees_check: MySQL=2, PostgreSQL=2
+2026-06-04 15:18:56,750 - INFO - Migrated 4 rows from products
+2026-06-04 15:18:56,755 - INFO - products: MySQL=4, PostgreSQL=4
+2026-06-04 15:48:22,253 - ERROR - Error in bulk_test: Unread result found
+2026-06-04 15:48:22,254 - ERROR - Error in products: Unread result found
+2026-06-04 16:03:33,271 - ERROR - Error in bulk_test: dict is not a sequence
+2026-06-04 16:03:33,277 - ERROR - Error in products: dict is not a sequence
+2026-06-04 16:05:30,594 - ERROR - Error in bulk_test: Unread result found
+2026-06-04 16:05:30,595 - ERROR - Error in products: Unread result found
+2026-06-04 16:06:53,375 - INFO - Migrated 5 rows from bulk_test
+2026-06-04 16:06:53,379 - ERROR - Error in bulk_test: 0
+2026-06-04 16:06:53,389 - INFO - Migrated 4 rows from products
+2026-06-04 16:06:53,391 - ERROR - Error in products: 0
+2026-06-04 16:11:07,281 - INFO - Migrated 5 rows from bulk_test
+2026-06-04 16:11:07,285 - INFO - bulk_test: MySQL=5, PostgreSQL=5
+2026-06-04 16:11:07,296 - INFO - Migrated 4 rows from products
+2026-06-04 16:11:07,299 - INFO - products: MySQL=4, PostgreSQL=4
+2026-06-04 16:21:33,698 - INFO - Migrated 5 rows from bulk_test
+2026-06-04 16:21:33,702 - INFO - bulk_test: MySQL=5, PostgreSQL=5
+2026-06-04 16:21:33,715 - INFO - Migrated 4 rows from products
+2026-06-04 16:21:33,718 - INFO - products: MySQL=4, PostgreSQL=4
+2026-06-04 16:41:12,134 - INFO - Migrated 5 rows from bulk_test
+2026-06-04 16:41:12,138 - INFO - bulk_test: MySQL=5, PostgreSQL=5
+2026-06-04 16:41:12,148 - INFO - Migrated 2 rows from customers
+2026-06-04 16:41:12,152 - INFO - customers: MySQL=2, PostgreSQL=2
+2026-06-04 16:41:12,159 - INFO - Migrated 2 rows from orders
+2026-06-04 16:41:12,163 - INFO - orders: MySQL=2, PostgreSQL=2
+2026-06-04 16:41:12,164 - ERROR - Error in payments: TEST FAILURE
+2026-06-04 16:41:12,174 - INFO - Migrated 4 rows from products
+2026-06-04 16:41:12,178 - INFO - products: MySQL=4, PostgreSQL=4
+2026-06-04 16:45:35,302 - ERROR - Error in payments: TEST FAILURE
+2026-06-04 16:46:52,722 - INFO - Migrated 2 rows from payments
+2026-06-04 16:46:52,728 - INFO - payments: MySQL=2, PostgreSQL=2
+2026-06-05 11:31:29,109 - INFO - Migrated 5 rows from bulk_test
+2026-06-05 11:31:29,117 - INFO - bulk_test: MySQL=5, PostgreSQL=5
+2026-06-05 11:31:29,131 - INFO - Migrated 2 rows from customers
+2026-06-05 11:31:29,136 - INFO - customers: MySQL=2, PostgreSQL=2
+2026-06-05 11:31:29,147 - INFO - Migrated 2 rows from orders
+2026-06-05 11:31:29,151 - INFO - orders: MySQL=2, PostgreSQL=2
+2026-06-05 11:31:29,159 - INFO - Migrated 2 rows from payments
+2026-06-05 11:31:29,166 - INFO - payments: MySQL=2, PostgreSQL=2
+2026-06-05 11:31:29,179 - INFO - Migrated 4 rows from products
+2026-06-05 11:31:29,183 - INFO - products: MySQL=4, PostgreSQL=4
+2026-06-05 12:34:42,735 - ERROR - View creation error: tuple indices must be integers or slices, not str
+2026-06-05 12:40:47,843 - ERROR - View creation error: tuple indices must be integers or slices, not str
+2026-06-06 18:48:20,968 - INFO - Migration initialized: mssql -> PostgreSQL
+2026-06-06 18:48:20,985 - INFO - migration_status table created
+2026-06-06 18:48:20,985 - INFO - migration_stages table created
+2026-06-06 18:48:21,060 - INFO - Found 5 completed tables
+2026-06-06 18:48:21,064 - INFO - Stage status fetched for customers
+2026-06-06 18:48:21,065 - INFO - Stage status fetched for products
+2026-06-06 18:48:21,065 - INFO - Stage status fetched for orders
+2026-06-06 18:48:21,066 - INFO - Stage status fetched for customers
+2026-06-06 18:48:21,066 - INFO - Stage status fetched for products
+2026-06-06 18:48:21,066 - INFO - Stage status fetched for orders
+2026-06-06 18:48:21,067 - INFO - Stage status fetched for customers
+2026-06-06 18:48:21,067 - INFO - Stage status fetched for products
+2026-06-06 18:48:21,067 - INFO - Stage status fetched for orders
+2026-06-06 18:48:21,134 - INFO - Check constraints created for customers
+2026-06-06 18:48:21,199 - ERROR - CHECK ERROR products: syntax error at or near "["
+LINE 6:             CHECK (([price]>(0)));
+                            ^
+
+2026-06-06 18:48:21,199 - INFO - Check constraints created for products
+2026-06-06 18:48:21,272 - INFO - Check constraints created for orders
+2026-06-06 18:48:21,299 - INFO - Stage status fetched for customers
+2026-06-06 18:48:21,300 - INFO - Stage status fetched for products
+2026-06-06 18:48:21,300 - INFO - Stage status fetched for orders
+2026-06-06 18:48:21,443 - ERROR - DEFAULT ERROR customers: column "city" of relation "customers" does not exist
+
+2026-06-06 18:48:21,443 - INFO - Default values created for customers
+2026-06-06 18:48:21,545 - INFO - Default values created for products
+2026-06-06 18:48:21,644 - INFO - Default values created for orders
+2026-06-06 18:48:21,657 - INFO - Exported 1 triggers
+2026-06-06 18:48:21,712 - INFO - Exported 1 procedures
+2026-06-06 18:48:21,755 - INFO - Rollback script generated successfully
+2026-06-06 18:48:29,938 - INFO - Migration initialized: mssql -> PostgreSQL
+2026-06-06 18:48:29,940 - INFO - migration_status table created
+2026-06-06 18:48:29,940 - INFO - migration_stages table created
+2026-06-06 18:48:29,948 - INFO - Found 5 completed tables
+2026-06-06 18:48:29,950 - INFO - Stage status fetched for customers
+2026-06-06 18:48:29,951 - INFO - Stage status fetched for products
+2026-06-06 18:48:29,951 - INFO - Stage status fetched for orders
+2026-06-06 18:48:29,952 - INFO - Stage status fetched for customers
+2026-06-06 18:48:29,952 - INFO - Stage status fetched for products
+2026-06-06 18:48:29,952 - INFO - Stage status fetched for orders
+2026-06-06 18:48:29,953 - INFO - Stage status fetched for customers
+2026-06-06 18:48:29,953 - INFO - Stage status fetched for products
+2026-06-06 18:48:29,953 - INFO - Stage status fetched for orders
+2026-06-06 18:48:29,958 - INFO - Check constraints created for customers
+2026-06-06 18:48:29,963 - ERROR - CHECK ERROR products: syntax error at or near "["
+LINE 6:             CHECK (([price]>(0)));
+                            ^
+
+2026-06-06 18:48:29,963 - INFO - Check constraints created for products
+2026-06-06 18:48:29,968 - INFO - Check constraints created for orders
+2026-06-06 18:48:29,974 - INFO - Stage status fetched for customers
+2026-06-06 18:48:29,974 - INFO - Stage status fetched for products
+2026-06-06 18:48:29,975 - INFO - Stage status fetched for orders
+2026-06-06 18:48:29,986 - ERROR - DEFAULT ERROR customers: column "city" of relation "customers" does not exist
+
+2026-06-06 18:48:29,986 - INFO - Default values created for customers
+2026-06-06 18:48:29,998 - INFO - Default values created for products
+2026-06-06 18:48:30,009 - INFO - Default values created for orders
+2026-06-06 18:48:30,016 - INFO - Exported 1 triggers
+2026-06-06 18:48:30,029 - INFO - Exported 1 procedures
+2026-06-06 18:48:30,042 - INFO - Rollback script generated successfully
+2026-06-06 19:05:30,230 - INFO - Migration initialized: mssql -> PostgreSQL
+2026-06-06 19:05:30,232 - INFO - migration_status table created
+2026-06-06 19:05:30,233 - INFO - migration_stages table created
+2026-06-06 19:05:30,277 - INFO - Found 5 completed tables
+2026-06-06 19:05:30,281 - INFO - Stage status fetched for customers
+2026-06-06 19:05:30,282 - INFO - Stage status fetched for products
+2026-06-06 19:05:30,283 - INFO - Stage status fetched for orders
+2026-06-06 19:05:30,284 - INFO - Stage status fetched for customers
+2026-06-06 19:05:30,285 - INFO - Stage status fetched for products
+2026-06-06 19:05:30,286 - INFO - Stage status fetched for orders
+2026-06-06 19:05:30,287 - INFO - Stage status fetched for customers
+2026-06-06 19:05:30,288 - INFO - Stage status fetched for products
+2026-06-06 19:05:30,289 - INFO - Stage status fetched for orders
+2026-06-06 19:05:30,378 - INFO - Check constraints created for customers
+2026-06-06 19:05:30,459 - ERROR - CHECK ERROR products: syntax error at or near "["
+LINE 6:             CHECK (([price]>(0)));
+                            ^
+
+2026-06-06 19:05:30,459 - INFO - Check constraints created for products
+2026-06-06 19:05:30,535 - INFO - Check constraints created for orders
+2026-06-06 19:05:30,617 - INFO - Stage status fetched for customers
+2026-06-06 19:05:30,618 - INFO - Stage status fetched for products
+2026-06-06 19:05:30,618 - INFO - Stage status fetched for orders
+2026-06-06 19:05:30,762 - ERROR - DEFAULT ERROR customers: column "city" of relation "customers" does not exist
+
+2026-06-06 19:05:30,763 - INFO - Default values created for customers
+2026-06-06 19:05:30,895 - INFO - Default values created for products
+2026-06-06 19:05:31,022 - INFO - Default values created for orders
+2026-06-06 19:05:31,038 - INFO - Exported 1 triggers
+2026-06-06 19:05:31,099 - INFO - Exported 1 procedures
+2026-06-06 19:05:31,151 - INFO - Rollback script generated successfully
+2026-06-06 19:05:31,154 - INFO - Migration Completed
+2026-06-06 19:28:08,353 - INFO - Migration initialized: mssql -> PostgreSQL
+2026-06-06 19:28:08,355 - INFO - migration_status table created
+2026-06-06 19:28:08,356 - INFO - migration_stages table created
+2026-06-06 19:28:08,394 - INFO - Found 0 completed tables
+2026-06-06 19:28:08,397 - INFO - No stage status found for customers
+2026-06-06 19:28:10,251 - INFO - Created table: customers
+2026-06-06 19:28:10,255 - INFO - customers: table_created updated
+2026-06-06 19:28:10,255 - INFO - No stage status found for products
+2026-06-06 19:28:11,694 - INFO - Created table: products
+2026-06-06 19:28:11,696 - INFO - products: table_created updated
+2026-06-06 19:28:11,697 - INFO - No stage status found for orders
+2026-06-06 19:28:12,814 - INFO - Created table: orders
+2026-06-06 19:28:12,815 - INFO - orders: table_created updated
+2026-06-06 19:28:12,816 - INFO - Stage status fetched for customers
+2026-06-06 19:28:12,969 - INFO - Indexes created for customers
+2026-06-06 19:28:12,970 - INFO - customers: indexes_created updated
+2026-06-06 19:28:12,971 - INFO - Stage status fetched for products
+2026-06-06 19:28:13,144 - INFO - Indexes created for products
+2026-06-06 19:28:13,145 - INFO - products: indexes_created updated
+2026-06-06 19:28:13,146 - INFO - Stage status fetched for orders
+2026-06-06 19:28:13,315 - INFO - Indexes created for orders
+2026-06-06 19:28:13,317 - INFO - orders: indexes_created updated
+2026-06-06 19:28:13,317 - INFO - Stage status fetched for customers
+2026-06-06 19:28:13,494 - INFO - Unique constraints created for customers
+2026-06-06 19:28:13,495 - INFO - customers: constraints_created updated
+2026-06-06 19:28:13,495 - INFO - Stage status fetched for products
+2026-06-06 19:28:13,666 - INFO - Unique constraints created for products
+2026-06-06 19:28:13,667 - INFO - products: constraints_created updated
+2026-06-06 19:28:13,668 - INFO - Stage status fetched for orders
+2026-06-06 19:28:13,844 - INFO - Unique constraints created for orders
+2026-06-06 19:28:13,845 - INFO - orders: constraints_created updated
+2026-06-06 19:28:13,922 - INFO - Check constraints created for customers
+2026-06-06 19:28:14,003 - INFO - Check constraints created for products
+2026-06-06 19:28:14,078 - INFO - Check constraints created for orders
+2026-06-06 19:28:14,125 - INFO - Stage status fetched for customers
+2026-06-06 19:28:14,152 - ERROR - Migration failed for customers: ('HY000', '[HY000] [Microsoft][ODBC Driver 18 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2026-06-06 19:28:14,152 - ERROR - Error in customers: ('HY000', '[HY000] [Microsoft][ODBC Driver 18 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2026-06-06 19:28:14,153 - INFO - Stage status fetched for products
+2026-06-06 19:28:14,165 - ERROR - Migration failed for products: ('HY000', '[HY000] [Microsoft][ODBC Driver 18 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2026-06-06 19:28:14,165 - ERROR - Error in products: ('HY000', '[HY000] [Microsoft][ODBC Driver 18 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2026-06-06 19:28:14,166 - INFO - Stage status fetched for orders
+2026-06-06 19:28:14,172 - ERROR - Migration failed for orders: ('HY000', '[HY000] [Microsoft][ODBC Driver 18 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2026-06-06 19:28:14,172 - ERROR - Error in orders: ('HY000', '[HY000] [Microsoft][ODBC Driver 18 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2026-06-06 19:28:14,306 - INFO - Default values created for customers
+2026-06-06 19:28:14,438 - INFO - Default values created for products
+2026-06-06 19:28:14,574 - INFO - Default values created for orders
+2026-06-06 19:28:14,591 - INFO - Exported 1 triggers
+2026-06-06 19:28:14,655 - INFO - Exported 1 procedures
+2026-06-06 19:28:14,711 - INFO - Rollback script generated successfully
+2026-06-06 19:28:14,714 - INFO - Migration Completed
+2026-06-06 19:30:37,766 - INFO - Migration initialized: mssql -> PostgreSQL
+2026-06-06 19:30:37,768 - INFO - migration_status table created
+2026-06-06 19:30:37,769 - INFO - migration_stages table created
+2026-06-06 19:30:37,814 - INFO - Found 0 completed tables
+2026-06-06 19:30:37,818 - INFO - Stage status fetched for customers
+2026-06-06 19:30:37,819 - INFO - Stage status fetched for products
+2026-06-06 19:30:37,819 - INFO - Stage status fetched for orders
+2026-06-06 19:30:37,820 - INFO - Stage status fetched for customers
+2026-06-06 19:30:37,820 - INFO - Stage status fetched for products
+2026-06-06 19:30:37,821 - INFO - Stage status fetched for orders
+2026-06-06 19:30:37,821 - INFO - Stage status fetched for customers
+2026-06-06 19:30:37,822 - INFO - Stage status fetched for products
+2026-06-06 19:30:37,822 - INFO - Stage status fetched for orders
+2026-06-06 19:30:37,919 - INFO - Check constraints created for customers
+2026-06-06 19:30:37,998 - INFO - Check constraints created for products
+2026-06-06 19:30:38,073 - INFO - Check constraints created for orders
+2026-06-06 19:30:38,111 - INFO - Stage status fetched for customers
+2026-06-06 19:30:38,141 - ERROR - Migration failed for customers: ('HY000', '[HY000] [Microsoft][ODBC Driver 18 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2026-06-06 19:30:38,141 - ERROR - Error in customers: ('HY000', '[HY000] [Microsoft][ODBC Driver 18 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2026-06-06 19:30:38,142 - INFO - Stage status fetched for products
+2026-06-06 19:30:38,159 - ERROR - Migration failed for products: ('HY000', '[HY000] [Microsoft][ODBC Driver 18 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2026-06-06 19:30:38,159 - ERROR - Error in products: ('HY000', '[HY000] [Microsoft][ODBC Driver 18 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2026-06-06 19:30:38,160 - INFO - Stage status fetched for orders
+2026-06-06 19:30:38,169 - ERROR - Migration failed for orders: ('HY000', '[HY000] [Microsoft][ODBC Driver 18 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2026-06-06 19:30:38,169 - ERROR - Error in orders: ('HY000', '[HY000] [Microsoft][ODBC Driver 18 for SQL Server]Connection is busy with results for another command (0) (SQLExecDirectW)')
+2026-06-06 19:30:38,313 - INFO - Default values created for customers
+2026-06-06 19:30:38,450 - INFO - Default values created for products
+2026-06-06 19:30:38,581 - INFO - Default values created for orders
+2026-06-06 19:30:38,599 - INFO - Exported 1 triggers
+2026-06-06 19:30:38,666 - INFO - Exported 1 procedures
+2026-06-06 19:30:38,717 - INFO - Rollback script generated successfully
+2026-06-06 19:30:38,719 - INFO - Migration Completed
+2026-06-06 19:45:53,230 - INFO - Migration initialized: mssql -> PostgreSQL
+2026-06-06 19:45:53,232 - INFO - migration_status table created
+2026-06-06 19:45:53,233 - INFO - migration_stages table created
+2026-06-06 19:45:53,274 - INFO - Found 0 completed tables
+2026-06-06 19:45:53,279 - INFO - Stage status fetched for customers
+2026-06-06 19:45:53,280 - INFO - Stage status fetched for products
+2026-06-06 19:45:53,281 - INFO - Stage status fetched for orders
+2026-06-06 19:45:53,282 - INFO - Stage status fetched for customers
+2026-06-06 19:45:53,283 - INFO - Stage status fetched for products
+2026-06-06 19:45:53,284 - INFO - Stage status fetched for orders
+2026-06-06 19:45:53,285 - INFO - Stage status fetched for customers
+2026-06-06 19:45:53,286 - INFO - Stage status fetched for products
+2026-06-06 19:45:53,286 - INFO - Stage status fetched for orders
+2026-06-06 19:45:53,376 - INFO - Check constraints created for customers
+2026-06-06 19:45:53,457 - INFO - Check constraints created for products
+2026-06-06 19:45:53,532 - INFO - Check constraints created for orders
+2026-06-06 19:45:53,563 - INFO - Stage status fetched for customers
+2026-06-06 19:45:54,170 - INFO - Migrated 2 rows from customers
+2026-06-06 19:45:54,171 - INFO - customers: data_migrated updated
+2026-06-06 19:45:54,176 - INFO - customers: Source=2, PostgreSQL=2
+2026-06-06 19:45:54,177 - INFO - Migration status saved: customers (2 rows)
+2026-06-06 19:45:54,178 - INFO - customers: validated updated
+2026-06-06 19:45:54,178 - INFO - Stage status fetched for products
+2026-06-06 19:45:54,731 - INFO - Migrated 2 rows from products
+2026-06-06 19:45:54,732 - INFO - products: data_migrated updated
+2026-06-06 19:45:54,738 - INFO - products: Source=2, PostgreSQL=2
+2026-06-06 19:45:54,739 - INFO - Migration status saved: products (2 rows)
+2026-06-06 19:45:54,740 - INFO - products: validated updated
+2026-06-06 19:45:54,742 - INFO - Stage status fetched for orders
+2026-06-06 19:45:55,281 - INFO - Migrated 2 rows from orders
+2026-06-06 19:45:55,282 - INFO - orders: data_migrated updated
+2026-06-06 19:45:55,288 - INFO - orders: Source=2, PostgreSQL=2
+2026-06-06 19:45:55,289 - INFO - Migration status saved: orders (2 rows)
+2026-06-06 19:45:55,291 - INFO - orders: validated updated
+2026-06-06 19:45:55,429 - INFO - Default values created for customers
+2026-06-06 19:45:55,556 - INFO - Default values created for products
+2026-06-06 19:45:55,684 - INFO - Default values created for orders
+2026-06-06 19:45:55,699 - INFO - Exported 1 triggers
+2026-06-06 19:45:55,759 - INFO - Exported 1 procedures
+2026-06-06 19:45:55,811 - INFO - Rollback script generated successfully
+2026-06-06 19:45:55,813 - INFO - Migration Completed
+2026-06-06 19:53:39,798 - INFO - Migration initialized: mssql -> PostgreSQL
+2026-06-06 19:53:39,799 - INFO - migration_status table created
+2026-06-06 19:53:39,800 - INFO - migration_stages table created
+2026-06-06 19:53:39,839 - INFO - Found 3 completed tables
+2026-06-06 19:53:39,842 - INFO - Stage status fetched for customers
+2026-06-06 19:53:39,843 - INFO - Stage status fetched for products
+2026-06-06 19:53:39,844 - INFO - Stage status fetched for orders
+2026-06-06 19:53:39,846 - INFO - Stage status fetched for customers
+2026-06-06 19:53:39,847 - INFO - Stage status fetched for products
+2026-06-06 19:53:39,849 - INFO - Stage status fetched for orders
+2026-06-06 19:53:39,850 - INFO - Stage status fetched for customers
+2026-06-06 19:53:39,851 - INFO - Stage status fetched for products
+2026-06-06 19:53:39,852 - INFO - Stage status fetched for orders
+2026-06-06 19:53:39,940 - INFO - Check constraints created for customers
+2026-06-06 19:53:40,019 - INFO - Check constraints created for products
+2026-06-06 19:53:40,096 - INFO - Check constraints created for orders
+2026-06-06 19:53:40,140 - INFO - Stage status fetched for customers
+2026-06-06 19:53:40,140 - INFO - Stage status fetched for products
+2026-06-06 19:53:40,141 - INFO - Stage status fetched for orders
+2026-06-06 19:53:40,284 - INFO - Default values created for customers
+2026-06-06 19:53:40,416 - INFO - Default values created for products
+2026-06-06 19:53:40,547 - INFO - Default values created for orders
+2026-06-06 19:53:40,567 - INFO - Exported 1 triggers
+2026-06-06 19:53:40,629 - INFO - Exported 1 procedures
+2026-06-06 19:53:40,681 - INFO - Rollback script generated successfully
+2026-06-06 19:53:40,684 - INFO - Migration Completed
+2026-06-06 22:02:37,182 - INFO - Migration initialized: mssql -> PostgreSQL
+2026-06-06 22:02:37,187 - INFO - migration_status table created
+2026-06-06 22:02:37,187 - INFO - migration_stages table created
+2026-06-06 22:02:37,250 - INFO - Found 3 completed tables
+2026-06-06 22:02:37,254 - INFO - Stage status fetched for customers
+2026-06-06 22:02:37,255 - INFO - Stage status fetched for products
+2026-06-06 22:02:37,255 - INFO - Stage status fetched for orders
+2026-06-06 22:02:37,255 - INFO - Stage status fetched for customers
+2026-06-06 22:02:37,256 - INFO - Stage status fetched for products
+2026-06-06 22:02:37,256 - INFO - Stage status fetched for orders
+2026-06-06 22:02:37,256 - INFO - Stage status fetched for customers
+2026-06-06 22:02:37,257 - INFO - Stage status fetched for products
+2026-06-06 22:02:37,257 - INFO - Stage status fetched for orders
+2026-06-06 22:02:37,362 - INFO - Check constraints created for customers
+2026-06-06 22:02:37,466 - INFO - Check constraints created for products
+2026-06-06 22:02:37,533 - INFO - Check constraints created for orders
+2026-06-06 22:02:37,572 - INFO - Stage status fetched for customers
+2026-06-06 22:02:37,572 - INFO - Stage status fetched for products
+2026-06-06 22:02:37,573 - INFO - Stage status fetched for orders
+2026-06-06 22:02:37,757 - INFO - Default values created for customers
+2026-06-06 22:02:37,923 - INFO - Default values created for products
+2026-06-06 22:02:38,045 - INFO - Default values created for orders
+2026-06-06 22:02:38,086 - INFO - Exported 1 triggers
+2026-06-06 22:02:38,149 - INFO - Exported 1 procedures
+2026-06-06 22:02:38,201 - INFO - Rollback script generated successfully
+2026-06-06 22:03:51,414 - INFO - Migration initialized: mssql -> PostgreSQL
+2026-06-06 22:03:51,416 - INFO - migration_status table created
+2026-06-06 22:03:51,416 - INFO - migration_stages table created
+2026-06-06 22:03:51,473 - INFO - Found 3 completed tables
+2026-06-06 22:03:51,475 - INFO - Stage status fetched for customers
+2026-06-06 22:03:51,476 - INFO - Stage status fetched for products
+2026-06-06 22:03:51,477 - INFO - Stage status fetched for orders
+2026-06-06 22:03:51,478 - INFO - Stage status fetched for customers
+2026-06-06 22:03:51,478 - INFO - Stage status fetched for products
+2026-06-06 22:03:51,479 - INFO - Stage status fetched for orders
+2026-06-06 22:03:51,479 - INFO - Stage status fetched for customers
+2026-06-06 22:03:51,479 - INFO - Stage status fetched for products
+2026-06-06 22:03:51,480 - INFO - Stage status fetched for orders
+2026-06-06 22:03:51,583 - INFO - Check constraints created for customers
+2026-06-06 22:03:51,700 - INFO - Check constraints created for products
+2026-06-06 22:03:51,778 - INFO - Check constraints created for orders
+2026-06-06 22:03:51,814 - INFO - Stage status fetched for customers
+2026-06-06 22:03:51,814 - INFO - Stage status fetched for products
+2026-06-06 22:03:51,815 - INFO - Stage status fetched for orders
+2026-06-06 22:03:52,001 - INFO - Default values created for customers
+2026-06-06 22:03:52,173 - INFO - Default values created for products
+2026-06-06 22:03:52,309 - INFO - Default values created for orders
+2026-06-06 22:03:52,345 - INFO - Exported 1 triggers
+2026-06-06 22:03:52,411 - INFO - Exported 1 procedures
+2026-06-06 22:03:52,471 - INFO - Rollback script generated successfully
+2026-06-06 22:04:18,908 - INFO - Migration initialized: mssql -> PostgreSQL
+2026-06-06 22:04:18,909 - INFO - migration_status table created
+2026-06-06 22:04:18,910 - INFO - migration_stages table created
+2026-06-06 22:04:18,980 - INFO - Found 3 completed tables
+2026-06-06 22:04:18,982 - INFO - Stage status fetched for customers
+2026-06-06 22:04:18,983 - INFO - Stage status fetched for products
+2026-06-06 22:04:18,984 - INFO - Stage status fetched for orders
+2026-06-06 22:04:18,984 - INFO - Stage status fetched for customers
+2026-06-06 22:04:18,985 - INFO - Stage status fetched for products
+2026-06-06 22:04:18,987 - INFO - Stage status fetched for orders
+2026-06-06 22:04:18,988 - INFO - Stage status fetched for customers
+2026-06-06 22:04:18,988 - INFO - Stage status fetched for products
+2026-06-06 22:04:18,989 - INFO - Stage status fetched for orders
+2026-06-06 22:04:19,095 - INFO - Check constraints created for customers
+2026-06-06 22:04:19,163 - INFO - Check constraints created for products
+2026-06-06 22:04:19,231 - INFO - Check constraints created for orders
+2026-06-06 22:04:19,282 - INFO - Stage status fetched for customers
+2026-06-06 22:04:19,282 - INFO - Stage status fetched for products
+2026-06-06 22:04:19,283 - INFO - Stage status fetched for orders
+2026-06-06 22:04:19,419 - INFO - Default values created for customers
+2026-06-06 22:04:19,544 - INFO - Default values created for products
+2026-06-06 22:04:19,707 - INFO - Default values created for orders
+2026-06-06 22:04:19,726 - INFO - Exported 1 triggers
+2026-06-06 22:04:19,786 - INFO - Exported 1 procedures
+2026-06-06 22:04:19,834 - INFO - Rollback script generated successfully
+2026-06-06 22:05:06,465 - INFO - Migration initialized: mssql -> PostgreSQL
+2026-06-06 22:05:06,468 - INFO - migration_status table created
+2026-06-06 22:05:06,469 - INFO - migration_stages table created
+2026-06-06 22:05:06,479 - INFO - Found 3 completed tables
+2026-06-06 22:05:06,480 - INFO - Stage status fetched for customers
+2026-06-06 22:05:06,481 - INFO - Stage status fetched for products
+2026-06-06 22:05:06,481 - INFO - Stage status fetched for orders
+2026-06-06 22:05:06,482 - INFO - Stage status fetched for customers
+2026-06-06 22:05:06,483 - INFO - Stage status fetched for products
+2026-06-06 22:05:06,484 - INFO - Stage status fetched for orders
+2026-06-06 22:05:06,484 - INFO - Stage status fetched for customers
+2026-06-06 22:05:06,485 - INFO - Stage status fetched for products
+2026-06-06 22:05:06,486 - INFO - Stage status fetched for orders
+2026-06-06 22:05:06,491 - INFO - Check constraints created for customers
+2026-06-06 22:05:06,497 - INFO - Check constraints created for products
+2026-06-06 22:05:06,503 - INFO - Check constraints created for orders
+2026-06-06 22:05:06,512 - INFO - Stage status fetched for customers
+2026-06-06 22:05:06,513 - INFO - Stage status fetched for products
+2026-06-06 22:05:06,513 - INFO - Stage status fetched for orders
+2026-06-06 22:05:06,525 - INFO - Default values created for customers
+2026-06-06 22:05:06,536 - INFO - Default values created for products
+2026-06-06 22:05:06,546 - INFO - Default values created for orders
+2026-06-06 22:05:06,553 - INFO - Exported 1 triggers
+2026-06-06 22:05:06,564 - INFO - Exported 1 procedures
+2026-06-06 22:05:06,575 - INFO - Rollback script generated successfully
+2026-06-06 22:05:06,577 - INFO - Migration Completed
+2026-06-07 01:01:25,001 - INFO - Migration initialized: mssql -> PostgreSQL
+2026-06-07 01:01:25,003 - INFO - migration_status table created
+2026-06-07 01:01:25,003 - INFO - migration_stages table created
+2026-06-07 01:01:25,056 - INFO - Found 3 completed tables
+2026-06-07 01:01:25,058 - INFO - Stage status fetched for customers
+2026-06-07 01:01:25,059 - INFO - Stage status fetched for products
+2026-06-07 01:01:25,060 - INFO - Stage status fetched for orders
+2026-06-07 01:01:25,060 - INFO - Stage status fetched for customers
+2026-06-07 01:01:25,061 - INFO - Stage status fetched for products
+2026-06-07 01:01:25,062 - INFO - Stage status fetched for orders
+2026-06-07 01:01:25,063 - INFO - Stage status fetched for customers
+2026-06-07 01:01:25,064 - INFO - Stage status fetched for products
+2026-06-07 01:01:25,065 - INFO - Stage status fetched for orders
+2026-06-07 01:01:25,184 - INFO - Check constraints created for customers
+2026-06-07 01:01:25,270 - INFO - Check constraints created for products
+2026-06-07 01:01:25,351 - INFO - Check constraints created for orders
+2026-06-07 01:01:25,419 - INFO - Stage status fetched for customers
+2026-06-07 01:01:25,421 - INFO - Stage status fetched for products
+2026-06-07 01:01:25,422 - INFO - Stage status fetched for orders
+2026-06-07 01:01:25,592 - INFO - Default values created for customers
+2026-06-07 01:01:25,726 - INFO - Default values created for products
+2026-06-07 01:01:25,858 - INFO - Default values created for orders
+2026-06-07 01:01:25,874 - INFO - Exported 1 triggers
+2026-06-07 01:01:25,939 - INFO - Exported 1 procedures
+2026-06-07 01:01:25,993 - INFO - Rollback script generated successfully
+2026-06-07 01:01:26,029 - INFO - Migration Completed
+2026-06-07 01:05:15,990 - INFO - Migration initialized: mssql -> PostgreSQL
+2026-06-07 01:05:15,992 - INFO - migration_status table created
+2026-06-07 01:05:15,992 - INFO - migration_stages table created
+2026-06-07 01:05:16,061 - INFO - Found 3 completed tables
+2026-06-07 01:05:16,063 - INFO - Stage status fetched for customers
+2026-06-07 01:05:16,064 - INFO - Stage status fetched for products
+2026-06-07 01:05:16,064 - INFO - Stage status fetched for orders
+2026-06-07 01:05:16,065 - INFO - Stage status fetched for customers
+2026-06-07 01:05:16,065 - INFO - Stage status fetched for products
+2026-06-07 01:05:16,066 - INFO - Stage status fetched for orders
+2026-06-07 01:05:16,067 - INFO - Stage status fetched for customers
+2026-06-07 01:05:16,068 - INFO - Stage status fetched for products
+2026-06-07 01:05:16,069 - INFO - Stage status fetched for orders
+2026-06-07 01:05:16,181 - INFO - Check constraints created for customers
+2026-06-07 01:05:16,265 - INFO - Check constraints created for products
+2026-06-07 01:05:16,342 - INFO - Check constraints created for orders
+2026-06-07 01:05:16,385 - INFO - Stage status fetched for customers
+2026-06-07 01:05:16,387 - INFO - Stage status fetched for products
+2026-06-07 01:05:16,388 - INFO - Stage status fetched for orders
+2026-06-07 01:05:16,555 - INFO - Default values created for customers
+2026-06-07 01:05:16,684 - INFO - Default values created for products
+2026-06-07 01:05:16,816 - INFO - Default values created for orders
+2026-06-07 01:05:16,834 - INFO - Exported 1 triggers
+2026-06-07 01:05:16,914 - INFO - Exported 1 procedures
+2026-06-07 01:05:16,967 - INFO - Rollback script generated successfully
+2026-06-07 01:05:17,004 - INFO - Migration Completed

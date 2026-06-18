@@ -1,0 +1,26 @@
+[
+    {
+        "table": "customers",
+        "source_checksum": "2e1cfe71c839ddfc2fbc72f9d84867c5",
+        "target_checksum": "2e1cfe71c839ddfc2fbc72f9d84867c5",
+        "status": "PASS"
+    },
+    {
+        "table": "products",
+        "source_checksum": "3af49a01dfe23d5cb808308026736395",
+        "target_checksum": "3af49a01dfe23d5cb808308026736395",
+        "status": "PASS"
+    },
+    {
+        "table": "orders",
+        "source_checksum": "2f916e0b6ff341e1d8a21ff61d8927ba",
+        "target_checksum": "2f916e0b6ff341e1d8a21ff61d8927ba",
+        "status": "PASS"
+    },
+    {
+        "table": "ai_test",
+        "source_checksum": "6448ed0440603e423cf03335601ab9e6",
+        "target_checksum": "6448ed0440603e423cf03335601ab9e6",
+        "status": "PASS"
+    }
+]

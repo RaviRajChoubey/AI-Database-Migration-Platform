@@ -1,0 +1,6 @@
+[
+    {
+        "TRIGGER_NAME": "trg_customer_insert",
+        "TABLE_NAME": "customers"
+    }
+]
