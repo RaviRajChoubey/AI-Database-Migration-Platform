@@ -6463,3 +6463,16 @@
 2026-06-18 14:48:01,131 - INFO - Added job "run_scheduled_migration" to job store "default"
 2026-06-18 14:48:01,131 - INFO - Removed job job_20
 2026-06-18 14:48:01,138 - WARNING - Run time of job "run_scheduled_migration (trigger: date[2026-06-15 12:45:00 IST], next run at: 2026-06-15 12:45:00 IST)" was missed by 3 days, 2:03:01.138504
+2026-06-18 14:53:22,487 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-18 14:53:22,488 - INFO - Added job "test_job" to job store "default"
+2026-06-18 14:53:22,488 - INFO - Scheduler started
+2026-06-18 14:53:22,561 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-06-18 14:53:22,561 - WARNING - Run time of job "run_scheduled_migration (trigger: date[2026-06-15 12:02:00 IST], next run at: 2026-06-15 12:02:00 IST)" was missed by 3 days, 2:51:22.561688
+2026-06-18 14:53:22,561 - INFO - Removed job job_17
+2026-06-18 14:53:22,562 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-06-18 14:53:22,562 - INFO - Removed job job_18
+2026-06-18 14:53:22,562 - WARNING - Run time of job "run_scheduled_migration (trigger: date[2026-06-15 12:07:00 IST], next run at: 2026-06-15 12:07:00 IST)" was missed by 3 days, 2:46:22.562500
+2026-06-18 14:53:22,567 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-06-18 14:53:22,568 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-06-18 14:53:22,568 - INFO - Removed job job_20
+2026-06-18 14:53:22,568 - WARNING - Run time of job "run_scheduled_migration (trigger: date[2026-06-15 12:45:00 IST], next run at: 2026-06-15 12:45:00 IST)" was missed by 3 days, 2:08:22.568614
