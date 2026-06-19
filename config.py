@@ -1,3 +1,8 @@
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
 SOURCE_DB = {
     "type": "mssql",
     "host": "localhost\\MSSQLSERVER01",
@@ -6,10 +11,9 @@ SOURCE_DB = {
 }
 
 TARGET_DB = {
-    "host": "ep-muddy-rain-aoftgafo-pooler.c-2.ap-southeast-1.aws.neon.tech",
-    "port": 5432,
-    "user": "neondb_owner",
-    "password": "npg_pvg0wBQkOyc7",
-    "database": "neondb",
-    "sslmode": "require"
+    "host": os.getenv("NEON_HOST"),
+    "port": int(os.getenv("NEON_PORT")),
+    "user": os.getenv("NEON_USER"),
+    "password": os.getenv("NEON_PASSWORD"),
+    "database": os.getenv("NEON_DATABASE")
 }

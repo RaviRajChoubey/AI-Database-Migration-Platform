@@ -7197,3 +7197,112 @@
 2026-06-19 12:00:12,808 - INFO - Migration Completed
 2026-06-19 12:00:13,952 - INFO - Job "run_scheduled_migration (trigger: cron[hour='12', minute='0'], next run at: 2026-06-20 12:00:00 IST)" executed successfully
 2026-06-19 12:00:14,138 - INFO - Job "run_scheduled_migration (trigger: cron[hour='12', minute='0'], next run at: 2026-06-20 12:00:00 IST)" executed successfully
+2026-06-19 12:04:23,640 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-19 12:04:23,641 - INFO - Added job "test_job" to job store "default"
+2026-06-19 12:04:23,641 - INFO - Scheduler started
+2026-06-19 12:04:25,913 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-06-19 12:04:26,560 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-19 12:04:26,562 - INFO - Added job "test_job" to job store "default"
+2026-06-19 12:04:26,562 - INFO - Scheduler started
+2026-06-19 12:04:29,197 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-06-19 12:15:26,777 - INFO - Migration initialized: mssql -> PostgreSQL
+2026-06-19 12:15:35,497 - INFO - migration_status table created
+2026-06-19 12:15:35,781 - INFO - migration_stages table created
+2026-06-19 12:15:36,234 - INFO - Found 4 completed tables
+2026-06-19 12:15:36,341 - INFO - Stage status fetched for customers
+2026-06-19 12:15:36,505 - INFO - Stage status fetched for products
+2026-06-19 12:15:36,657 - INFO - Stage status fetched for orders
+2026-06-19 12:15:36,923 - INFO - Stage status fetched for ai_test
+2026-06-19 12:15:37,132 - INFO - Stage status fetched for customers
+2026-06-19 12:15:37,334 - INFO - Stage status fetched for products
+2026-06-19 12:15:37,512 - INFO - Stage status fetched for orders
+2026-06-19 12:15:37,613 - INFO - Stage status fetched for ai_test
+2026-06-19 12:15:37,772 - INFO - Stage status fetched for customers
+2026-06-19 12:15:37,942 - INFO - Stage status fetched for products
+2026-06-19 12:15:38,153 - INFO - Stage status fetched for orders
+2026-06-19 12:15:38,282 - INFO - Stage status fetched for ai_test
+2026-06-19 12:15:38,553 - INFO - Check constraints created for customers
+2026-06-19 12:15:38,981 - INFO - Check constraints created for products
+2026-06-19 12:15:39,077 - INFO - Check constraints created for orders
+2026-06-19 12:15:39,157 - INFO - Check constraints created for ai_test
+2026-06-19 12:15:40,021 - INFO - Stage status fetched for customers
+2026-06-19 12:15:40,168 - INFO - Stage status fetched for products
+2026-06-19 12:15:40,322 - INFO - Stage status fetched for orders
+2026-06-19 12:15:40,474 - INFO - Stage status fetched for ai_test
+2026-06-19 12:15:40,908 - INFO - Default values created for customers
+2026-06-19 12:15:41,067 - INFO - Default values created for products
+2026-06-19 12:15:41,192 - INFO - Default values created for orders
+2026-06-19 12:15:41,330 - INFO - Default values created for ai_test
+2026-06-19 12:15:41,347 - INFO - Exported 1 triggers
+2026-06-19 12:15:41,418 - INFO - Exported 1 procedures
+2026-06-19 12:15:41,471 - INFO - Rollback script generated successfully
+2026-06-19 12:15:47,659 - INFO - Migration Completed
+2026-06-19 12:24:57,464 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-06-19 12:24:57,474 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-06-19 12:26:00,009 - INFO - Running job "run_scheduled_migration (trigger: date[2026-06-19 12:26:00 IST], next run at: 2026-06-19 12:26:00 IST)" (scheduled at 2026-06-19 12:26:00+05:30)
+2026-06-19 12:26:00,010 - INFO - Removed job job_8
+2026-06-19 12:26:01,498 - INFO - Migration initialized: mssql -> PostgreSQL
+2026-06-19 12:26:05,293 - INFO - migration_status table created
+2026-06-19 12:26:05,815 - INFO - migration_stages table created
+2026-06-19 12:26:06,350 - INFO - Found 4 completed tables
+2026-06-19 12:26:06,540 - INFO - Stage status fetched for customers
+2026-06-19 12:26:06,693 - INFO - Stage status fetched for products
+2026-06-19 12:26:06,927 - INFO - Stage status fetched for orders
+2026-06-19 12:26:07,072 - INFO - Stage status fetched for ai_test
+2026-06-19 12:26:07,187 - INFO - Stage status fetched for customers
+2026-06-19 12:26:07,306 - INFO - Stage status fetched for products
+2026-06-19 12:26:07,407 - INFO - Stage status fetched for orders
+2026-06-19 12:26:07,513 - INFO - Stage status fetched for ai_test
+2026-06-19 12:26:07,615 - INFO - Stage status fetched for customers
+2026-06-19 12:26:07,815 - INFO - Stage status fetched for products
+2026-06-19 12:26:08,122 - INFO - Stage status fetched for orders
+2026-06-19 12:26:08,291 - INFO - Stage status fetched for ai_test
+2026-06-19 12:26:08,503 - INFO - Check constraints created for customers
+2026-06-19 12:26:09,362 - INFO - Check constraints created for products
+2026-06-19 12:26:09,453 - INFO - Check constraints created for orders
+2026-06-19 12:26:09,519 - INFO - Check constraints created for ai_test
+2026-06-19 12:26:10,251 - INFO - Stage status fetched for customers
+2026-06-19 12:26:10,422 - INFO - Stage status fetched for products
+2026-06-19 12:26:10,538 - INFO - Stage status fetched for orders
+2026-06-19 12:26:10,662 - INFO - Stage status fetched for ai_test
+2026-06-19 12:26:11,165 - INFO - Default values created for customers
+2026-06-19 12:26:11,293 - INFO - Default values created for products
+2026-06-19 12:26:11,443 - INFO - Default values created for orders
+2026-06-19 12:26:11,552 - INFO - Default values created for ai_test
+2026-06-19 12:26:11,571 - INFO - Exported 1 triggers
+2026-06-19 12:26:11,637 - INFO - Exported 1 procedures
+2026-06-19 12:26:11,688 - INFO - Rollback script generated successfully
+2026-06-19 12:26:15,913 - INFO - Migration Completed
+2026-06-19 12:26:17,340 - INFO - Job "run_scheduled_migration (trigger: date[2026-06-19 12:26:00 IST], next run at: 2026-06-19 12:26:00 IST)" executed successfully
+2026-06-19 12:28:48,165 - INFO - Migration initialized: mssql -> PostgreSQL
+2026-06-19 12:28:50,773 - INFO - migration_status table created
+2026-06-19 12:28:51,121 - INFO - migration_stages table created
+2026-06-19 12:28:51,312 - INFO - Found 4 completed tables
+2026-06-19 12:28:51,411 - INFO - Stage status fetched for customers
+2026-06-19 12:28:51,512 - INFO - Stage status fetched for products
+2026-06-19 12:28:51,621 - INFO - Stage status fetched for orders
+2026-06-19 12:28:51,743 - INFO - Stage status fetched for ai_test
+2026-06-19 12:28:51,856 - INFO - Stage status fetched for customers
+2026-06-19 12:28:52,030 - INFO - Stage status fetched for products
+2026-06-19 12:28:52,149 - INFO - Stage status fetched for orders
+2026-06-19 12:28:52,250 - INFO - Stage status fetched for ai_test
+2026-06-19 12:28:52,550 - INFO - Stage status fetched for customers
+2026-06-19 12:28:52,849 - INFO - Stage status fetched for products
+2026-06-19 12:28:53,023 - INFO - Stage status fetched for orders
+2026-06-19 12:28:53,181 - INFO - Stage status fetched for ai_test
+2026-06-19 12:28:53,417 - INFO - Check constraints created for customers
+2026-06-19 12:28:53,895 - INFO - Check constraints created for products
+2026-06-19 12:28:53,978 - INFO - Check constraints created for orders
+2026-06-19 12:28:54,041 - INFO - Check constraints created for ai_test
+2026-06-19 12:28:54,860 - INFO - Stage status fetched for customers
+2026-06-19 12:28:55,113 - INFO - Stage status fetched for products
+2026-06-19 12:28:55,267 - INFO - Stage status fetched for orders
+2026-06-19 12:28:55,369 - INFO - Stage status fetched for ai_test
+2026-06-19 12:28:55,678 - INFO - Default values created for customers
+2026-06-19 12:28:55,767 - INFO - Default values created for products
+2026-06-19 12:28:55,887 - INFO - Default values created for orders
+2026-06-19 12:28:56,001 - INFO - Default values created for ai_test
+2026-06-19 12:28:56,038 - INFO - Exported 1 triggers
+2026-06-19 12:28:56,094 - INFO - Exported 1 procedures
+2026-06-19 12:28:56,134 - INFO - Rollback script generated successfully
+2026-06-19 12:28:59,775 - INFO - Migration Completed
