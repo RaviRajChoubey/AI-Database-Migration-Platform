@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import { FaHistory } from "react-icons/fa";
 
-import { getHistory }
-    from "../services/api";
+import { getMigrationHistory } from "../services/api";
 
 function MigrationHistory() {
 
@@ -19,10 +18,10 @@ function MigrationHistory() {
 
         try {
 
-            const data =
-                await getHistory();
+            const data = await getMigrationHistory();
 
             console.log(data);
+
             setHistory(data);
 
         }
@@ -166,61 +165,30 @@ function MigrationHistory() {
                                 (item) => (
 
                                     <tr
-                                        key={item.id}
+                                        key={item.audit_id}
                                         style={{
-                                            borderBottom:
-                                                "1px solid #1e3a5f"
+                                            borderBottom: "1px solid #1e3a5f"
                                         }}
                                     >
 
-                                        <td
-                                            style={{
-                                                padding: "12px",
-                                                textAlign: "center",
-                                                fontSize: "24px"
-                                            }}
-                                        >
-                                            {item.id}
+                                        <td style={{ padding: "12px", textAlign: "center", fontSize: "24px" }}>
+                                            {item.audit_id}
                                         </td>
 
-                                        <td
-                                            style={{
-                                                padding: "12px",
-                                                textAlign: "center",
-                                                fontSize: "24px"
-                                            }}
-                                        >
+                                        <td style={{ padding: "12px", textAlign: "center", fontSize: "24px" }}>
                                             {item.source_db}
                                         </td>
 
-                                        <td
-                                            style={{
-                                                padding: "12px",
-                                                textAlign: "center",
-                                                fontSize: "24px"
-                                            }}
-                                        >
+                                        <td style={{ padding: "12px", textAlign: "center", fontSize: "24px" }}>
                                             {item.target_db}
                                         </td>
 
-                                        <td
-                                            style={{
-                                                padding: "12px",
-                                                textAlign: "center",
-                                                fontSize: "24px"
-                                            }}
-                                        >
-                                            {item.tables_count}
+                                        <td style={{ padding: "12px", textAlign: "center", fontSize: "24px" }}>
+                                            {item.tables_processed}
                                         </td>
 
-                                        <td
-                                            style={{
-                                                padding: "12px",
-                                                textAlign: "center",
-                                                fontSize: "24px"
-                                            }}
-                                        >
-                                            {item.rows_count}
+                                        <td style={{ padding: "12px", textAlign: "center", fontSize: "24px" }}>
+                                            {item.rows_processed}
                                         </td>
 
                                         <td
@@ -229,23 +197,17 @@ function MigrationHistory() {
                                                 textAlign: "center",
                                                 fontWeight: "700",
                                                 color:
-                                                    item.status === "SUCCESS"
+                                                    item.validation_status === "PASSED"
                                                         ? "#22c55e"
                                                         : "#ef4444",
                                                 fontSize: "24px"
                                             }}
                                         >
-                                            {item.status}
+                                            {item.validation_status}
                                         </td>
 
-                                        <td
-                                            style={{
-                                                padding: "12px",
-                                                textAlign: "center",
-                                                fontSize: "24px"
-                                            }}
-                                        >
-                                            {item.migration_time}
+                                        <td style={{ padding: "12px", textAlign: "center", fontSize: "24px" }}>
+                                            {new Date(item.completed_at).toLocaleString()}
                                         </td>
 
                                     </tr>

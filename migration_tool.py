@@ -23,11 +23,12 @@ class MigrationTool:
         self.config = config
 
         self.pg_conn = psycopg2.connect(
-            host=config["targetHost"],
-            port=5432,
-            user=config["targetUser"],
-            password=config["targetPassword"],
-            dbname=config["targetDatabase"]
+            host=TARGET_DB["host"],
+            port=TARGET_DB["port"],
+            database=TARGET_DB["database"],
+            user=TARGET_DB["user"],
+            password=TARGET_DB["password"],
+            sslmode="require"
         )
 
         self.source = get_adapter(
@@ -2166,47 +2167,41 @@ class MigrationTool:
                 f"Function export failed: {e}"
             )
 
+    from datetime import datetime
+
     def save_history(
-    self,
-    tables_count,
-    rows_count,
-    status
-):
+        self,
+        rows_count,
+        status,
+        start_time,
+        end_time
+    ):
 
         cursor = self.pg_conn.cursor()
 
         cursor.execute(
-
             """
-
             INSERT INTO migration_history(
-
-                source_db,
-                target_db,
-                tables_count,
-                rows_count,
-                status
-
+                source,
+                target,
+                status,
+                rows_migrated,
+                started_at,
+                completed_at
             )
-
-            VALUES (%s,%s,%s,%s,%s)
-
+            VALUES (%s,%s,%s,%s,%s,%s)
             """,
-
             (
-
                 SOURCE_DB["type"],
                 "postgresql",
-                tables_count,
+                status,
                 rows_count,
-                status
-
+                start_time,
+                end_time
             )
-
         )
 
         self.pg_conn.commit()
-
         cursor.close()
 
     def create_unique_constraints(self, table):
@@ -3064,13 +3059,10 @@ class MigrationTool:
         print("PG CONNECTION STATUS:", self.pg_conn.closed)
         
         self.save_history(
-
-            len(tables),
-
             total_rows,
-
-            "SUCCESS"
-
+            "SUCCESS",
+            start_time,
+            end_time
         )
         print("SAVE HISTORY COMPLETED")
         print("\nMigration Completed")

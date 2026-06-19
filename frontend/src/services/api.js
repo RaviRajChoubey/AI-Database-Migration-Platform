@@ -95,15 +95,6 @@ export const getSchemaAnalysis =
         return response.data;
     };
 
-export const getHistory = async () => {
-
-    const response = await axios.get(
-        `${API_URL}/migration/history`
-    );
-
-    return response.data;
-};
-
 export const getValidationReport = async () => {
     const response = await fetch(
         "http://localhost:8000/migration/validation-report"

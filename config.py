@@ -6,9 +6,10 @@ SOURCE_DB = {
 }
 
 TARGET_DB = {
-    "host": "localhost",
+    "host": "ep-muddy-rain-aoftgafo-pooler.c-2.ap-southeast-1.aws.neon.tech",
     "port": 5432,
-    "user": "postgres",
-    "password": "R@viR@j1234",
-    "database": "target_db"
+    "user": "neondb_owner",
+    "password": "npg_pvg0wBQkOyc7",
+    "database": "neondb",
+    "sslmode": "require"
 }

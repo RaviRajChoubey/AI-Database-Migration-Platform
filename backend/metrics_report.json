@@ -1,7 +1,7 @@
 {
-    "migration_duration_seconds": 0.468714,
+    "migration_duration_seconds": 10.894133,
     "rows_migrated": 7,
     "tables_processed": 4,
     "failed_tables": 0,
-    "rows_per_second": 14.93
+    "rows_per_second": 0.64
 }

@@ -6,7 +6,9 @@ def get_pg_connection():
 
     return psycopg2.connect(
         host=TARGET_DB["host"],
+        port=TARGET_DB["port"],
         database=TARGET_DB["database"],
         user=TARGET_DB["user"],
-        password=TARGET_DB["password"]
+        password=TARGET_DB["password"],
+        sslmode="require"
     )

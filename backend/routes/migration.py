@@ -305,13 +305,12 @@ def get_progress():
 def get_history():
 
     conn = psycopg2.connect(
-
         host=TARGET_DB["host"],
         port=TARGET_DB["port"],
+        database=TARGET_DB["database"],
         user=TARGET_DB["user"],
         password=TARGET_DB["password"],
-        dbname=TARGET_DB["database"]
-
+        sslmode="require"
     )
 
     cursor = conn.cursor()
@@ -390,12 +389,13 @@ def reset_table(table_name: str):
 
     try:
 
-        conn = psycopg2.connect(
+        conn=psycopg2.connect(
             host=TARGET_DB["host"],
             port=TARGET_DB["port"],
+            database=TARGET_DB["database"],
             user=TARGET_DB["user"],
             password=TARGET_DB["password"],
-            dbname=TARGET_DB["database"]
+            sslmode="require"
         )
 
         cursor = conn.cursor()
@@ -674,61 +674,38 @@ def download_reconciliation():
 def get_migration_history():
 
     conn = get_pg_connection()
-
     cursor = conn.cursor()
 
     cursor.execute(
-
         """
-
         SELECT
-
             audit_id,
-
             source_db,
-
             target_db,
-
             tables_processed,
-
             rows_processed,
-
             validation_status,
-
             started_at,
-
             completed_at
-
         FROM migration_audit_trail
-
         ORDER BY audit_id DESC
-
         LIMIT 20
-
         """
-
     )
 
     rows = cursor.fetchall()
 
     columns = [
-
         desc[0]
-
         for desc in cursor.description
-
     ]
 
     result = [
-
         dict(zip(columns, row))
-
         for row in rows
-
     ]
 
     cursor.close()
-
     conn.close()
 
     return result
@@ -739,12 +716,12 @@ def create_schedule(
 ):
 
     conn = psycopg2.connect(
-
         host=TARGET_DB["host"],
+        port=TARGET_DB["port"],
         database=TARGET_DB["database"],
         user=TARGET_DB["user"],
-        password=TARGET_DB["password"]
-
+        password=TARGET_DB["password"],
+        sslmode="require"
     )
 
     cursor = conn.cursor()
@@ -804,12 +781,12 @@ def create_schedule(
 def get_schedules():
 
     conn = psycopg2.connect(
-
         host=TARGET_DB["host"],
+        port=TARGET_DB["port"],
         database=TARGET_DB["database"],
         user=TARGET_DB["user"],
-        password=TARGET_DB["password"]
-
+        password=TARGET_DB["password"],
+        sslmode="require"
     )
 
     cursor = conn.cursor()
@@ -860,12 +837,12 @@ def delete_schedule(
 ):
 
     conn = psycopg2.connect(
-
         host=TARGET_DB["host"],
+        port=TARGET_DB["port"],
         database=TARGET_DB["database"],
         user=TARGET_DB["user"],
-        password=TARGET_DB["password"]
-
+        password=TARGET_DB["password"],
+        sslmode="require"
     )
 
     cursor = conn.cursor()
@@ -904,12 +881,12 @@ def toggle_schedule(
 ):
 
     conn = psycopg2.connect(
-
         host=TARGET_DB["host"],
+        port=TARGET_DB["port"],
         database=TARGET_DB["database"],
         user=TARGET_DB["user"],
-        password=TARGET_DB["password"]
-
+        password=TARGET_DB["password"],
+        sslmode="require"
     )
 
     cursor = conn.cursor()
@@ -950,12 +927,12 @@ def save_profile(
 ):
 
     conn = psycopg2.connect(
-
         host=TARGET_DB["host"],
+        port=TARGET_DB["port"],
         database=TARGET_DB["database"],
         user=TARGET_DB["user"],
-        password=TARGET_DB["password"]
-
+        password=TARGET_DB["password"],
+        sslmode="require"
     )
 
     cursor = conn.cursor()
@@ -1024,91 +1001,55 @@ def save_profile(
 def get_scheduler_logs():
 
     conn = psycopg2.connect(
-
         host=TARGET_DB["host"],
+        port=TARGET_DB["port"],
         database=TARGET_DB["database"],
         user=TARGET_DB["user"],
-        password=TARGET_DB["password"]
-
+        password=TARGET_DB["password"],
+        sslmode="require"
     )
 
     cursor = conn.cursor()
 
-    cursor.execute(
-
-        """
-
-        SELECT *
-
-        FROM scheduler_execution_log
-
-        ORDER BY execution_id DESC
-
-        """
-
-    )
-
-    rows = cursor.fetchall()
-
-    cursor.close()
-
-    conn.close()
-
-    return rows
-
-@router.get("/scheduler/logs")
-def get_scheduler_logs():
-
-    conn = psycopg2.connect(
-
-        host=TARGET_DB["host"],
-        database=TARGET_DB["database"],
-        user=TARGET_DB["user"],
-        password=TARGET_DB["password"]
-
-    )
-
-    cursor = conn.cursor()
-
-    cursor.execute(
-
-        """
-
+    cursor.execute("""
         SELECT
-
             execution_id,
             schedule_id,
             execution_time,
             status,
             duration_seconds,
             error_message
-
         FROM scheduler_execution_log
-
         ORDER BY execution_id DESC
-
-        """
-
-    )
+    """)
 
     rows = cursor.fetchall()
 
-    cursor.close()
+    columns = [
+        desc[0]
+        for desc in cursor.description
+    ]
 
+    result = [
+        dict(zip(columns, row))
+        for row in rows
+    ]
+
+    cursor.close()
     conn.close()
 
-    return rows
+    return result
 
 @router.get("/profiles")
 def get_profiles():
 
     conn = psycopg2.connect(
-
         host=TARGET_DB["host"],
+        port=TARGET_DB["port"],
         database=TARGET_DB["database"],
         user=TARGET_DB["user"],
-        password=TARGET_DB["password"]
-
+        password=TARGET_DB["password"],
+        sslmode="require"
     )
 
     cursor = conn.cursor()

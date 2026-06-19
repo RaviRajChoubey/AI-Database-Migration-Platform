@@ -16,6 +16,40 @@ from datetime import datetime
 
 scheduler = BackgroundScheduler()
 
+def create_scheduler_table():
+
+    conn = psycopg2.connect(
+        host=TARGET_DB["host"],
+        port=TARGET_DB["port"],
+        database=TARGET_DB["database"],
+        user=TARGET_DB["user"],
+        password=TARGET_DB["password"],
+        sslmode="require"
+    )
+
+    cursor = conn.cursor()
+
+    cursor.execute("""
+    CREATE TABLE IF NOT EXISTS migration_scheduler (
+
+        schedule_id SERIAL PRIMARY KEY,
+        schedule_name VARCHAR(255),
+        schedule_type VARCHAR(50),
+        scheduled_date DATE,
+        scheduled_time TIME,
+        weekday VARCHAR(20),
+        retry_count INTEGER DEFAULT 0,
+        profile_id INTEGER,
+        is_active BOOLEAN DEFAULT TRUE
+
+    );
+    """)
+
+    conn.commit()
+
+    cursor.close()
+    conn.close()
+
 
 def test_job():
 
@@ -137,12 +171,12 @@ def run_scheduled_migration(
 def load_schedules():
 
     conn = psycopg2.connect(
-
         host=TARGET_DB["host"],
+        port=TARGET_DB["port"],
         database=TARGET_DB["database"],
         user=TARGET_DB["user"],
-        password=TARGET_DB["password"]
-
+        password=TARGET_DB["password"],
+        sslmode=TARGET_DB["sslmode"]
     )
 
     cursor = conn.cursor()
@@ -186,12 +220,12 @@ def save_execution_log(
 ):
 
     conn = psycopg2.connect(
-
         host=TARGET_DB["host"],
+        port=TARGET_DB["port"],
         database=TARGET_DB["database"],
         user=TARGET_DB["user"],
-        password=TARGET_DB["password"]
-
+        password=TARGET_DB["password"],
+        sslmode="require"
     )
 
     cursor = conn.cursor()
@@ -480,5 +514,5 @@ print("STARTING APSCHEDULER")
 scheduler.start()
 
 print("CALLING REGISTER_JOBS")
-
+create_scheduler_table()
 register_jobs()

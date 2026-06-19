@@ -6476,3 +6476,724 @@
 2026-06-18 14:53:22,568 - INFO - Added job "run_scheduled_migration" to job store "default"
 2026-06-18 14:53:22,568 - INFO - Removed job job_20
 2026-06-18 14:53:22,568 - WARNING - Run time of job "run_scheduled_migration (trigger: date[2026-06-15 12:45:00 IST], next run at: 2026-06-15 12:45:00 IST)" was missed by 3 days, 2:08:22.568614
+2026-06-18 15:56:59,766 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-18 15:56:59,767 - INFO - Added job "test_job" to job store "default"
+2026-06-18 15:56:59,767 - INFO - Scheduler started
+2026-06-18 15:57:03,332 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-18 15:57:03,333 - INFO - Added job "test_job" to job store "default"
+2026-06-18 15:57:03,334 - INFO - Scheduler started
+2026-06-18 15:57:05,916 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-18 15:57:05,917 - INFO - Added job "test_job" to job store "default"
+2026-06-18 15:57:05,918 - INFO - Scheduler started
+2026-06-18 15:57:10,559 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-18 15:57:10,560 - INFO - Added job "test_job" to job store "default"
+2026-06-18 15:57:10,561 - INFO - Scheduler started
+2026-06-18 15:57:14,962 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-18 15:57:14,963 - INFO - Added job "test_job" to job store "default"
+2026-06-18 15:57:14,963 - INFO - Scheduler started
+2026-06-18 15:57:17,303 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-18 15:57:17,304 - INFO - Added job "test_job" to job store "default"
+2026-06-18 15:57:17,304 - INFO - Scheduler started
+2026-06-18 15:57:19,899 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-18 15:57:19,900 - INFO - Added job "test_job" to job store "default"
+2026-06-18 15:57:19,901 - INFO - Scheduler started
+2026-06-18 15:57:22,516 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-18 15:57:22,517 - INFO - Added job "test_job" to job store "default"
+2026-06-18 15:57:22,518 - INFO - Scheduler started
+2026-06-18 15:57:30,589 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-18 15:57:30,589 - INFO - Added job "test_job" to job store "default"
+2026-06-18 15:57:30,590 - INFO - Scheduler started
+2026-06-18 15:57:38,725 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-18 15:57:38,726 - INFO - Added job "test_job" to job store "default"
+2026-06-18 15:57:38,726 - INFO - Scheduler started
+2026-06-18 15:57:45,223 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-18 15:57:45,224 - INFO - Added job "test_job" to job store "default"
+2026-06-18 15:57:45,224 - INFO - Scheduler started
+2026-06-18 15:57:54,652 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-18 15:57:54,654 - INFO - Added job "test_job" to job store "default"
+2026-06-18 15:57:54,654 - INFO - Scheduler started
+2026-06-18 15:58:35,697 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-18 15:58:35,697 - INFO - Added job "test_job" to job store "default"
+2026-06-18 15:58:35,698 - INFO - Scheduler started
+2026-06-18 15:58:53,419 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-18 15:58:53,420 - INFO - Added job "test_job" to job store "default"
+2026-06-18 15:58:53,420 - INFO - Scheduler started
+2026-06-18 15:58:58,270 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-18 15:58:58,271 - INFO - Added job "test_job" to job store "default"
+2026-06-18 15:58:58,271 - INFO - Scheduler started
+2026-06-18 15:59:01,636 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-18 15:59:01,637 - INFO - Added job "test_job" to job store "default"
+2026-06-18 15:59:01,637 - INFO - Scheduler started
+2026-06-18 15:59:04,017 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-18 15:59:04,018 - INFO - Added job "test_job" to job store "default"
+2026-06-18 15:59:04,019 - INFO - Scheduler started
+2026-06-18 15:59:06,823 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-18 15:59:06,824 - INFO - Added job "test_job" to job store "default"
+2026-06-18 15:59:06,824 - INFO - Scheduler started
+2026-06-18 15:59:09,073 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-18 15:59:09,074 - INFO - Added job "test_job" to job store "default"
+2026-06-18 15:59:09,074 - INFO - Scheduler started
+2026-06-18 15:59:20,869 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-18 15:59:20,870 - INFO - Added job "test_job" to job store "default"
+2026-06-18 15:59:20,870 - INFO - Scheduler started
+2026-06-18 15:59:23,452 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-18 15:59:23,453 - INFO - Added job "test_job" to job store "default"
+2026-06-18 15:59:23,454 - INFO - Scheduler started
+2026-06-18 15:59:26,472 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-18 15:59:26,473 - INFO - Added job "test_job" to job store "default"
+2026-06-18 15:59:26,473 - INFO - Scheduler started
+2026-06-18 16:00:03,182 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-18 16:00:03,183 - INFO - Added job "test_job" to job store "default"
+2026-06-18 16:00:03,183 - INFO - Scheduler started
+2026-06-18 16:00:10,001 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-18 16:00:10,002 - INFO - Added job "test_job" to job store "default"
+2026-06-18 16:00:10,002 - INFO - Scheduler started
+2026-06-18 16:00:16,472 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-18 16:00:16,473 - INFO - Added job "test_job" to job store "default"
+2026-06-18 16:00:16,473 - INFO - Scheduler started
+2026-06-18 16:00:26,202 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-18 16:00:26,203 - INFO - Added job "test_job" to job store "default"
+2026-06-18 16:00:26,203 - INFO - Scheduler started
+2026-06-18 16:00:29,512 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-18 16:00:29,514 - INFO - Added job "test_job" to job store "default"
+2026-06-18 16:00:29,515 - INFO - Scheduler started
+2026-06-18 16:00:36,484 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-18 16:00:36,485 - INFO - Added job "test_job" to job store "default"
+2026-06-18 16:00:36,485 - INFO - Scheduler started
+2026-06-18 16:00:42,545 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-18 16:00:42,546 - INFO - Added job "test_job" to job store "default"
+2026-06-18 16:00:42,546 - INFO - Scheduler started
+2026-06-18 16:00:45,637 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-18 16:00:45,637 - INFO - Added job "test_job" to job store "default"
+2026-06-18 16:00:45,638 - INFO - Scheduler started
+2026-06-18 16:00:54,131 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-18 16:00:54,132 - INFO - Added job "test_job" to job store "default"
+2026-06-18 16:00:54,132 - INFO - Scheduler started
+2026-06-18 16:01:05,577 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-18 16:01:05,579 - INFO - Added job "test_job" to job store "default"
+2026-06-18 16:01:05,579 - INFO - Scheduler started
+2026-06-18 16:01:09,977 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-18 16:01:09,977 - INFO - Added job "test_job" to job store "default"
+2026-06-18 16:01:09,978 - INFO - Scheduler started
+2026-06-18 16:01:16,501 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-18 16:01:16,503 - INFO - Added job "test_job" to job store "default"
+2026-06-18 16:01:16,503 - INFO - Scheduler started
+2026-06-18 16:01:19,156 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-18 16:01:19,157 - INFO - Added job "test_job" to job store "default"
+2026-06-18 16:01:19,157 - INFO - Scheduler started
+2026-06-18 16:01:23,512 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-18 16:01:23,513 - INFO - Added job "test_job" to job store "default"
+2026-06-18 16:01:23,513 - INFO - Scheduler started
+2026-06-18 16:01:26,165 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-18 16:01:26,166 - INFO - Added job "test_job" to job store "default"
+2026-06-18 16:01:26,166 - INFO - Scheduler started
+2026-06-18 16:01:30,532 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-18 16:01:30,533 - INFO - Added job "test_job" to job store "default"
+2026-06-18 16:01:30,533 - INFO - Scheduler started
+2026-06-18 16:01:39,142 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-18 16:01:39,143 - INFO - Added job "test_job" to job store "default"
+2026-06-18 16:01:39,143 - INFO - Scheduler started
+2026-06-18 16:01:41,757 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-18 16:01:41,758 - INFO - Added job "test_job" to job store "default"
+2026-06-18 16:01:41,758 - INFO - Scheduler started
+2026-06-18 16:01:45,916 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-18 16:01:45,917 - INFO - Added job "test_job" to job store "default"
+2026-06-18 16:01:45,918 - INFO - Scheduler started
+2026-06-18 16:01:51,889 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-18 16:01:51,890 - INFO - Added job "test_job" to job store "default"
+2026-06-18 16:01:51,890 - INFO - Scheduler started
+2026-06-18 16:01:54,620 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-18 16:01:54,621 - INFO - Added job "test_job" to job store "default"
+2026-06-18 16:01:54,621 - INFO - Scheduler started
+2026-06-18 16:02:00,107 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-18 16:02:00,108 - INFO - Added job "test_job" to job store "default"
+2026-06-18 16:02:00,108 - INFO - Scheduler started
+2026-06-18 16:27:11,001 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-18 16:27:11,003 - INFO - Added job "test_job" to job store "default"
+2026-06-18 16:27:11,003 - INFO - Scheduler started
+2026-06-18 16:27:29,168 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-18 16:27:29,169 - INFO - Added job "test_job" to job store "default"
+2026-06-18 16:27:29,169 - INFO - Scheduler started
+2026-06-18 16:33:29,580 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-18 16:33:29,581 - INFO - Added job "test_job" to job store "default"
+2026-06-18 16:33:29,581 - INFO - Scheduler started
+2026-06-18 16:33:32,953 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-18 16:33:32,954 - INFO - Added job "test_job" to job store "default"
+2026-06-18 16:33:32,954 - INFO - Scheduler started
+2026-06-18 16:33:56,931 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-18 16:33:56,932 - INFO - Added job "test_job" to job store "default"
+2026-06-18 16:33:56,932 - INFO - Scheduler started
+2026-06-18 16:34:00,736 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-18 16:34:00,737 - INFO - Added job "test_job" to job store "default"
+2026-06-18 16:34:00,737 - INFO - Scheduler started
+2026-06-18 16:34:05,564 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-18 16:34:05,565 - INFO - Added job "test_job" to job store "default"
+2026-06-18 16:34:05,565 - INFO - Scheduler started
+2026-06-18 16:34:09,282 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-18 16:34:09,283 - INFO - Added job "test_job" to job store "default"
+2026-06-18 16:34:09,283 - INFO - Scheduler started
+2026-06-19 01:32:23,026 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-19 01:32:23,030 - INFO - Added job "test_job" to job store "default"
+2026-06-19 01:32:23,030 - INFO - Scheduler started
+2026-06-19 01:32:26,332 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-19 01:32:26,333 - INFO - Added job "test_job" to job store "default"
+2026-06-19 01:32:26,333 - INFO - Scheduler started
+2026-06-19 01:51:17,362 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-19 01:51:17,364 - INFO - Added job "test_job" to job store "default"
+2026-06-19 01:51:17,364 - INFO - Scheduler started
+2026-06-19 01:51:21,206 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-19 01:51:21,207 - INFO - Added job "test_job" to job store "default"
+2026-06-19 01:51:21,207 - INFO - Scheduler started
+2026-06-19 02:15:07,031 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-19 02:15:07,032 - INFO - Added job "test_job" to job store "default"
+2026-06-19 02:15:07,032 - INFO - Scheduler started
+2026-06-19 02:15:10,608 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-19 02:15:10,608 - INFO - Added job "test_job" to job store "default"
+2026-06-19 02:15:10,609 - INFO - Scheduler started
+2026-06-19 02:23:02,110 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-19 02:23:02,111 - INFO - Added job "test_job" to job store "default"
+2026-06-19 02:23:02,111 - INFO - Scheduler started
+2026-06-19 02:23:09,227 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-19 02:23:09,228 - INFO - Added job "test_job" to job store "default"
+2026-06-19 02:23:09,228 - INFO - Scheduler started
+2026-06-19 02:23:12,699 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-19 02:23:12,700 - INFO - Added job "test_job" to job store "default"
+2026-06-19 02:23:12,700 - INFO - Scheduler started
+2026-06-19 02:23:17,216 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-19 02:23:17,217 - INFO - Added job "test_job" to job store "default"
+2026-06-19 02:23:17,217 - INFO - Scheduler started
+2026-06-19 02:23:24,533 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-19 02:23:24,534 - INFO - Added job "test_job" to job store "default"
+2026-06-19 02:23:24,534 - INFO - Scheduler started
+2026-06-19 02:27:23,865 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-19 02:27:23,867 - INFO - Added job "test_job" to job store "default"
+2026-06-19 02:27:23,867 - INFO - Scheduler started
+2026-06-19 02:27:29,086 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-19 02:27:29,087 - INFO - Added job "test_job" to job store "default"
+2026-06-19 02:27:29,087 - INFO - Scheduler started
+2026-06-19 02:27:32,914 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-19 02:27:32,915 - INFO - Added job "test_job" to job store "default"
+2026-06-19 02:27:32,915 - INFO - Scheduler started
+2026-06-19 02:27:36,209 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-19 02:27:36,210 - INFO - Added job "test_job" to job store "default"
+2026-06-19 02:27:36,211 - INFO - Scheduler started
+2026-06-19 02:27:41,653 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-19 02:27:41,654 - INFO - Added job "test_job" to job store "default"
+2026-06-19 02:27:41,654 - INFO - Scheduler started
+2026-06-19 02:27:44,934 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-19 02:27:44,935 - INFO - Added job "test_job" to job store "default"
+2026-06-19 02:27:44,935 - INFO - Scheduler started
+2026-06-19 02:34:39,806 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-19 02:34:39,807 - INFO - Added job "test_job" to job store "default"
+2026-06-19 02:34:39,807 - INFO - Scheduler started
+2026-06-19 02:34:43,208 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-19 02:34:43,208 - INFO - Added job "test_job" to job store "default"
+2026-06-19 02:34:43,209 - INFO - Scheduler started
+2026-06-19 02:40:24,891 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-19 02:40:24,893 - INFO - Added job "test_job" to job store "default"
+2026-06-19 02:40:24,893 - INFO - Scheduler started
+2026-06-19 02:46:12,911 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-19 02:46:12,912 - INFO - Added job "test_job" to job store "default"
+2026-06-19 02:46:12,912 - INFO - Scheduler started
+2026-06-19 02:46:17,028 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-19 02:46:17,029 - INFO - Added job "test_job" to job store "default"
+2026-06-19 02:46:17,029 - INFO - Scheduler started
+2026-06-19 02:50:18,873 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-19 02:50:18,874 - INFO - Added job "test_job" to job store "default"
+2026-06-19 02:50:18,874 - INFO - Scheduler started
+2026-06-19 02:50:21,990 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-19 02:50:21,992 - INFO - Added job "test_job" to job store "default"
+2026-06-19 02:50:21,992 - INFO - Scheduler started
+2026-06-19 02:50:25,663 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-19 02:50:25,664 - INFO - Added job "test_job" to job store "default"
+2026-06-19 02:50:25,664 - INFO - Scheduler started
+2026-06-19 03:03:08,852 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-19 03:03:08,856 - INFO - Added job "test_job" to job store "default"
+2026-06-19 03:03:08,856 - INFO - Scheduler started
+2026-06-19 03:03:13,623 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-19 03:03:13,624 - INFO - Added job "test_job" to job store "default"
+2026-06-19 03:03:13,624 - INFO - Scheduler started
+2026-06-19 03:09:29,571 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-19 03:09:29,573 - INFO - Added job "test_job" to job store "default"
+2026-06-19 03:09:29,573 - INFO - Scheduler started
+2026-06-19 03:09:33,468 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-19 03:09:33,469 - INFO - Added job "test_job" to job store "default"
+2026-06-19 03:09:33,469 - INFO - Scheduler started
+2026-06-19 03:12:29,400 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-19 03:12:29,402 - INFO - Added job "test_job" to job store "default"
+2026-06-19 03:12:29,402 - INFO - Scheduler started
+2026-06-19 03:31:01,847 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-19 03:31:01,848 - INFO - Added job "test_job" to job store "default"
+2026-06-19 03:31:01,848 - INFO - Scheduler started
+2026-06-19 03:31:05,149 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-19 03:31:05,150 - INFO - Added job "test_job" to job store "default"
+2026-06-19 03:31:05,150 - INFO - Scheduler started
+2026-06-19 03:33:57,037 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-19 03:33:57,038 - INFO - Added job "test_job" to job store "default"
+2026-06-19 03:33:57,038 - INFO - Scheduler started
+2026-06-19 03:34:00,566 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-19 03:34:00,568 - INFO - Added job "test_job" to job store "default"
+2026-06-19 03:34:00,569 - INFO - Scheduler started
+2026-06-19 03:35:45,308 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-06-19 03:43:10,820 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-06-19 03:43:26,372 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-06-19 03:43:26,373 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-06-19 03:45:00,005 - INFO - Running job "run_scheduled_migration (trigger: cron[hour='3', minute='45'], next run at: 2026-06-19 03:45:00 IST)" (scheduled at 2026-06-19 03:45:00+05:30)
+2026-06-19 03:45:02,098 - INFO - Job "run_scheduled_migration (trigger: cron[hour='3', minute='45'], next run at: 2026-06-20 03:45:00 IST)" executed successfully
+2026-06-19 03:58:44,513 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-19 03:58:44,514 - INFO - Added job "test_job" to job store "default"
+2026-06-19 03:58:44,514 - INFO - Scheduler started
+2026-06-19 03:59:34,817 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-19 03:59:34,818 - INFO - Added job "test_job" to job store "default"
+2026-06-19 03:59:34,818 - INFO - Scheduler started
+2026-06-19 03:59:38,136 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-06-19 03:59:38,136 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-06-19 03:59:38,934 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-19 03:59:38,935 - INFO - Added job "test_job" to job store "default"
+2026-06-19 03:59:38,935 - INFO - Scheduler started
+2026-06-19 03:59:41,926 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-06-19 03:59:41,928 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-06-19 04:00:17,136 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-06-19 04:00:17,137 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-06-19 04:00:17,141 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-06-19 04:01:00,027 - INFO - Running job "run_scheduled_migration (trigger: date[2026-06-19 04:01:00 IST], next run at: 2026-06-19 04:01:00 IST)" (scheduled at 2026-06-19 04:01:00+05:30)
+2026-06-19 04:01:00,028 - INFO - Removed job job_4
+2026-06-19 04:01:01,150 - INFO - Migration initialized: mssql -> PostgreSQL
+2026-06-19 04:01:05,120 - INFO - migration_status table created
+2026-06-19 04:01:05,439 - INFO - migration_stages table created
+2026-06-19 04:01:05,690 - INFO - Found 0 completed tables
+2026-06-19 04:01:05,777 - INFO - No stage status found for customers
+2026-06-19 04:01:07,001 - INFO - Created table: customers
+2026-06-19 04:01:07,319 - INFO - customers: table_created updated
+2026-06-19 04:01:07,495 - INFO - No stage status found for products
+2026-06-19 04:01:08,627 - INFO - Created table: products
+2026-06-19 04:01:09,476 - INFO - products: table_created updated
+2026-06-19 04:01:09,649 - INFO - No stage status found for orders
+2026-06-19 04:01:11,092 - INFO - Created table: orders
+2026-06-19 04:01:11,643 - INFO - orders: table_created updated
+2026-06-19 04:01:12,533 - INFO - No stage status found for ai_test
+2026-06-19 04:01:14,165 - INFO - Created table: ai_test
+2026-06-19 04:01:14,918 - INFO - ai_test: table_created updated
+2026-06-19 04:01:15,637 - INFO - Stage status fetched for customers
+2026-06-19 04:01:16,556 - INFO - Indexes created for customers
+2026-06-19 04:01:17,593 - INFO - customers: indexes_created updated
+2026-06-19 04:01:17,993 - INFO - Stage status fetched for products
+2026-06-19 04:01:18,317 - INFO - Indexes created for products
+2026-06-19 04:01:18,791 - INFO - products: indexes_created updated
+2026-06-19 04:01:19,363 - INFO - Stage status fetched for orders
+2026-06-19 04:01:19,787 - INFO - Indexes created for orders
+2026-06-19 04:01:20,141 - INFO - orders: indexes_created updated
+2026-06-19 04:01:20,609 - INFO - Stage status fetched for ai_test
+2026-06-19 04:01:20,924 - INFO - Indexes created for ai_test
+2026-06-19 04:01:21,425 - INFO - ai_test: indexes_created updated
+2026-06-19 04:01:21,606 - INFO - Stage status fetched for customers
+2026-06-19 04:01:22,394 - INFO - Unique constraints created for customers
+2026-06-19 04:01:22,876 - INFO - customers: constraints_created updated
+2026-06-19 04:01:23,069 - INFO - Stage status fetched for products
+2026-06-19 04:01:23,570 - INFO - Unique constraints created for products
+2026-06-19 04:01:24,090 - INFO - products: constraints_created updated
+2026-06-19 04:01:24,559 - INFO - Stage status fetched for orders
+2026-06-19 04:01:25,038 - INFO - Unique constraints created for orders
+2026-06-19 04:01:25,327 - INFO - orders: constraints_created updated
+2026-06-19 04:01:25,520 - INFO - Stage status fetched for ai_test
+2026-06-19 04:01:26,159 - INFO - Unique constraints created for ai_test
+2026-06-19 04:01:26,997 - INFO - ai_test: constraints_created updated
+2026-06-19 04:01:27,106 - INFO - Check constraints created for customers
+2026-06-19 04:01:27,650 - INFO - Check constraints created for products
+2026-06-19 04:01:27,735 - INFO - Check constraints created for orders
+2026-06-19 04:01:27,815 - INFO - Check constraints created for ai_test
+2026-06-19 04:01:28,741 - INFO - Stage status fetched for customers
+2026-06-19 04:01:29,925 - INFO - Migrated 2 rows from customers
+2026-06-19 04:01:31,029 - INFO - customers: data_migrated updated
+2026-06-19 04:01:31,366 - INFO - customers: Source=2, PostgreSQL=2
+2026-06-19 04:01:31,669 - INFO - Migration status saved: customers (2 rows)
+2026-06-19 04:01:32,531 - INFO - customers: validated updated
+2026-06-19 04:01:32,744 - INFO - Stage status fetched for products
+2026-06-19 04:01:33,713 - INFO - Migrated 2 rows from products
+2026-06-19 04:01:34,635 - INFO - products: data_migrated updated
+2026-06-19 04:01:34,889 - INFO - products: Source=2, PostgreSQL=2
+2026-06-19 04:01:35,106 - INFO - Migration status saved: products (2 rows)
+2026-06-19 04:01:35,663 - INFO - products: validated updated
+2026-06-19 04:01:36,269 - INFO - Stage status fetched for orders
+2026-06-19 04:01:37,789 - INFO - Migrated 2 rows from orders
+2026-06-19 04:01:38,379 - INFO - orders: data_migrated updated
+2026-06-19 04:01:39,346 - INFO - orders: Source=2, PostgreSQL=2
+2026-06-19 04:01:39,768 - INFO - Migration status saved: orders (2 rows)
+2026-06-19 04:01:40,676 - INFO - orders: validated updated
+2026-06-19 04:01:41,103 - INFO - Stage status fetched for ai_test
+2026-06-19 04:01:42,413 - INFO - Migrated 1 rows from ai_test
+2026-06-19 04:01:43,249 - INFO - ai_test: data_migrated updated
+2026-06-19 04:01:43,459 - INFO - ai_test: Source=1, PostgreSQL=1
+2026-06-19 04:01:44,070 - INFO - Migration status saved: ai_test (1 rows)
+2026-06-19 04:01:45,244 - INFO - ai_test: validated updated
+2026-06-19 04:01:46,459 - INFO - Default values created for customers
+2026-06-19 04:01:46,596 - INFO - Default values created for products
+2026-06-19 04:01:46,730 - INFO - Default values created for orders
+2026-06-19 04:01:46,872 - INFO - Default values created for ai_test
+2026-06-19 04:01:46,886 - INFO - Exported 1 triggers
+2026-06-19 04:01:46,959 - INFO - Exported 1 procedures
+2026-06-19 04:01:47,013 - INFO - Rollback script generated successfully
+2026-06-19 04:01:52,438 - INFO - Migration initialized: mssql -> PostgreSQL
+2026-06-19 04:01:53,708 - INFO - migration_status table created
+2026-06-19 04:01:54,453 - INFO - migration_stages table created
+2026-06-19 04:01:54,965 - INFO - Found 4 completed tables
+2026-06-19 04:01:55,312 - INFO - Stage status fetched for customers
+2026-06-19 04:01:55,521 - INFO - Stage status fetched for products
+2026-06-19 04:01:55,632 - INFO - Stage status fetched for orders
+2026-06-19 04:01:56,012 - INFO - Stage status fetched for ai_test
+2026-06-19 04:01:56,120 - INFO - Stage status fetched for customers
+2026-06-19 04:01:56,236 - INFO - Stage status fetched for products
+2026-06-19 04:01:56,346 - INFO - Stage status fetched for orders
+2026-06-19 04:01:56,493 - INFO - Stage status fetched for ai_test
+2026-06-19 04:01:56,835 - INFO - Stage status fetched for customers
+2026-06-19 04:01:57,170 - INFO - Stage status fetched for products
+2026-06-19 04:01:57,279 - INFO - Stage status fetched for orders
+2026-06-19 04:01:57,416 - INFO - Stage status fetched for ai_test
+2026-06-19 04:01:57,568 - INFO - Check constraints created for customers
+2026-06-19 04:01:58,274 - INFO - Check constraints created for products
+2026-06-19 04:01:58,280 - INFO - Check constraints created for orders
+2026-06-19 04:01:58,287 - INFO - Check constraints created for ai_test
+2026-06-19 04:01:59,667 - INFO - Stage status fetched for customers
+2026-06-19 04:01:59,769 - INFO - Stage status fetched for products
+2026-06-19 04:02:00,278 - INFO - Stage status fetched for orders
+2026-06-19 04:02:00,648 - INFO - Stage status fetched for ai_test
+2026-06-19 04:02:00,860 - INFO - Default values created for customers
+2026-06-19 04:02:00,870 - INFO - Default values created for products
+2026-06-19 04:02:00,880 - INFO - Default values created for orders
+2026-06-19 04:02:00,892 - INFO - Default values created for ai_test
+2026-06-19 04:02:00,899 - INFO - Exported 1 triggers
+2026-06-19 04:02:00,912 - INFO - Exported 1 procedures
+2026-06-19 04:02:00,927 - INFO - Rollback script generated successfully
+2026-06-19 04:02:06,941 - INFO - Migration initialized: mssql -> PostgreSQL
+2026-06-19 04:02:08,520 - INFO - migration_status table created
+2026-06-19 04:02:09,107 - INFO - migration_stages table created
+2026-06-19 04:02:09,597 - INFO - Found 4 completed tables
+2026-06-19 04:02:09,821 - INFO - Stage status fetched for customers
+2026-06-19 04:02:10,163 - INFO - Stage status fetched for products
+2026-06-19 04:02:10,273 - INFO - Stage status fetched for orders
+2026-06-19 04:02:10,421 - INFO - Stage status fetched for ai_test
+2026-06-19 04:02:10,777 - INFO - Stage status fetched for customers
+2026-06-19 04:02:11,034 - INFO - Stage status fetched for products
+2026-06-19 04:02:11,407 - INFO - Stage status fetched for orders
+2026-06-19 04:02:11,575 - INFO - Stage status fetched for ai_test
+2026-06-19 04:02:11,834 - INFO - Stage status fetched for customers
+2026-06-19 04:02:11,956 - INFO - Stage status fetched for products
+2026-06-19 04:02:12,407 - INFO - Stage status fetched for orders
+2026-06-19 04:02:12,828 - INFO - Stage status fetched for ai_test
+2026-06-19 04:02:12,959 - INFO - Check constraints created for customers
+2026-06-19 04:02:13,744 - INFO - Check constraints created for products
+2026-06-19 04:02:13,750 - INFO - Check constraints created for orders
+2026-06-19 04:02:13,757 - INFO - Check constraints created for ai_test
+2026-06-19 04:02:14,618 - INFO - Stage status fetched for customers
+2026-06-19 04:02:14,733 - INFO - Stage status fetched for products
+2026-06-19 04:02:14,935 - INFO - Stage status fetched for orders
+2026-06-19 04:02:15,044 - INFO - Stage status fetched for ai_test
+2026-06-19 04:02:15,647 - INFO - Default values created for customers
+2026-06-19 04:02:15,659 - INFO - Default values created for products
+2026-06-19 04:02:15,671 - INFO - Default values created for orders
+2026-06-19 04:02:15,681 - INFO - Default values created for ai_test
+2026-06-19 04:02:15,688 - INFO - Exported 1 triggers
+2026-06-19 04:02:15,700 - INFO - Exported 1 procedures
+2026-06-19 04:02:15,713 - INFO - Rollback script generated successfully
+2026-06-19 04:02:22,177 - INFO - Migration initialized: mssql -> PostgreSQL
+2026-06-19 04:02:24,141 - INFO - migration_status table created
+2026-06-19 04:02:25,042 - INFO - migration_stages table created
+2026-06-19 04:02:25,987 - INFO - Found 4 completed tables
+2026-06-19 04:02:26,377 - INFO - Stage status fetched for customers
+2026-06-19 04:02:26,699 - INFO - Stage status fetched for products
+2026-06-19 04:02:26,893 - INFO - Stage status fetched for orders
+2026-06-19 04:02:27,195 - INFO - Stage status fetched for ai_test
+2026-06-19 04:02:27,578 - INFO - Stage status fetched for customers
+2026-06-19 04:02:27,890 - INFO - Stage status fetched for products
+2026-06-19 04:02:28,170 - INFO - Stage status fetched for orders
+2026-06-19 04:02:28,284 - INFO - Stage status fetched for ai_test
+2026-06-19 04:02:28,542 - INFO - Stage status fetched for customers
+2026-06-19 04:02:28,954 - INFO - Stage status fetched for products
+2026-06-19 04:02:29,102 - INFO - Stage status fetched for orders
+2026-06-19 04:02:29,420 - INFO - Stage status fetched for ai_test
+2026-06-19 04:02:30,035 - INFO - Check constraints created for customers
+2026-06-19 04:02:31,157 - INFO - Check constraints created for products
+2026-06-19 04:02:31,294 - INFO - Check constraints created for orders
+2026-06-19 04:02:31,396 - INFO - Check constraints created for ai_test
+2026-06-19 04:02:32,841 - INFO - Stage status fetched for customers
+2026-06-19 04:02:33,155 - INFO - Stage status fetched for products
+2026-06-19 04:02:33,454 - INFO - Stage status fetched for orders
+2026-06-19 04:02:33,561 - INFO - Stage status fetched for ai_test
+2026-06-19 04:02:34,643 - INFO - Default values created for customers
+2026-06-19 04:02:34,776 - INFO - Default values created for products
+2026-06-19 04:02:34,905 - INFO - Default values created for orders
+2026-06-19 04:02:35,038 - INFO - Default values created for ai_test
+2026-06-19 04:02:35,054 - INFO - Exported 1 triggers
+2026-06-19 04:02:35,118 - INFO - Exported 1 procedures
+2026-06-19 04:02:35,176 - INFO - Rollback script generated successfully
+2026-06-19 04:02:43,758 - INFO - Job "run_scheduled_migration (trigger: date[2026-06-19 04:01:00 IST], next run at: 2026-06-19 04:01:00 IST)" executed successfully
+2026-06-19 04:11:40,416 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-19 04:11:40,417 - INFO - Added job "test_job" to job store "default"
+2026-06-19 04:11:40,417 - INFO - Scheduler started
+2026-06-19 04:11:43,868 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-06-19 04:11:43,869 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-06-19 04:11:43,872 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-06-19 04:11:43,882 - WARNING - Run time of job "run_scheduled_migration (trigger: date[2026-06-19 04:01:00 IST], next run at: 2026-06-19 04:01:00 IST)" was missed by 0:10:43.882462
+2026-06-19 04:11:43,882 - INFO - Removed job job_4
+2026-06-19 04:11:44,541 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-19 04:11:44,542 - INFO - Added job "test_job" to job store "default"
+2026-06-19 04:11:44,542 - INFO - Scheduler started
+2026-06-19 04:11:48,457 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-06-19 04:11:48,458 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-06-19 04:11:48,462 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-06-19 04:11:48,483 - WARNING - Run time of job "run_scheduled_migration (trigger: date[2026-06-19 04:01:00 IST], next run at: 2026-06-19 04:01:00 IST)" was missed by 0:10:48.483508
+2026-06-19 04:11:48,484 - INFO - Removed job job_4
+2026-06-19 04:12:34,086 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-06-19 04:12:34,088 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-06-19 04:12:34,089 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-06-19 04:12:34,090 - INFO - Removed job job_4
+2026-06-19 04:12:34,090 - WARNING - Run time of job "run_scheduled_migration (trigger: date[2026-06-19 04:01:00 IST], next run at: 2026-06-19 04:01:00 IST)" was missed by 0:11:34.090237
+2026-06-19 04:12:34,093 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-06-19 04:14:00,013 - INFO - Running job "run_scheduled_migration (trigger: cron[hour='4', minute='14'], next run at: 2026-06-20 04:14:00 IST)" (scheduled at 2026-06-19 04:14:00+05:30)
+2026-06-19 04:14:01,519 - INFO - Migration initialized: mssql -> PostgreSQL
+2026-06-19 04:14:05,029 - INFO - migration_status table created
+2026-06-19 04:14:05,591 - INFO - migration_stages table created
+2026-06-19 04:14:05,840 - INFO - Found 4 completed tables
+2026-06-19 04:14:05,949 - INFO - Stage status fetched for customers
+2026-06-19 04:14:06,070 - INFO - Stage status fetched for products
+2026-06-19 04:14:06,462 - INFO - Stage status fetched for orders
+2026-06-19 04:14:06,773 - INFO - Stage status fetched for ai_test
+2026-06-19 04:14:07,020 - INFO - Stage status fetched for customers
+2026-06-19 04:14:07,437 - INFO - Stage status fetched for products
+2026-06-19 04:14:07,792 - INFO - Stage status fetched for orders
+2026-06-19 04:14:08,115 - INFO - Stage status fetched for ai_test
+2026-06-19 04:14:08,449 - INFO - Stage status fetched for customers
+2026-06-19 04:14:08,681 - INFO - Stage status fetched for products
+2026-06-19 04:14:09,021 - INFO - Stage status fetched for orders
+2026-06-19 04:14:09,132 - INFO - Stage status fetched for ai_test
+2026-06-19 04:14:09,577 - INFO - Check constraints created for customers
+2026-06-19 04:14:10,108 - INFO - Check constraints created for products
+2026-06-19 04:14:10,188 - INFO - Check constraints created for orders
+2026-06-19 04:14:10,263 - INFO - Check constraints created for ai_test
+2026-06-19 04:14:12,021 - INFO - Stage status fetched for customers
+2026-06-19 04:14:12,125 - INFO - Stage status fetched for products
+2026-06-19 04:14:12,324 - INFO - Stage status fetched for orders
+2026-06-19 04:14:12,713 - INFO - Stage status fetched for ai_test
+2026-06-19 04:14:13,382 - INFO - Default values created for customers
+2026-06-19 04:14:13,518 - INFO - Default values created for products
+2026-06-19 04:14:13,647 - INFO - Default values created for orders
+2026-06-19 04:14:13,784 - INFO - Default values created for ai_test
+2026-06-19 04:14:13,801 - INFO - Exported 1 triggers
+2026-06-19 04:14:13,878 - INFO - Exported 1 procedures
+2026-06-19 04:14:13,932 - INFO - Rollback script generated successfully
+2026-06-19 04:14:18,998 - INFO - Migration initialized: mssql -> PostgreSQL
+2026-06-19 04:14:20,666 - INFO - migration_status table created
+2026-06-19 04:14:21,420 - INFO - migration_stages table created
+2026-06-19 04:14:21,822 - INFO - Found 4 completed tables
+2026-06-19 04:14:21,940 - INFO - Stage status fetched for customers
+2026-06-19 04:14:22,052 - INFO - Stage status fetched for products
+2026-06-19 04:14:22,169 - INFO - Stage status fetched for orders
+2026-06-19 04:14:22,544 - INFO - Stage status fetched for ai_test
+2026-06-19 04:14:22,867 - INFO - Stage status fetched for customers
+2026-06-19 04:14:23,157 - INFO - Stage status fetched for products
+2026-06-19 04:14:23,460 - INFO - Stage status fetched for orders
+2026-06-19 04:14:23,580 - INFO - Stage status fetched for ai_test
+2026-06-19 04:14:23,696 - INFO - Stage status fetched for customers
+2026-06-19 04:14:24,138 - INFO - Stage status fetched for products
+2026-06-19 04:14:24,377 - INFO - Stage status fetched for orders
+2026-06-19 04:14:24,693 - INFO - Stage status fetched for ai_test
+2026-06-19 04:14:25,103 - INFO - Check constraints created for customers
+2026-06-19 04:14:26,145 - INFO - Check constraints created for products
+2026-06-19 04:14:26,149 - INFO - Check constraints created for orders
+2026-06-19 04:14:26,152 - INFO - Check constraints created for ai_test
+2026-06-19 04:14:27,762 - INFO - Stage status fetched for customers
+2026-06-19 04:14:27,881 - INFO - Stage status fetched for products
+2026-06-19 04:14:28,232 - INFO - Stage status fetched for orders
+2026-06-19 04:14:28,508 - INFO - Stage status fetched for ai_test
+2026-06-19 04:14:29,225 - INFO - Default values created for customers
+2026-06-19 04:14:29,235 - INFO - Default values created for products
+2026-06-19 04:14:29,247 - INFO - Default values created for orders
+2026-06-19 04:14:29,259 - INFO - Default values created for ai_test
+2026-06-19 04:14:29,266 - INFO - Exported 1 triggers
+2026-06-19 04:14:29,282 - INFO - Exported 1 procedures
+2026-06-19 04:14:29,297 - INFO - Rollback script generated successfully
+2026-06-19 04:14:37,131 - INFO - Migration initialized: mssql -> PostgreSQL
+2026-06-19 04:14:41,936 - INFO - migration_status table created
+2026-06-19 04:14:42,936 - INFO - migration_stages table created
+2026-06-19 04:14:43,451 - INFO - Found 4 completed tables
+2026-06-19 04:14:43,553 - INFO - Stage status fetched for customers
+2026-06-19 04:14:43,659 - INFO - Stage status fetched for products
+2026-06-19 04:14:43,946 - INFO - Stage status fetched for orders
+2026-06-19 04:14:44,487 - INFO - Stage status fetched for ai_test
+2026-06-19 04:14:44,867 - INFO - Stage status fetched for customers
+2026-06-19 04:14:45,045 - INFO - Stage status fetched for products
+2026-06-19 04:14:45,163 - INFO - Stage status fetched for orders
+2026-06-19 04:14:45,481 - INFO - Stage status fetched for ai_test
+2026-06-19 04:14:45,686 - INFO - Stage status fetched for customers
+2026-06-19 04:14:45,774 - INFO - Stage status fetched for products
+2026-06-19 04:14:45,936 - INFO - Stage status fetched for orders
+2026-06-19 04:14:46,032 - INFO - Stage status fetched for ai_test
+2026-06-19 04:14:46,224 - INFO - Check constraints created for customers
+2026-06-19 04:14:47,173 - INFO - Check constraints created for products
+2026-06-19 04:14:47,256 - INFO - Check constraints created for orders
+2026-06-19 04:14:47,334 - INFO - Check constraints created for ai_test
+2026-06-19 04:14:48,769 - INFO - Stage status fetched for customers
+2026-06-19 04:14:48,859 - INFO - Stage status fetched for products
+2026-06-19 04:14:48,951 - INFO - Stage status fetched for orders
+2026-06-19 04:14:49,084 - INFO - Stage status fetched for ai_test
+2026-06-19 04:14:49,436 - INFO - Default values created for customers
+2026-06-19 04:14:49,575 - INFO - Default values created for products
+2026-06-19 04:14:49,707 - INFO - Default values created for orders
+2026-06-19 04:14:49,855 - INFO - Default values created for ai_test
+2026-06-19 04:14:49,874 - INFO - Exported 1 triggers
+2026-06-19 04:14:49,945 - INFO - Exported 1 procedures
+2026-06-19 04:14:50,000 - INFO - Rollback script generated successfully
+2026-06-19 04:14:55,620 - INFO - Migration initialized: mssql -> PostgreSQL
+2026-06-19 04:14:56,945 - INFO - migration_status table created
+2026-06-19 04:14:57,924 - INFO - migration_stages table created
+2026-06-19 04:14:58,272 - INFO - Found 4 completed tables
+2026-06-19 04:14:58,637 - INFO - Stage status fetched for customers
+2026-06-19 04:14:58,934 - INFO - Stage status fetched for products
+2026-06-19 04:14:59,305 - INFO - Stage status fetched for orders
+2026-06-19 04:14:59,613 - INFO - Stage status fetched for ai_test
+2026-06-19 04:14:59,958 - INFO - Stage status fetched for customers
+2026-06-19 04:15:00,227 - INFO - Stage status fetched for products
+2026-06-19 04:15:00,329 - INFO - Stage status fetched for orders
+2026-06-19 04:15:00,535 - INFO - Stage status fetched for ai_test
+2026-06-19 04:15:00,878 - INFO - Stage status fetched for customers
+2026-06-19 04:15:01,251 - INFO - Stage status fetched for products
+2026-06-19 04:15:01,597 - INFO - Stage status fetched for orders
+2026-06-19 04:15:01,725 - INFO - Stage status fetched for ai_test
+2026-06-19 04:15:01,993 - INFO - Check constraints created for customers
+2026-06-19 04:15:02,788 - INFO - Check constraints created for products
+2026-06-19 04:15:02,794 - INFO - Check constraints created for orders
+2026-06-19 04:15:02,799 - INFO - Check constraints created for ai_test
+2026-06-19 04:15:04,062 - INFO - Stage status fetched for customers
+2026-06-19 04:15:04,255 - INFO - Stage status fetched for products
+2026-06-19 04:15:04,364 - INFO - Stage status fetched for orders
+2026-06-19 04:15:04,453 - INFO - Stage status fetched for ai_test
+2026-06-19 04:15:05,006 - INFO - Default values created for customers
+2026-06-19 04:15:05,025 - INFO - Default values created for products
+2026-06-19 04:15:05,034 - INFO - Default values created for orders
+2026-06-19 04:15:05,046 - INFO - Default values created for ai_test
+2026-06-19 04:15:05,053 - INFO - Exported 1 triggers
+2026-06-19 04:15:05,067 - INFO - Exported 1 procedures
+2026-06-19 04:15:05,081 - INFO - Rollback script generated successfully
+2026-06-19 04:15:10,799 - INFO - Job "run_scheduled_migration (trigger: cron[hour='4', minute='14'], next run at: 2026-06-20 04:14:00 IST)" executed successfully
+2026-06-19 04:21:48,516 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-19 04:21:48,517 - INFO - Added job "test_job" to job store "default"
+2026-06-19 04:21:48,517 - INFO - Scheduler started
+2026-06-19 04:21:51,682 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-06-19 04:21:52,302 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-19 04:21:52,303 - INFO - Added job "test_job" to job store "default"
+2026-06-19 04:21:52,303 - INFO - Scheduler started
+2026-06-19 04:21:55,285 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-06-19 04:22:05,334 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-06-19 04:22:05,335 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-06-19 04:22:42,690 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-06-19 04:22:42,692 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-06-19 04:24:00,016 - INFO - Running job "run_scheduled_migration (trigger: cron[hour='4', minute='24'], next run at: 2026-06-19 04:24:00 IST)" (scheduled at 2026-06-19 04:24:00+05:30)
+2026-06-19 04:24:01,689 - INFO - Migration initialized: mssql -> PostgreSQL
+2026-06-19 04:24:05,058 - INFO - migration_status table created
+2026-06-19 04:24:05,762 - INFO - migration_stages table created
+2026-06-19 04:24:06,251 - INFO - Found 4 completed tables
+2026-06-19 04:24:06,362 - INFO - Stage status fetched for customers
+2026-06-19 04:24:06,643 - INFO - Stage status fetched for products
+2026-06-19 04:24:06,929 - INFO - Stage status fetched for orders
+2026-06-19 04:24:07,052 - INFO - Stage status fetched for ai_test
+2026-06-19 04:24:07,344 - INFO - Stage status fetched for customers
+2026-06-19 04:24:07,580 - INFO - Stage status fetched for products
+2026-06-19 04:24:07,696 - INFO - Stage status fetched for orders
+2026-06-19 04:24:07,784 - INFO - Stage status fetched for ai_test
+2026-06-19 04:24:07,983 - INFO - Stage status fetched for customers
+2026-06-19 04:24:08,215 - INFO - Stage status fetched for products
+2026-06-19 04:24:08,305 - INFO - Stage status fetched for orders
+2026-06-19 04:24:08,419 - INFO - Stage status fetched for ai_test
+2026-06-19 04:24:08,592 - INFO - Check constraints created for customers
+2026-06-19 04:24:09,014 - INFO - Check constraints created for products
+2026-06-19 04:24:09,094 - INFO - Check constraints created for orders
+2026-06-19 04:24:09,174 - INFO - Check constraints created for ai_test
+2026-06-19 04:24:09,946 - INFO - Stage status fetched for customers
+2026-06-19 04:24:10,241 - INFO - Stage status fetched for products
+2026-06-19 04:24:10,537 - INFO - Stage status fetched for orders
+2026-06-19 04:24:10,740 - INFO - Stage status fetched for ai_test
+2026-06-19 04:24:11,451 - INFO - Default values created for customers
+2026-06-19 04:24:11,582 - INFO - Default values created for products
+2026-06-19 04:24:11,718 - INFO - Default values created for orders
+2026-06-19 04:24:11,854 - INFO - Default values created for ai_test
+2026-06-19 04:24:11,872 - INFO - Exported 1 triggers
+2026-06-19 04:24:11,941 - INFO - Exported 1 procedures
+2026-06-19 04:24:11,994 - INFO - Rollback script generated successfully
+2026-06-19 04:24:17,099 - INFO - Migration Completed
+2026-06-19 04:24:18,377 - INFO - Job "run_scheduled_migration (trigger: cron[hour='4', minute='24'], next run at: 2026-06-20 04:24:00 IST)" executed successfully
+2026-06-19 11:54:34,627 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-19 11:54:34,629 - INFO - Added job "test_job" to job store "default"
+2026-06-19 11:54:34,629 - INFO - Scheduler started
+2026-06-19 11:54:37,640 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-06-19 11:54:37,642 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-06-19 11:54:38,237 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-06-19 11:54:38,238 - INFO - Added job "test_job" to job store "default"
+2026-06-19 11:54:38,238 - INFO - Scheduler started
+2026-06-19 11:54:41,236 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-06-19 11:54:41,237 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-06-19 12:00:00,011 - INFO - Running job "run_scheduled_migration (trigger: cron[hour='12', minute='0'], next run at: 2026-06-19 12:00:00 IST)" (scheduled at 2026-06-19 12:00:00+05:30)
+2026-06-19 12:00:00,012 - INFO - Running job "run_scheduled_migration (trigger: cron[hour='12', minute='0'], next run at: 2026-06-19 12:00:00 IST)" (scheduled at 2026-06-19 12:00:00+05:30)
+2026-06-19 12:00:00,851 - INFO - Migration initialized: mssql -> PostgreSQL
+2026-06-19 12:00:00,855 - INFO - Migration initialized: mssql -> PostgreSQL
+2026-06-19 12:00:03,944 - INFO - migration_status table created
+2026-06-19 12:00:03,978 - INFO - migration_status table created
+2026-06-19 12:00:04,238 - INFO - migration_stages table created
+2026-06-19 12:00:04,332 - INFO - migration_stages table created
+2026-06-19 12:00:04,542 - INFO - Found 4 completed tables
+2026-06-19 12:00:04,633 - INFO - Found 4 completed tables
+2026-06-19 12:00:04,697 - INFO - Stage status fetched for customers
+2026-06-19 12:00:04,783 - INFO - Stage status fetched for customers
+2026-06-19 12:00:04,884 - INFO - Stage status fetched for products
+2026-06-19 12:00:04,971 - INFO - Stage status fetched for orders
+2026-06-19 12:00:04,985 - INFO - Stage status fetched for orders
+2026-06-19 12:00:05,072 - INFO - Stage status fetched for ai_test
+2026-06-19 12:00:05,130 - INFO - Stage status fetched for ai_test
+2026-06-19 12:00:05,179 - INFO - Stage status fetched for customers
+2026-06-19 12:00:05,234 - INFO - Stage status fetched for customers
+2026-06-19 12:00:05,279 - INFO - Stage status fetched for products
+2026-06-19 12:00:05,372 - INFO - Stage status fetched for orders
+2026-06-19 12:00:05,372 - INFO - Stage status fetched for products
+2026-06-19 12:00:05,495 - INFO - Stage status fetched for ai_test
+2026-06-19 12:00:05,495 - INFO - Stage status fetched for orders
+2026-06-19 12:00:05,688 - INFO - Stage status fetched for ai_test
+2026-06-19 12:00:05,688 - INFO - Stage status fetched for customers
+2026-06-19 12:00:05,872 - INFO - Stage status fetched for products
+2026-06-19 12:00:05,872 - INFO - Stage status fetched for customers
+2026-06-19 12:00:05,959 - INFO - Stage status fetched for orders
+2026-06-19 12:00:05,981 - INFO - Stage status fetched for products
+2026-06-19 12:00:06,051 - INFO - Stage status fetched for ai_test
+2026-06-19 12:00:06,143 - INFO - Stage status fetched for orders
+2026-06-19 12:00:06,233 - INFO - Check constraints created for customers
+2026-06-19 12:00:06,235 - INFO - Stage status fetched for ai_test
+2026-06-19 12:00:06,368 - INFO - Check constraints created for customers
+2026-06-19 12:00:06,717 - INFO - Check constraints created for products
+2026-06-19 12:00:06,790 - INFO - Check constraints created for orders
+2026-06-19 12:00:06,862 - INFO - Check constraints created for ai_test
+2026-06-19 12:00:06,874 - INFO - Check constraints created for products
+2026-06-19 12:00:06,879 - INFO - Check constraints created for orders
+2026-06-19 12:00:06,882 - INFO - Check constraints created for ai_test
+2026-06-19 12:00:07,494 - INFO - Stage status fetched for customers
+2026-06-19 12:00:07,690 - INFO - Stage status fetched for customers
+2026-06-19 12:00:07,905 - INFO - Stage status fetched for orders
+2026-06-19 12:00:07,905 - INFO - Stage status fetched for products
+2026-06-19 12:00:08,118 - INFO - Stage status fetched for ai_test
+2026-06-19 12:00:08,128 - INFO - Stage status fetched for orders
+2026-06-19 12:00:08,279 - INFO - Stage status fetched for ai_test
+2026-06-19 12:00:08,621 - INFO - Default values created for customers
+2026-06-19 12:00:08,744 - INFO - Default values created for products
+2026-06-19 12:00:08,791 - INFO - Default values created for customers
+2026-06-19 12:00:08,800 - INFO - Default values created for products
+2026-06-19 12:00:08,866 - INFO - Default values created for orders
+2026-06-19 12:00:08,927 - INFO - Default values created for orders
+2026-06-19 12:00:09,001 - INFO - Default values created for ai_test
+2026-06-19 12:00:09,022 - INFO - Exported 1 triggers
+2026-06-19 12:00:09,059 - INFO - Default values created for ai_test
+2026-06-19 12:00:09,063 - INFO - Exported 1 triggers
+2026-06-19 12:00:09,081 - INFO - Exported 1 procedures
+2026-06-19 12:00:09,111 - INFO - Exported 1 procedures
+2026-06-19 12:00:09,132 - INFO - Rollback script generated successfully
+2026-06-19 12:00:09,165 - INFO - Rollback script generated successfully
+2026-06-19 12:00:12,556 - INFO - Migration Completed
+2026-06-19 12:00:12,808 - INFO - Migration Completed
+2026-06-19 12:00:13,952 - INFO - Job "run_scheduled_migration (trigger: cron[hour='12', minute='0'], next run at: 2026-06-20 12:00:00 IST)" executed successfully
+2026-06-19 12:00:14,138 - INFO - Job "run_scheduled_migration (trigger: cron[hour='12', minute='0'], next run at: 2026-06-20 12:00:00 IST)" executed successfully

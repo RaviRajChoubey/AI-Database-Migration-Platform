@@ -1912,7 +1912,7 @@ function Dashboard() {
                                         key={profile.profile_id}
                                         value={profile.profile_id}
                                     >
-                                        {profile.profile_name}
+                                        {profile.profile_name} ({profile.source_type.toUpperCase()})
                                     </option>
                                 ))}
                             </select>
@@ -2020,7 +2020,7 @@ function Dashboard() {
                                     {
                                         schedulerLogs.map(log => (
 
-                                            <tr key={log[0]}>
+                                            <tr key={log.execution_id}>
 
                                                 <td
                                                     style={{
@@ -2028,7 +2028,7 @@ function Dashboard() {
                                                         textAlign: "center"
                                                     }}
                                                 >
-                                                    {log[0]}
+                                                    {log.execution_id}
                                                 </td>
 
                                                 <td
@@ -2037,7 +2037,7 @@ function Dashboard() {
                                                         textAlign: "center"
                                                     }}
                                                 >
-                                                    {log[1]}
+                                                    {log.schedule_id}
                                                 </td>
 
                                                 <td
@@ -2045,13 +2045,13 @@ function Dashboard() {
                                                         padding: "16px",
                                                         textAlign: "center",
                                                         color:
-                                                            log[3] === "SUCCESS"
+                                                            log.status === "SUCCESS"
                                                                 ? "#22c55e"
                                                                 : "#ef4444",
                                                         fontWeight: "bold"
                                                     }}
                                                 >
-                                                    {log[3]}
+                                                    {log.status}
                                                 </td>
 
                                                 <td
@@ -2060,7 +2060,7 @@ function Dashboard() {
                                                         textAlign: "center"
                                                     }}
                                                 >
-                                                    {log[4]} sec
+                                                    {log.duration_seconds} sec
                                                 </td>
 
                                             </tr>
