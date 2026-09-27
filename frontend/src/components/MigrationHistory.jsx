@@ -52,7 +52,7 @@ function MigrationHistory() {
                     color: "white",
                     textAlign: "center",
                     marginBottom: "15px",
-                    fontSize: "28px",
+                    fontSize: "clamp(1.1rem, 1.8vw, 1.5rem)",
                     fontWeight: "700",
                     display: "flex",
                     justifyContent: "center",
@@ -65,6 +65,7 @@ function MigrationHistory() {
             </h2>
 
             <div
+                className="table-wrapper"
                 style={{
                     height: "330px",
                     overflowY: "auto"
@@ -91,8 +92,8 @@ function MigrationHistory() {
 
                             <th
                                 style={{
-                                    padding: "14px",
-                                    fontSize: "28px"
+                                    padding: "10px",
+                                    fontSize: "clamp(0.85rem, 1.1vw, 1rem)"
                                 }}
                             >
                                 ID
@@ -100,8 +101,8 @@ function MigrationHistory() {
 
                             <th
                                 style={{
-                                    padding: "14px",
-                                    fontSize: "28px"
+                                    padding: "10px",
+                                    fontSize: "clamp(0.85rem, 1.1vw, 1rem)"
                                 }}
                             >
                                 Source
@@ -109,8 +110,8 @@ function MigrationHistory() {
 
                             <th
                                 style={{
-                                    padding: "14px",
-                                    fontSize: "28px"
+                                    padding: "10px",
+                                    fontSize: "clamp(0.85rem, 1.1vw, 1rem)"
                                 }}
                             >
                                 Target
@@ -118,8 +119,8 @@ function MigrationHistory() {
 
                             <th
                                 style={{
-                                    padding: "14px",
-                                    fontSize: "28px"
+                                    padding: "10px",
+                                    fontSize: "clamp(0.85rem, 1.1vw, 1rem)"
                                 }}
                             >
                                 Tables
@@ -127,8 +128,8 @@ function MigrationHistory() {
 
                             <th
                                 style={{
-                                    padding: "14px",
-                                    fontSize: "28px"
+                                    padding: "10px",
+                                    fontSize: "clamp(0.85rem, 1.1vw, 1rem)"
                                 }}
                             >
                                 Rows
@@ -136,8 +137,8 @@ function MigrationHistory() {
 
                             <th
                                 style={{
-                                    padding: "14px",
-                                    fontSize: "28px"
+                                    padding: "10px",
+                                    fontSize: "clamp(0.85rem, 1.1vw, 1rem)"
                                 }}
                             >
                                 Status
@@ -145,8 +146,8 @@ function MigrationHistory() {
 
                             <th
                                 style={{
-                                    padding: "14px",
-                                    fontSize: "28px"
+                                    padding: "10px",
+                                    fontSize: "clamp(0.85rem, 1.1vw, 1rem)"
                                 }}
                             >
                                 Time
@@ -171,42 +172,42 @@ function MigrationHistory() {
                                         }}
                                     >
 
-                                        <td style={{ padding: "12px", textAlign: "center", fontSize: "24px" }}>
+                                        <td style={{ padding: "10px", textAlign: "center", fontSize: "clamp(0.8rem, 1vw, 0.95rem)" }}>
                                             {item.audit_id}
                                         </td>
 
-                                        <td style={{ padding: "12px", textAlign: "center", fontSize: "24px" }}>
+                                        <td style={{ padding: "10px", textAlign: "center", fontSize: "clamp(0.8rem, 1vw, 0.95rem)" }}>
                                             {item.source_db}
                                         </td>
 
-                                        <td style={{ padding: "12px", textAlign: "center", fontSize: "24px" }}>
+                                        <td style={{ padding: "10px", textAlign: "center", fontSize: "clamp(0.8rem, 1vw, 0.95rem)" }}>
                                             {item.target_db}
                                         </td>
 
-                                        <td style={{ padding: "12px", textAlign: "center", fontSize: "24px" }}>
+                                        <td style={{ padding: "10px", textAlign: "center", fontSize: "clamp(0.8rem, 1vw, 0.95rem)" }}>
                                             {item.tables_processed}
                                         </td>
 
-                                        <td style={{ padding: "12px", textAlign: "center", fontSize: "24px" }}>
+                                        <td style={{ padding: "10px", textAlign: "center", fontSize: "clamp(0.8rem, 1vw, 0.95rem)" }}>
                                             {item.rows_processed}
                                         </td>
 
                                         <td
                                             style={{
-                                                padding: "12px",
+                                                padding: "10px",
                                                 textAlign: "center",
                                                 fontWeight: "700",
                                                 color:
                                                     item.validation_status === "PASSED"
                                                         ? "#22c55e"
                                                         : "#ef4444",
-                                                fontSize: "24px"
+                                                fontSize: "clamp(0.8rem, 1vw, 0.95rem)"
                                             }}
                                         >
                                             {item.validation_status}
                                         </td>
 
-                                        <td style={{ padding: "12px", textAlign: "center", fontSize: "24px" }}>
+                                        <td style={{ padding: "10px", textAlign: "center", fontSize: "clamp(0.8rem, 1vw, 0.95rem)" }}>
                                             {new Date(item.completed_at).toLocaleString()}
                                         </td>
 

@@ -15,9 +15,9 @@ function DownloadCenter() {
         color: "white",
         border: "none",
         borderRadius: "12px",
-        padding: "20px",
+        padding: "16px",
         cursor: "pointer",
-        fontSize: "28px",
+        fontSize: "clamp(0.95rem, 1.3vw, 1.2rem)",
         fontWeight: "600",
         width: "100%",
         minHeight: "90px",
@@ -46,7 +46,7 @@ function DownloadCenter() {
                 style={{
                     textAlign: "center",
                     marginBottom: "25px",
-                    fontSize: "38px",
+                    fontSize: "clamp(1.4rem, 2.5vw, 2.2rem)",
                     fontWeight: "700",
                     color: "white"
                 }}

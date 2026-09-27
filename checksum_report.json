@@ -22,5 +22,11 @@
         "source_checksum": "6448ed0440603e423cf03335601ab9e6",
         "target_checksum": "6448ed0440603e423cf03335601ab9e6",
         "status": "PASS"
+    },
+    {
+        "table": "employees",
+        "source_checksum": "20f2a94ed3b9dc95b559e0d41bd1ca35",
+        "target_checksum": "b2e0086df43fc409383eb8eb8967c8ab",
+        "status": "FAIL"
     }
 ]

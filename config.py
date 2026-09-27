@@ -1,8 +1,3 @@
-import os
-from dotenv import load_dotenv
-
-load_dotenv()
-
 SOURCE_DB = {
     "type": "mssql",
     "host": "localhost\\MSSQLSERVER01",
@@ -11,9 +6,14 @@ SOURCE_DB = {
 }
 
 TARGET_DB = {
-    "host": os.getenv("NEON_HOST"),
-    "port": int(os.getenv("NEON_PORT")),
-    "user": os.getenv("NEON_USER"),
-    "password": os.getenv("NEON_PASSWORD"),
-    "database": os.getenv("NEON_DATABASE")
+    "host": "localhost",
+    "port": 5432,
+    "user": "postgres",
+    "password": "R@viR@j1234",
+    "database": "target_db"
 }
+
+# Custom Mapping Configurations
+ENABLE_CUSTOM_MAPPING = False
+TABLE_MAPPING = {}
+COLUMN_MAPPING = {}

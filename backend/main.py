@@ -1,15 +1,25 @@
 import sys
 import os
 
-sys.path.append(
-    os.path.abspath("..")
-)
+backend_dir = os.path.dirname(os.path.abspath(__file__))
+project_dir = os.path.dirname(backend_dir)
+
+if backend_dir not in sys.path:
+    sys.path.insert(0, backend_dir)
+if project_dir not in sys.path:
+    sys.path.insert(0, project_dir)
 
 from fastapi import FastAPI
-from routes.migration import router
+try:
+    from routes.migration import router
+except ModuleNotFoundError:
+    from backend.routes.migration import router
 from fastapi.middleware.cors import CORSMiddleware
 
-import scheduler
+try:
+    import scheduler
+except ModuleNotFoundError:
+    from backend import scheduler
 
 app = FastAPI(
     title="DB Migration Tool",

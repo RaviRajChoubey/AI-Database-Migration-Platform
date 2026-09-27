@@ -1,15 +1,81 @@
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: clamp(12px, 1.5vw, 24px);
+    margin-bottom: clamp(16px, 2vw, 30px);
+    width: 100%;
+}
+
+@media (max-width: 1199px) {
+    .summary-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .summary-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.metric-grid {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 1px;
+    background: #13294B;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .3);
+    margin-bottom: clamp(20px, 3vw, 40px);
+    width: 100%;
+}
+
+@media (max-width: 1200px) {
+    .metric-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .metric-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 420px) {
+    .metric-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.audit-summary-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: clamp(14px, 2vw, 24px);
+    margin-top: clamp(20px, 3vw, 38px);
+    align-items: stretch;
+    width: 100%;
+}
+
+@media (max-width: 992px) {
+    .audit-summary-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 .kpi-card {
     background: #13294B;
     border-radius: 10px;
-    padding: 16px 20px;
+    padding: clamp(14px, 1.5vw, 22px);
     min-height: 120px;
+    width: 100%;
+    min-width: 0;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
 
     box-shadow: 0 4px 10px rgba(0, 0, 0, .25);
-
     transition: all .3s ease;
 }
 
@@ -19,34 +85,34 @@
 
 .kpi-card h3 {
     margin: 0;
-    font-size: 14px;
+    font-size: clamp(1.05rem, 1.4vw, 1.35rem);
     font-weight: 600;
     color: #b8c7e0;
 }
 
 .kpi-card h1 {
     margin: 6px 0 0 0;
-    font-size: 42px;
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
     font-weight: 700;
     color: white;
 }
 
 select {
-    font-size: 18px !important;
+    font-size: clamp(0.95rem, 1.2vw, 1.15rem) !important;
     font-weight: 600;
 }
 
 option {
-    font-size: 18px;
+    font-size: 16px;
     padding: 12px;
 }
 
 input[type="date"]::-webkit-calendar-picker-indicator {
-    transform: scale(1.5);
+    transform: scale(1.3);
     cursor: pointer;
 }
 
 input[type="time"]::-webkit-calendar-picker-indicator {
-    transform: scale(1.5);
+    transform: scale(1.3);
     cursor: pointer;
 }

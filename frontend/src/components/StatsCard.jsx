@@ -16,13 +16,14 @@ function StatsCard({ title, value }) {
         >
             <h2
                 style={{
-                    fontSize: "30px",
+                    fontSize: "clamp(0.85rem, 1.3vw, 1.25rem)",
                     fontWeight: "600",
                     color: "#E2E8F0",
                     marginBottom: "12px",
                     display: "flex",
                     alignItems: "center",
-                    gap: "8px"
+                    gap: "8px",
+                    textAlign: "center"
                 }}
             >
                 {title}
@@ -30,7 +31,7 @@ function StatsCard({ title, value }) {
 
             <h1
                 style={{
-                    fontSize: "54px",
+                    fontSize: "clamp(1.5rem, 2.5vw, 2.5rem)",
                     fontWeight: "700",
                     color: "white",
                     margin: 0

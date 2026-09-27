@@ -54,7 +54,8 @@ class MSSQLAdapter(BaseAdapter):
                 WHEN k.COLUMN_NAME IS NOT NULL
                 THEN 'PRI'
                 ELSE ''
-            END AS KEY_TYPE
+            END AS KEY_TYPE,
+            COLUMNPROPERTY(object_id('{table}'), c.COLUMN_NAME, 'IsIdentity') AS IS_IDENTITY
         FROM INFORMATION_SCHEMA.COLUMNS c
 
         LEFT JOIN (
@@ -87,16 +88,11 @@ class MSSQLAdapter(BaseAdapter):
         for row in cursor.fetchall():
 
             data_type = row[1]
-
-            if (
-                row[1].lower() == "varchar"
-                and row[2]
-                and row[2] > 0
-            ):
-
-                data_type = (
-                    f"VARCHAR({row[2]})"
-                )
+            char_len = row[2]
+            if char_len is not None and char_len > 0:
+                data_type = f"{row[1]}({char_len})"
+            elif char_len == -1:
+                data_type = f"{row[1]}(max)"
 
             columns.append({
 
@@ -108,7 +104,7 @@ class MSSQLAdapter(BaseAdapter):
 
                 "Default": row[4],
 
-                "Extra": "",
+                "Extra": "auto_increment" if row[6] == 1 else "",
 
                 "Key": row[5]
 

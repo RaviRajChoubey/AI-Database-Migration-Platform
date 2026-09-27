@@ -646,3 +646,624 @@ LINE 6:             CHECK (([price]>(0)));
 2026-06-07 01:05:16,914 - INFO - Exported 1 procedures
 2026-06-07 01:05:16,967 - INFO - Rollback script generated successfully
 2026-06-07 01:05:17,004 - INFO - Migration Completed
+2026-09-08 12:10:10,048 - INFO - Migration initialized: mssql -> PostgreSQL
+2026-09-08 12:10:18,424 - INFO - migration_status table created
+2026-09-08 12:10:18,426 - INFO - migration_stages table created
+2026-09-08 12:10:18,552 - INFO - Found 4 completed tables
+2026-09-08 12:10:18,563 - INFO - Stage status fetched for customers
+2026-09-08 12:10:18,564 - INFO - Stage status fetched for products
+2026-09-08 12:10:18,565 - INFO - Stage status fetched for orders
+2026-09-08 12:10:18,566 - INFO - Stage status fetched for ai_test
+2026-09-08 12:10:18,567 - INFO - Stage status fetched for customers
+2026-09-08 12:10:18,567 - INFO - Stage status fetched for products
+2026-09-08 12:10:18,568 - INFO - Stage status fetched for orders
+2026-09-08 12:10:18,569 - INFO - Stage status fetched for ai_test
+2026-09-08 12:10:18,570 - INFO - Stage status fetched for customers
+2026-09-08 12:10:18,570 - INFO - Stage status fetched for products
+2026-09-08 12:10:18,571 - INFO - Stage status fetched for orders
+2026-09-08 12:10:18,573 - INFO - Stage status fetched for ai_test
+2026-09-08 12:10:18,693 - INFO - Check constraints created for customers
+2026-09-08 12:10:18,833 - INFO - Check constraints created for products
+2026-09-08 12:10:18,933 - INFO - Check constraints created for orders
+2026-09-08 12:10:19,027 - INFO - Check constraints created for ai_test
+2026-09-08 12:10:19,114 - INFO - Stage status fetched for customers
+2026-09-08 12:10:19,114 - INFO - Stage status fetched for products
+2026-09-08 12:10:19,115 - INFO - Stage status fetched for orders
+2026-09-08 12:10:19,116 - INFO - Stage status fetched for ai_test
+2026-09-08 12:10:19,323 - INFO - Default values created for customers
+2026-09-08 12:10:19,482 - INFO - Default values created for products
+2026-09-08 12:10:19,659 - INFO - Default values created for orders
+2026-09-08 12:10:19,818 - INFO - Default values created for ai_test
+2026-09-08 12:10:19,837 - INFO - Exported 1 triggers
+2026-09-08 12:10:19,930 - INFO - Exported 1 procedures
+2026-09-08 12:10:19,992 - INFO - Rollback script generated successfully
+2026-09-08 12:14:24,330 - INFO - Migration initialized: mssql -> PostgreSQL
+2026-09-08 12:14:32,955 - INFO - migration_status table created
+2026-09-08 12:14:32,955 - INFO - migration_stages table created
+2026-09-08 12:14:33,012 - INFO - Found 4 completed tables
+2026-09-08 12:14:33,015 - INFO - Stage status fetched for customers
+2026-09-08 12:14:33,015 - INFO - Stage status fetched for products
+2026-09-08 12:14:33,015 - INFO - Stage status fetched for orders
+2026-09-08 12:14:33,016 - INFO - Stage status fetched for ai_test
+2026-09-08 12:14:33,016 - INFO - Stage status fetched for customers
+2026-09-08 12:14:33,016 - INFO - Stage status fetched for products
+2026-09-08 12:14:33,017 - INFO - Stage status fetched for orders
+2026-09-08 12:14:33,017 - INFO - Stage status fetched for ai_test
+2026-09-08 12:14:33,018 - INFO - Stage status fetched for customers
+2026-09-08 12:14:33,019 - INFO - Stage status fetched for products
+2026-09-08 12:14:33,019 - INFO - Stage status fetched for orders
+2026-09-08 12:14:33,020 - INFO - Stage status fetched for ai_test
+2026-09-08 12:14:33,139 - INFO - Check constraints created for customers
+2026-09-08 12:14:33,262 - INFO - Check constraints created for products
+2026-09-08 12:14:33,374 - INFO - Check constraints created for orders
+2026-09-08 12:14:33,466 - INFO - Check constraints created for ai_test
+2026-09-08 12:14:33,515 - INFO - Stage status fetched for customers
+2026-09-08 12:14:33,515 - INFO - Stage status fetched for products
+2026-09-08 12:14:33,516 - INFO - Stage status fetched for orders
+2026-09-08 12:14:33,516 - INFO - Stage status fetched for ai_test
+2026-09-08 12:14:33,702 - INFO - Default values created for customers
+2026-09-08 12:14:33,909 - INFO - Default values created for products
+2026-09-08 12:14:34,090 - INFO - Default values created for orders
+2026-09-08 12:14:34,307 - INFO - Default values created for ai_test
+2026-09-08 12:14:34,327 - INFO - Exported 1 triggers
+2026-09-08 12:14:34,448 - INFO - Exported 1 procedures
+2026-09-08 12:14:34,546 - INFO - Rollback script generated successfully
+2026-09-08 12:14:37,930 - INFO - Migration Completed
+2026-09-08 12:23:49,191 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-09-08 12:23:49,194 - INFO - Added job "test_job" to job store "default"
+2026-09-08 12:23:49,195 - INFO - Scheduler started
+2026-09-08 12:24:03,632 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-09-08 12:24:03,633 - INFO - Added job "test_job" to job store "default"
+2026-09-08 12:24:03,633 - INFO - Scheduler started
+2026-09-08 12:29:59,128 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-09-08 12:29:59,130 - INFO - Added job "test_job" to job store "default"
+2026-09-08 12:29:59,130 - INFO - Scheduler started
+2026-09-08 12:29:59,265 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-09-08 12:29:59,265 - WARNING - Run time of job "run_scheduled_migration (trigger: date[2026-06-15 12:02:00 IST], next run at: 2026-06-15 12:02:00 IST)" was missed by 85 days, 0:27:59.265919
+2026-09-08 12:29:59,266 - INFO - Removed job job_17
+2026-09-08 12:29:59,266 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-09-08 12:29:59,266 - INFO - Removed job job_18
+2026-09-08 12:29:59,266 - WARNING - Run time of job "run_scheduled_migration (trigger: date[2026-06-15 12:07:00 IST], next run at: 2026-06-15 12:07:00 IST)" was missed by 85 days, 0:22:59.266805
+2026-09-08 12:29:59,273 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-09-08 12:29:59,273 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-09-08 12:29:59,274 - INFO - Removed job job_20
+2026-09-08 12:29:59,274 - WARNING - Run time of job "run_scheduled_migration (trigger: date[2026-06-15 12:45:00 IST], next run at: 2026-06-15 12:45:00 IST)" was missed by 84 days, 23:44:59.274257
+2026-09-08 12:30:00,151 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-09-08 12:30:00,153 - INFO - Added job "test_job" to job store "default"
+2026-09-08 12:30:00,153 - INFO - Scheduler started
+2026-09-08 12:30:00,264 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-09-08 12:30:00,265 - WARNING - Run time of job "run_scheduled_migration (trigger: date[2026-06-15 12:02:00 IST], next run at: 2026-06-15 12:02:00 IST)" was missed by 85 days, 0:28:00.265064
+2026-09-08 12:30:00,265 - INFO - Removed job job_17
+2026-09-08 12:30:00,265 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-09-08 12:30:00,266 - INFO - Removed job job_18
+2026-09-08 12:30:00,266 - WARNING - Run time of job "run_scheduled_migration (trigger: date[2026-06-15 12:07:00 IST], next run at: 2026-06-15 12:07:00 IST)" was missed by 85 days, 0:23:00.266193
+2026-09-08 12:30:00,272 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-09-08 12:30:00,273 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-09-08 12:30:00,273 - INFO - Removed job job_20
+2026-09-08 12:30:00,274 - WARNING - Run time of job "run_scheduled_migration (trigger: date[2026-06-15 12:45:00 IST], next run at: 2026-06-15 12:45:00 IST)" was missed by 84 days, 23:45:00.273985
+2026-09-08 12:32:00,011 - INFO - Running job "run_scheduled_migration (trigger: cron[hour='12', minute='32'], next run at: 2026-09-09 12:32:00 IST)" (scheduled at 2026-09-08 12:32:00+05:30)
+2026-09-08 12:32:00,012 - INFO - Running job "run_scheduled_migration (trigger: cron[hour='12', minute='32'], next run at: 2026-09-09 12:32:00 IST)" (scheduled at 2026-09-08 12:32:00+05:30)
+2026-09-08 12:32:00,554 - INFO - Migration initialized: mssql -> PostgreSQL
+2026-09-08 12:32:00,588 - INFO - Migration initialized: mssql -> PostgreSQL
+2026-09-08 12:32:08,544 - INFO - migration_status table created
+2026-09-08 12:32:08,546 - INFO - migration_stages table created
+2026-09-08 12:32:08,572 - INFO - Found 4 completed tables
+2026-09-08 12:32:08,579 - INFO - Stage status fetched for customers
+2026-09-08 12:32:08,580 - INFO - Stage status fetched for products
+2026-09-08 12:32:08,582 - INFO - Stage status fetched for orders
+2026-09-08 12:32:08,585 - INFO - Stage status fetched for ai_test
+2026-09-08 12:32:08,589 - INFO - Stage status fetched for customers
+2026-09-08 12:32:08,592 - INFO - Stage status fetched for products
+2026-09-08 12:32:08,593 - INFO - Stage status fetched for orders
+2026-09-08 12:32:08,596 - INFO - Stage status fetched for ai_test
+2026-09-08 12:32:08,600 - INFO - Stage status fetched for customers
+2026-09-08 12:32:08,601 - INFO - Stage status fetched for products
+2026-09-08 12:32:08,603 - INFO - Stage status fetched for orders
+2026-09-08 12:32:08,605 - INFO - Stage status fetched for ai_test
+2026-09-08 12:32:08,735 - INFO - Check constraints created for customers
+2026-09-08 12:32:08,961 - INFO - Check constraints created for products
+2026-09-08 12:32:09,079 - INFO - Check constraints created for orders
+2026-09-08 12:32:09,231 - INFO - Check constraints created for ai_test
+2026-09-08 12:32:09,315 - INFO - migration_status table created
+2026-09-08 12:32:09,317 - INFO - migration_stages table created
+2026-09-08 12:32:09,335 - INFO - Found 4 completed tables
+2026-09-08 12:32:09,344 - INFO - Stage status fetched for customers
+2026-09-08 12:32:09,346 - INFO - Stage status fetched for products
+2026-09-08 12:32:09,349 - INFO - Stage status fetched for orders
+2026-09-08 12:32:09,352 - INFO - Stage status fetched for ai_test
+2026-09-08 12:32:09,356 - INFO - Stage status fetched for customers
+2026-09-08 12:32:09,358 - INFO - Stage status fetched for products
+2026-09-08 12:32:09,360 - INFO - Stage status fetched for orders
+2026-09-08 12:32:09,362 - INFO - Stage status fetched for ai_test
+2026-09-08 12:32:09,366 - INFO - Stage status fetched for customers
+2026-09-08 12:32:09,367 - INFO - Stage status fetched for products
+2026-09-08 12:32:09,368 - INFO - Stage status fetched for orders
+2026-09-08 12:32:09,370 - INFO - Stage status fetched for ai_test
+2026-09-08 12:32:09,383 - INFO - Check constraints created for customers
+2026-09-08 12:32:09,447 - INFO - Stage status fetched for customers
+2026-09-08 12:32:09,448 - INFO - Stage status fetched for products
+2026-09-08 12:32:09,450 - INFO - Check constraints created for products
+2026-09-08 12:32:09,451 - INFO - Stage status fetched for orders
+2026-09-08 12:32:09,455 - INFO - Stage status fetched for ai_test
+2026-09-08 12:32:09,460 - INFO - Check constraints created for orders
+2026-09-08 12:32:09,473 - INFO - Check constraints created for ai_test
+2026-09-08 12:32:09,513 - INFO - Stage status fetched for customers
+2026-09-08 12:32:09,518 - INFO - Stage status fetched for products
+2026-09-08 12:32:09,521 - INFO - Stage status fetched for orders
+2026-09-08 12:32:09,525 - INFO - Stage status fetched for ai_test
+2026-09-08 12:32:09,754 - INFO - Default values created for customers
+2026-09-08 12:32:09,814 - INFO - Default values created for customers
+2026-09-08 12:32:09,984 - INFO - Default values created for products
+2026-09-08 12:32:10,037 - INFO - Default values created for products
+2026-09-08 12:32:10,361 - INFO - Default values created for orders
+2026-09-08 12:32:10,430 - INFO - Default values created for orders
+2026-09-08 12:32:10,606 - INFO - Default values created for ai_test
+2026-09-08 12:32:10,642 - INFO - Exported 1 triggers
+2026-09-08 12:32:10,665 - INFO - Default values created for ai_test
+2026-09-08 12:32:10,678 - INFO - Exported 1 triggers
+2026-09-08 12:32:10,753 - INFO - Exported 1 procedures
+2026-09-08 12:32:10,757 - INFO - Exported 1 procedures
+2026-09-08 12:32:10,850 - INFO - Rollback script generated successfully
+2026-09-08 12:32:10,861 - INFO - Rollback script generated successfully
+2026-09-08 12:32:11,463 - INFO - Migration Completed
+2026-09-08 12:32:11,463 - INFO - Migration Completed
+2026-09-08 12:32:11,605 - INFO - Job "run_scheduled_migration (trigger: cron[hour='12', minute='32'], next run at: 2026-09-09 12:32:00 IST)" executed successfully
+2026-09-08 12:32:11,606 - INFO - Job "run_scheduled_migration (trigger: cron[hour='12', minute='32'], next run at: 2026-09-09 12:32:00 IST)" executed successfully
+2026-09-09 10:34:02,629 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-09-09 10:34:02,633 - INFO - Added job "test_job" to job store "default"
+2026-09-09 10:34:02,633 - INFO - Scheduler started
+2026-09-09 10:34:02,873 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-09-09 10:34:02,874 - WARNING - Run time of job "run_scheduled_migration (trigger: date[2026-06-15 12:02:00 IST], next run at: 2026-06-15 12:02:00 IST)" was missed by 85 days, 22:32:02.874816
+2026-09-09 10:34:02,875 - INFO - Removed job job_17
+2026-09-09 10:34:02,875 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-09-09 10:34:02,875 - INFO - Removed job job_18
+2026-09-09 10:34:02,875 - WARNING - Run time of job "run_scheduled_migration (trigger: date[2026-06-15 12:07:00 IST], next run at: 2026-06-15 12:07:00 IST)" was missed by 85 days, 22:27:02.875890
+2026-09-09 10:34:02,888 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-09-09 10:34:02,890 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-09-09 10:34:02,890 - INFO - Removed job job_20
+2026-09-09 10:34:02,890 - WARNING - Run time of job "run_scheduled_migration (trigger: date[2026-06-15 12:45:00 IST], next run at: 2026-06-15 12:45:00 IST)" was missed by 85 days, 21:49:02.890584
+2026-09-09 10:34:04,464 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-09-09 10:34:04,466 - INFO - Added job "test_job" to job store "default"
+2026-09-09 10:34:04,466 - INFO - Scheduler started
+2026-09-09 10:34:04,630 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-09-09 10:34:04,631 - WARNING - Run time of job "run_scheduled_migration (trigger: date[2026-06-15 12:02:00 IST], next run at: 2026-06-15 12:02:00 IST)" was missed by 85 days, 22:32:04.631136
+2026-09-09 10:34:04,631 - INFO - Removed job job_17
+2026-09-09 10:34:04,632 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-09-09 10:34:04,632 - INFO - Removed job job_18
+2026-09-09 10:34:04,632 - WARNING - Run time of job "run_scheduled_migration (trigger: date[2026-06-15 12:07:00 IST], next run at: 2026-06-15 12:07:00 IST)" was missed by 85 days, 22:27:04.632934
+2026-09-09 10:34:04,640 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-09-09 10:34:04,641 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-09-09 10:34:04,642 - INFO - Removed job job_20
+2026-09-09 10:34:04,642 - WARNING - Run time of job "run_scheduled_migration (trigger: date[2026-06-15 12:45:00 IST], next run at: 2026-06-15 12:45:00 IST)" was missed by 85 days, 21:49:04.642182
+2026-09-09 12:11:34,968 - INFO - Migration initialized: mssql -> PostgreSQL
+2026-09-09 12:11:38,042 - INFO - Migration initialized: mssql -> PostgreSQL
+2026-09-09 12:11:39,386 - INFO - Migration initialized: mssql -> PostgreSQL
+2026-09-09 12:11:41,480 - INFO - Migration initialized: mssql -> PostgreSQL
+2026-09-09 12:11:45,375 - INFO - Migration initialized: mssql -> PostgreSQL
+2026-09-09 12:11:47,172 - INFO - migration_status table created
+2026-09-09 12:11:47,174 - INFO - migration_stages table created
+2026-09-09 12:11:49,510 - INFO - Found 4 completed tables
+2026-09-09 12:11:49,516 - INFO - Stage status fetched for customers
+2026-09-09 12:11:49,517 - INFO - Stage status fetched for products
+2026-09-09 12:11:49,519 - INFO - Stage status fetched for orders
+2026-09-09 12:11:49,520 - INFO - Stage status fetched for ai_test
+2026-09-09 12:11:49,522 - INFO - Stage status fetched for customers
+2026-09-09 12:11:49,523 - INFO - Stage status fetched for products
+2026-09-09 12:11:49,525 - INFO - Stage status fetched for orders
+2026-09-09 12:11:49,526 - INFO - Stage status fetched for ai_test
+2026-09-09 12:11:49,527 - INFO - Stage status fetched for customers
+2026-09-09 12:11:49,528 - INFO - Stage status fetched for products
+2026-09-09 12:11:49,529 - INFO - Stage status fetched for orders
+2026-09-09 12:11:49,531 - INFO - Stage status fetched for ai_test
+2026-09-09 12:11:50,616 - INFO - Check constraints created for customers
+2026-09-09 12:11:52,097 - INFO - Check constraints created for products
+2026-09-09 12:11:53,233 - INFO - Check constraints created for orders
+2026-09-09 12:11:55,213 - INFO - Check constraints created for ai_test
+2026-09-09 12:11:55,851 - INFO - Stage status fetched for customers
+2026-09-09 12:11:55,852 - INFO - Stage status fetched for products
+2026-09-09 12:11:55,853 - INFO - Stage status fetched for orders
+2026-09-09 12:11:55,854 - INFO - Stage status fetched for ai_test
+2026-09-09 12:11:58,092 - INFO - Default values created for customers
+2026-09-09 12:12:00,276 - INFO - Default values created for products
+2026-09-09 12:12:00,959 - INFO - Default values created for orders
+2026-09-09 12:12:02,001 - INFO - migration_status table created
+2026-09-09 12:12:02,004 - INFO - migration_stages table created
+2026-09-09 12:12:03,619 - INFO - Found 4 completed tables
+2026-09-09 12:12:03,622 - INFO - Stage status fetched for customers
+2026-09-09 12:12:03,622 - INFO - Stage status fetched for products
+2026-09-09 12:12:03,623 - INFO - Stage status fetched for orders
+2026-09-09 12:12:03,625 - INFO - Stage status fetched for ai_test
+2026-09-09 12:12:03,626 - INFO - Stage status fetched for customers
+2026-09-09 12:12:03,627 - INFO - Stage status fetched for products
+2026-09-09 12:12:03,628 - INFO - Stage status fetched for orders
+2026-09-09 12:12:03,629 - INFO - Stage status fetched for ai_test
+2026-09-09 12:12:03,631 - INFO - Stage status fetched for customers
+2026-09-09 12:12:03,632 - INFO - Stage status fetched for products
+2026-09-09 12:12:03,633 - INFO - Stage status fetched for orders
+2026-09-09 12:12:03,634 - INFO - Stage status fetched for ai_test
+2026-09-09 12:12:03,752 - INFO - Default values created for ai_test
+2026-09-09 12:12:04,413 - INFO - migration_status table created
+2026-09-09 12:12:04,414 - INFO - migration_stages table created
+2026-09-09 12:12:05,214 - INFO - Check constraints created for customers
+2026-09-09 12:12:05,229 - INFO - Exported 1 triggers
+2026-09-09 12:12:05,348 - INFO - Check constraints created for products
+2026-09-09 12:12:05,990 - INFO - Found 4 completed tables
+2026-09-09 12:12:05,995 - INFO - Stage status fetched for customers
+2026-09-09 12:12:05,996 - INFO - Stage status fetched for products
+2026-09-09 12:12:05,997 - INFO - Stage status fetched for orders
+2026-09-09 12:12:05,998 - INFO - Stage status fetched for ai_test
+2026-09-09 12:12:06,000 - INFO - Stage status fetched for customers
+2026-09-09 12:12:06,001 - INFO - Stage status fetched for products
+2026-09-09 12:12:06,002 - INFO - Stage status fetched for orders
+2026-09-09 12:12:06,004 - INFO - Stage status fetched for ai_test
+2026-09-09 12:12:06,010 - INFO - Stage status fetched for customers
+2026-09-09 12:12:06,011 - INFO - Stage status fetched for products
+2026-09-09 12:12:06,013 - INFO - Stage status fetched for orders
+2026-09-09 12:12:06,015 - INFO - Stage status fetched for ai_test
+2026-09-09 12:12:06,067 - INFO - Check constraints created for orders
+2026-09-09 12:12:06,125 - INFO - Exported 1 procedures
+2026-09-09 12:12:06,235 - INFO - Check constraints created for customers
+2026-09-09 12:12:06,972 - INFO - Check constraints created for ai_test
+2026-09-09 12:12:07,669 - INFO - Rollback script generated successfully
+2026-09-09 12:12:07,771 - INFO - Check constraints created for products
+2026-09-09 12:12:08,506 - INFO - migration_status table created
+2026-09-09 12:12:08,508 - INFO - migration_stages table created
+2026-09-09 12:12:08,531 - INFO - Stage status fetched for customers
+2026-09-09 12:12:08,532 - INFO - Stage status fetched for products
+2026-09-09 12:12:08,533 - INFO - Stage status fetched for orders
+2026-09-09 12:12:08,535 - INFO - Stage status fetched for ai_test
+2026-09-09 12:12:09,566 - INFO - Check constraints created for orders
+2026-09-09 12:12:09,599 - INFO - Found 4 completed tables
+2026-09-09 12:12:09,609 - INFO - Stage status fetched for customers
+2026-09-09 12:12:09,611 - INFO - Stage status fetched for products
+2026-09-09 12:12:09,613 - INFO - Stage status fetched for orders
+2026-09-09 12:12:09,615 - INFO - Stage status fetched for ai_test
+2026-09-09 12:12:09,620 - INFO - Stage status fetched for customers
+2026-09-09 12:12:09,622 - INFO - Stage status fetched for products
+2026-09-09 12:12:09,625 - INFO - Stage status fetched for orders
+2026-09-09 12:12:09,627 - INFO - Stage status fetched for ai_test
+2026-09-09 12:12:09,630 - INFO - Stage status fetched for customers
+2026-09-09 12:12:09,632 - INFO - Stage status fetched for products
+2026-09-09 12:12:09,634 - INFO - Stage status fetched for orders
+2026-09-09 12:12:09,638 - INFO - Stage status fetched for ai_test
+2026-09-09 12:12:09,878 - INFO - Default values created for customers
+2026-09-09 12:12:10,627 - INFO - migration_status table created
+2026-09-09 12:12:10,629 - INFO - migration_stages table created
+2026-09-09 12:12:10,791 - INFO - Default values created for products
+2026-09-09 12:12:10,922 - INFO - Check constraints created for customers
+2026-09-09 12:12:11,016 - INFO - Check constraints created for ai_test
+2026-09-09 12:12:11,043 - INFO - Found 4 completed tables
+2026-09-09 12:12:11,048 - INFO - Stage status fetched for customers
+2026-09-09 12:12:11,049 - INFO - Stage status fetched for products
+2026-09-09 12:12:11,050 - INFO - Stage status fetched for orders
+2026-09-09 12:12:11,051 - INFO - Stage status fetched for ai_test
+2026-09-09 12:12:11,052 - INFO - Stage status fetched for customers
+2026-09-09 12:12:11,054 - INFO - Stage status fetched for products
+2026-09-09 12:12:11,055 - INFO - Stage status fetched for orders
+2026-09-09 12:12:11,055 - INFO - Stage status fetched for ai_test
+2026-09-09 12:12:11,057 - INFO - Stage status fetched for customers
+2026-09-09 12:12:11,058 - INFO - Stage status fetched for products
+2026-09-09 12:12:11,059 - INFO - Stage status fetched for orders
+2026-09-09 12:12:11,060 - INFO - Stage status fetched for ai_test
+2026-09-09 12:12:11,288 - INFO - Default values created for orders
+2026-09-09 12:12:11,383 - INFO - Check constraints created for products
+2026-09-09 12:12:11,421 - INFO - Stage status fetched for customers
+2026-09-09 12:12:11,422 - INFO - Stage status fetched for products
+2026-09-09 12:12:11,424 - INFO - Stage status fetched for orders
+2026-09-09 12:12:11,425 - INFO - Stage status fetched for ai_test
+2026-09-09 12:12:11,618 - INFO - Default values created for ai_test
+2026-09-09 12:12:11,702 - INFO - Check constraints created for customers
+2026-09-09 12:12:11,787 - INFO - Check constraints created for orders
+2026-09-09 12:12:11,962 - INFO - Exported 1 triggers
+2026-09-09 12:12:12,132 - INFO - Exported 1 procedures
+2026-09-09 12:12:12,211 - INFO - Check constraints created for ai_test
+2026-09-09 12:12:12,280 - INFO - Rollback script generated successfully
+2026-09-09 12:12:15,332 - INFO - Check constraints created for products
+2026-09-09 12:12:15,334 - INFO - Default values created for customers
+2026-09-09 12:12:15,335 - INFO - Migration Completed
+2026-09-09 12:12:15,351 - INFO - Stage status fetched for customers
+2026-09-09 12:12:15,352 - INFO - Stage status fetched for products
+2026-09-09 12:12:15,353 - INFO - Stage status fetched for orders
+2026-09-09 12:12:15,354 - INFO - Stage status fetched for ai_test
+2026-09-09 12:12:15,440 - INFO - Check constraints created for orders
+2026-09-09 12:12:15,583 - INFO - Default values created for products
+2026-09-09 12:12:15,681 - INFO - Check constraints created for ai_test
+2026-09-09 12:12:16,013 - INFO - Default values created for orders
+2026-09-09 12:12:16,046 - INFO - Stage status fetched for customers
+2026-09-09 12:12:16,048 - INFO - Stage status fetched for products
+2026-09-09 12:12:16,050 - INFO - Stage status fetched for orders
+2026-09-09 12:12:16,051 - INFO - Stage status fetched for ai_test
+2026-09-09 12:12:16,253 - INFO - Default values created for ai_test
+2026-09-09 12:12:16,446 - INFO - Exported 1 triggers
+2026-09-09 12:12:17,249 - INFO - Exported 1 procedures
+2026-09-09 12:12:17,978 - INFO - Rollback script generated successfully
+2026-09-09 12:12:19,257 - INFO - Migration Completed
+2026-09-09 12:12:19,258 - INFO - Default values created for customers
+2026-09-09 12:12:19,260 - INFO - Default values created for customers
+2026-09-09 12:12:19,438 - INFO - Default values created for products
+2026-09-09 12:12:19,565 - INFO - Default values created for products
+2026-09-09 12:12:19,742 - INFO - Default values created for orders
+2026-09-09 12:12:19,891 - INFO - Default values created for orders
+2026-09-09 12:12:20,046 - INFO - Default values created for ai_test
+2026-09-09 12:12:20,191 - INFO - Default values created for ai_test
+2026-09-09 12:12:20,215 - INFO - Exported 1 triggers
+2026-09-09 12:12:20,225 - INFO - Exported 1 triggers
+2026-09-09 12:12:20,305 - INFO - Exported 1 procedures
+2026-09-09 12:12:20,353 - INFO - Exported 1 procedures
+2026-09-09 12:12:20,397 - INFO - Rollback script generated successfully
+2026-09-09 12:12:21,066 - INFO - Rollback script generated successfully
+2026-09-09 12:12:23,145 - INFO - Migration Completed
+2026-09-09 12:12:27,173 - INFO - Migration Completed
+2026-09-09 12:12:27,697 - INFO - Migration Completed
+2026-09-09 21:29:44,997 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-09-09 21:29:45,001 - INFO - Added job "test_job" to job store "default"
+2026-09-09 21:29:45,002 - INFO - Scheduler started
+2026-09-09 21:29:45,182 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-09-09 21:29:45,183 - WARNING - Run time of job "run_scheduled_migration (trigger: date[2026-06-15 12:02:00 IST], next run at: 2026-06-15 12:02:00 IST)" was missed by 86 days, 9:27:45.183638
+2026-09-09 21:29:45,184 - INFO - Removed job job_17
+2026-09-09 21:29:45,184 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-09-09 21:29:45,185 - INFO - Removed job job_18
+2026-09-09 21:29:45,185 - WARNING - Run time of job "run_scheduled_migration (trigger: date[2026-06-15 12:07:00 IST], next run at: 2026-06-15 12:07:00 IST)" was missed by 86 days, 9:22:45.185638
+2026-09-09 21:29:45,193 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-09-09 21:29:45,194 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-09-09 21:29:45,194 - INFO - Removed job job_20
+2026-09-09 21:29:45,198 - WARNING - Run time of job "run_scheduled_migration (trigger: date[2026-06-15 12:45:00 IST], next run at: 2026-06-15 12:45:00 IST)" was missed by 86 days, 8:44:45.198391
+2026-09-09 21:29:46,488 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-09-09 21:29:46,489 - INFO - Added job "test_job" to job store "default"
+2026-09-09 21:29:46,489 - INFO - Scheduler started
+2026-09-09 21:29:46,649 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-09-09 21:29:46,650 - WARNING - Run time of job "run_scheduled_migration (trigger: date[2026-06-15 12:02:00 IST], next run at: 2026-06-15 12:02:00 IST)" was missed by 86 days, 9:27:46.650210
+2026-09-09 21:29:46,650 - INFO - Removed job job_17
+2026-09-09 21:29:46,651 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-09-09 21:29:46,651 - INFO - Removed job job_18
+2026-09-09 21:29:46,652 - WARNING - Run time of job "run_scheduled_migration (trigger: date[2026-06-15 12:07:00 IST], next run at: 2026-06-15 12:07:00 IST)" was missed by 86 days, 9:22:46.651982
+2026-09-09 21:29:46,661 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-09-09 21:29:46,662 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-09-09 21:29:46,662 - INFO - Removed job job_20
+2026-09-09 21:29:46,667 - WARNING - Run time of job "run_scheduled_migration (trigger: date[2026-06-15 12:45:00 IST], next run at: 2026-06-15 12:45:00 IST)" was missed by 86 days, 8:44:46.667180
+2026-09-09 21:32:09,726 - INFO - Migration initialized: mssql -> PostgreSQL
+2026-09-09 21:32:13,159 - INFO - migration_status table created
+2026-09-09 21:32:13,167 - INFO - migration_stages table created
+2026-09-09 21:32:13,185 - INFO - Found 4 completed tables
+2026-09-09 21:32:13,204 - INFO - Stage status fetched for customers
+2026-09-09 21:32:13,208 - INFO - Stage status fetched for products
+2026-09-09 21:32:13,219 - INFO - Stage status fetched for orders
+2026-09-09 21:32:13,223 - INFO - Stage status fetched for ai_test
+2026-09-09 21:32:13,224 - INFO - No stage status found for employees
+2026-09-09 21:32:13,232 - WARNING - Unknown source type: bit
+2026-09-09 21:32:14,463 - INFO - Created table: employees
+2026-09-09 21:32:14,487 - INFO - employees: table_created updated
+2026-09-09 21:32:14,511 - INFO - Stage status fetched for customers
+2026-09-09 21:32:14,541 - INFO - Stage status fetched for products
+2026-09-09 21:32:14,562 - INFO - Stage status fetched for orders
+2026-09-09 21:32:14,585 - INFO - Stage status fetched for ai_test
+2026-09-09 21:32:14,608 - INFO - Stage status fetched for employees
+2026-09-09 21:32:14,827 - INFO - Indexes created for employees
+2026-09-09 21:32:14,829 - INFO - employees: indexes_created updated
+2026-09-09 21:32:14,830 - INFO - Stage status fetched for customers
+2026-09-09 21:32:14,831 - INFO - Stage status fetched for products
+2026-09-09 21:32:14,832 - INFO - Stage status fetched for orders
+2026-09-09 21:32:14,833 - INFO - Stage status fetched for ai_test
+2026-09-09 21:32:14,834 - INFO - Stage status fetched for employees
+2026-09-09 21:32:15,034 - INFO - Unique constraints created for employees
+2026-09-09 21:32:15,035 - INFO - employees: constraints_created updated
+2026-09-09 21:32:15,131 - INFO - Check constraints created for customers
+2026-09-09 21:32:15,254 - INFO - Check constraints created for products
+2026-09-09 21:32:15,341 - INFO - Check constraints created for orders
+2026-09-09 21:32:15,437 - INFO - Check constraints created for ai_test
+2026-09-09 21:32:15,532 - INFO - Check constraints created for employees
+2026-09-09 21:32:15,583 - INFO - Stage status fetched for customers
+2026-09-09 21:32:15,585 - INFO - Stage status fetched for products
+2026-09-09 21:32:15,585 - INFO - Stage status fetched for orders
+2026-09-09 21:32:15,586 - INFO - Stage status fetched for ai_test
+2026-09-09 21:32:15,587 - INFO - Stage status fetched for employees
+2026-09-09 21:32:15,630 - INFO - Migrated 3 rows from employees
+2026-09-09 21:32:15,632 - INFO - employees: data_migrated updated
+2026-09-09 21:32:15,639 - INFO - employees: Source=3, PostgreSQL=3
+2026-09-09 21:32:15,643 - INFO - Migration status saved: employees (3 rows)
+2026-09-09 21:32:15,645 - INFO - employees: validated updated
+2026-09-09 21:32:15,803 - INFO - Default values created for customers
+2026-09-09 21:32:15,966 - INFO - Default values created for products
+2026-09-09 21:32:16,122 - INFO - Default values created for orders
+2026-09-09 21:32:16,282 - INFO - Default values created for ai_test
+2026-09-09 21:32:16,436 - INFO - Default values created for employees
+2026-09-09 21:32:16,458 - INFO - Exported 1 triggers
+2026-09-09 21:32:16,537 - INFO - Exported 1 procedures
+2026-09-09 21:32:16,610 - INFO - Rollback script generated successfully
+2026-09-09 21:32:16,932 - INFO - Migration Completed
+2026-09-26 11:47:45,164 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-09-26 11:47:45,170 - INFO - Added job "test_job" to job store "default"
+2026-09-26 11:47:45,170 - INFO - Scheduler started
+2026-09-26 11:47:45,499 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-09-26 11:47:45,501 - WARNING - Run time of job "run_scheduled_migration (trigger: date[2026-06-15 12:02:00 IST], next run at: 2026-06-15 12:02:00 IST)" was missed by 102 days, 23:45:45.501781
+2026-09-26 11:47:45,502 - INFO - Removed job job_17
+2026-09-26 11:47:45,503 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-09-26 11:47:45,503 - INFO - Removed job job_18
+2026-09-26 11:47:45,503 - WARNING - Run time of job "run_scheduled_migration (trigger: date[2026-06-15 12:07:00 IST], next run at: 2026-06-15 12:07:00 IST)" was missed by 102 days, 23:40:45.503487
+2026-09-26 11:47:45,515 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-09-26 11:47:45,516 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-09-26 11:47:45,516 - INFO - Removed job job_20
+2026-09-26 11:47:45,516 - WARNING - Run time of job "run_scheduled_migration (trigger: date[2026-06-15 12:45:00 IST], next run at: 2026-06-15 12:45:00 IST)" was missed by 102 days, 23:02:45.516600
+2026-09-26 11:47:47,249 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-09-26 11:47:47,252 - INFO - Added job "test_job" to job store "default"
+2026-09-26 11:47:47,253 - INFO - Scheduler started
+2026-09-26 11:47:47,461 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-09-26 11:47:47,462 - WARNING - Run time of job "run_scheduled_migration (trigger: date[2026-06-15 12:02:00 IST], next run at: 2026-06-15 12:02:00 IST)" was missed by 102 days, 23:45:47.462834
+2026-09-26 11:47:47,463 - INFO - Removed job job_17
+2026-09-26 11:47:47,464 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-09-26 11:47:47,464 - INFO - Removed job job_18
+2026-09-26 11:47:47,464 - WARNING - Run time of job "run_scheduled_migration (trigger: date[2026-06-15 12:07:00 IST], next run at: 2026-06-15 12:07:00 IST)" was missed by 102 days, 23:40:47.464718
+2026-09-26 11:47:47,476 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-09-26 11:47:47,477 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-09-26 11:47:47,477 - INFO - Removed job job_20
+2026-09-26 11:47:47,478 - WARNING - Run time of job "run_scheduled_migration (trigger: date[2026-06-15 12:45:00 IST], next run at: 2026-06-15 12:45:00 IST)" was missed by 102 days, 23:02:47.478144
+2026-09-26 11:48:30,858 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-09-26 11:48:30,861 - INFO - Added job "test_job" to job store "default"
+2026-09-26 11:48:30,861 - INFO - Scheduler started
+2026-09-26 11:48:31,027 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-09-26 11:48:31,028 - WARNING - Run time of job "run_scheduled_migration (trigger: date[2026-06-15 12:02:00 IST], next run at: 2026-06-15 12:02:00 IST)" was missed by 102 days, 23:46:31.028886
+2026-09-26 11:48:31,029 - INFO - Removed job job_17
+2026-09-26 11:48:31,029 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-09-26 11:48:31,030 - INFO - Removed job job_18
+2026-09-26 11:48:31,030 - WARNING - Run time of job "run_scheduled_migration (trigger: date[2026-06-15 12:07:00 IST], next run at: 2026-06-15 12:07:00 IST)" was missed by 102 days, 23:41:31.030420
+2026-09-26 11:48:31,039 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-09-26 11:48:31,040 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-09-26 11:48:31,041 - INFO - Removed job job_20
+2026-09-26 11:48:31,041 - WARNING - Run time of job "run_scheduled_migration (trigger: date[2026-06-15 12:45:00 IST], next run at: 2026-06-15 12:45:00 IST)" was missed by 102 days, 23:03:31.041538
+2026-09-26 11:48:33,409 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-09-26 11:48:33,412 - INFO - Added job "test_job" to job store "default"
+2026-09-26 11:48:33,412 - INFO - Scheduler started
+2026-09-26 11:48:33,592 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-09-26 11:48:33,594 - WARNING - Run time of job "run_scheduled_migration (trigger: date[2026-06-15 12:02:00 IST], next run at: 2026-06-15 12:02:00 IST)" was missed by 102 days, 23:46:33.594356
+2026-09-26 11:48:33,595 - INFO - Removed job job_17
+2026-09-26 11:48:33,596 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-09-26 11:48:33,596 - INFO - Removed job job_18
+2026-09-26 11:48:33,596 - WARNING - Run time of job "run_scheduled_migration (trigger: date[2026-06-15 12:07:00 IST], next run at: 2026-06-15 12:07:00 IST)" was missed by 102 days, 23:41:33.596819
+2026-09-26 11:48:33,608 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-09-26 11:48:33,610 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-09-26 11:48:33,610 - INFO - Removed job job_20
+2026-09-26 11:48:33,613 - WARNING - Run time of job "run_scheduled_migration (trigger: date[2026-06-15 12:45:00 IST], next run at: 2026-06-15 12:45:00 IST)" was missed by 102 days, 23:03:33.613576
+2026-09-26 11:49:42,808 - INFO - Migration initialized: mssql -> PostgreSQL
+2026-09-26 11:49:46,832 - INFO - migration_status table created
+2026-09-26 11:49:46,833 - INFO - migration_stages table created
+2026-09-26 11:49:46,878 - INFO - Found 5 completed tables
+2026-09-26 11:49:46,894 - INFO - Stage status fetched for customers
+2026-09-26 11:49:46,896 - INFO - Stage status fetched for products
+2026-09-26 11:49:46,897 - INFO - Stage status fetched for orders
+2026-09-26 11:49:46,898 - INFO - Stage status fetched for ai_test
+2026-09-26 11:49:46,899 - INFO - Stage status fetched for employees
+2026-09-26 11:49:46,901 - INFO - Stage status fetched for customers
+2026-09-26 11:49:46,902 - INFO - Stage status fetched for products
+2026-09-26 11:49:46,903 - INFO - Stage status fetched for orders
+2026-09-26 11:49:46,905 - INFO - Stage status fetched for ai_test
+2026-09-26 11:49:46,906 - INFO - Stage status fetched for employees
+2026-09-26 11:49:46,907 - INFO - Stage status fetched for customers
+2026-09-26 11:49:46,908 - INFO - Stage status fetched for products
+2026-09-26 11:49:46,912 - INFO - Stage status fetched for orders
+2026-09-26 11:49:46,913 - INFO - Stage status fetched for ai_test
+2026-09-26 11:49:46,914 - INFO - Stage status fetched for employees
+2026-09-26 11:49:47,035 - INFO - Check constraints created for customers
+2026-09-26 11:49:47,149 - INFO - Check constraints created for products
+2026-09-26 11:49:47,260 - INFO - Check constraints created for orders
+2026-09-26 11:49:47,346 - INFO - Check constraints created for ai_test
+2026-09-26 11:49:47,433 - INFO - Check constraints created for employees
+2026-09-26 11:49:47,512 - INFO - Stage status fetched for customers
+2026-09-26 11:49:47,513 - INFO - Stage status fetched for products
+2026-09-26 11:49:47,514 - INFO - Stage status fetched for orders
+2026-09-26 11:49:47,514 - INFO - Stage status fetched for ai_test
+2026-09-26 11:49:47,515 - INFO - Stage status fetched for employees
+2026-09-26 11:49:47,712 - INFO - Default values created for customers
+2026-09-26 11:49:47,858 - INFO - Default values created for products
+2026-09-26 11:49:48,012 - INFO - Default values created for orders
+2026-09-26 11:49:48,159 - INFO - Default values created for ai_test
+2026-09-26 11:49:48,306 - INFO - Default values created for employees
+2026-09-26 11:49:48,327 - INFO - Exported 1 triggers
+2026-09-26 11:49:48,407 - INFO - Exported 1 procedures
+2026-09-26 11:49:48,466 - INFO - Rollback script generated successfully
+2026-09-26 11:49:48,742 - INFO - Migration Completed
+2026-09-26 12:32:00,011 - INFO - Running job "run_scheduled_migration (trigger: cron[hour='12', minute='32'], next run at: 2026-09-27 12:32:00 IST)" (scheduled at 2026-09-26 12:32:00+05:30)
+2026-09-26 12:32:00,032 - INFO - Running job "run_scheduled_migration (trigger: cron[hour='12', minute='32'], next run at: 2026-09-27 12:32:00 IST)" (scheduled at 2026-09-26 12:32:00+05:30)
+2026-09-26 12:32:00,427 - INFO - Migration initialized: mssql -> PostgreSQL
+2026-09-26 12:32:00,427 - INFO - Migration initialized: mssql -> PostgreSQL
+2026-09-26 12:32:05,305 - INFO - migration_status table created
+2026-09-26 12:32:05,307 - INFO - migration_stages table created
+2026-09-26 12:32:05,329 - INFO - Found 5 completed tables
+2026-09-26 12:32:05,336 - INFO - Stage status fetched for customers
+2026-09-26 12:32:05,336 - INFO - Stage status fetched for products
+2026-09-26 12:32:05,338 - INFO - Stage status fetched for orders
+2026-09-26 12:32:05,339 - INFO - Stage status fetched for ai_test
+2026-09-26 12:32:05,339 - INFO - Stage status fetched for employees
+2026-09-26 12:32:05,341 - INFO - Stage status fetched for customers
+2026-09-26 12:32:05,343 - INFO - Stage status fetched for products
+2026-09-26 12:32:05,344 - INFO - Stage status fetched for orders
+2026-09-26 12:32:05,344 - INFO - migration_status table created
+2026-09-26 12:32:05,346 - INFO - Stage status fetched for ai_test
+2026-09-26 12:32:05,346 - INFO - migration_stages table created
+2026-09-26 12:32:05,351 - INFO - Stage status fetched for employees
+2026-09-26 12:32:05,360 - INFO - Stage status fetched for customers
+2026-09-26 12:32:05,365 - INFO - Stage status fetched for products
+2026-09-26 12:32:05,367 - INFO - Found 5 completed tables
+2026-09-26 12:32:05,368 - INFO - Stage status fetched for orders
+2026-09-26 12:32:05,372 - INFO - Stage status fetched for ai_test
+2026-09-26 12:32:05,376 - INFO - Stage status fetched for customers
+2026-09-26 12:32:05,377 - INFO - Stage status fetched for employees
+2026-09-26 12:32:05,381 - INFO - Stage status fetched for products
+2026-09-26 12:32:05,386 - INFO - Stage status fetched for orders
+2026-09-26 12:32:05,389 - INFO - Stage status fetched for ai_test
+2026-09-26 12:32:05,394 - INFO - Stage status fetched for employees
+2026-09-26 12:32:05,403 - INFO - Stage status fetched for customers
+2026-09-26 12:32:05,408 - INFO - Stage status fetched for products
+2026-09-26 12:32:05,414 - INFO - Stage status fetched for orders
+2026-09-26 12:32:05,417 - INFO - Stage status fetched for ai_test
+2026-09-26 12:32:05,422 - INFO - Stage status fetched for employees
+2026-09-26 12:32:05,435 - INFO - Stage status fetched for customers
+2026-09-26 12:32:05,439 - INFO - Stage status fetched for products
+2026-09-26 12:32:05,442 - INFO - Stage status fetched for orders
+2026-09-26 12:32:05,444 - INFO - Stage status fetched for ai_test
+2026-09-26 12:32:05,446 - INFO - Stage status fetched for employees
+2026-09-26 12:32:05,536 - INFO - Check constraints created for customers
+2026-09-26 12:32:05,565 - INFO - Check constraints created for customers
+2026-09-26 12:32:05,628 - INFO - Check constraints created for products
+2026-09-26 12:32:05,645 - INFO - Check constraints created for products
+2026-09-26 12:32:05,707 - INFO - Check constraints created for orders
+2026-09-26 12:32:05,721 - INFO - Check constraints created for orders
+2026-09-26 12:32:05,781 - INFO - Check constraints created for ai_test
+2026-09-26 12:32:05,797 - INFO - Check constraints created for ai_test
+2026-09-26 12:32:05,872 - INFO - Check constraints created for employees
+2026-09-26 12:32:05,884 - INFO - Check constraints created for employees
+2026-09-26 12:32:05,938 - INFO - Stage status fetched for customers
+2026-09-26 12:32:05,939 - INFO - Stage status fetched for products
+2026-09-26 12:32:05,940 - INFO - Stage status fetched for orders
+2026-09-26 12:32:05,942 - INFO - Stage status fetched for ai_test
+2026-09-26 12:32:05,943 - INFO - Stage status fetched for employees
+2026-09-26 12:32:05,967 - INFO - Stage status fetched for customers
+2026-09-26 12:32:05,968 - INFO - Stage status fetched for products
+2026-09-26 12:32:05,970 - INFO - Stage status fetched for orders
+2026-09-26 12:32:05,971 - INFO - Stage status fetched for ai_test
+2026-09-26 12:32:05,972 - INFO - Stage status fetched for employees
+2026-09-26 12:32:06,112 - INFO - Default values created for customers
+2026-09-26 12:32:06,121 - INFO - Default values created for customers
+2026-09-26 12:32:06,261 - INFO - Default values created for products
+2026-09-26 12:32:06,269 - INFO - Default values created for products
+2026-09-26 12:32:06,412 - INFO - Default values created for orders
+2026-09-26 12:32:06,425 - INFO - Default values created for orders
+2026-09-26 12:32:06,535 - INFO - Default values created for ai_test
+2026-09-26 12:32:06,544 - INFO - Default values created for ai_test
+2026-09-26 12:32:06,674 - INFO - Default values created for employees
+2026-09-26 12:32:06,684 - INFO - Default values created for employees
+2026-09-26 12:32:06,693 - INFO - Exported 1 triggers
+2026-09-26 12:32:06,704 - INFO - Exported 1 triggers
+2026-09-26 12:32:06,768 - INFO - Exported 1 procedures
+2026-09-26 12:32:06,769 - INFO - Exported 1 procedures
+2026-09-26 12:32:06,826 - INFO - Rollback script generated successfully
+2026-09-26 12:32:06,835 - INFO - Rollback script generated successfully
+2026-09-26 12:32:07,267 - INFO - Migration Completed
+2026-09-26 12:32:07,267 - INFO - Migration Completed
+2026-09-26 12:32:07,384 - INFO - Job "run_scheduled_migration (trigger: cron[hour='12', minute='32'], next run at: 2026-09-27 12:32:00 IST)" executed successfully
+2026-09-26 12:32:07,387 - INFO - Job "run_scheduled_migration (trigger: cron[hour='12', minute='32'], next run at: 2026-09-27 12:32:00 IST)" executed successfully
+2026-09-26 13:25:13,950 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-09-26 13:25:13,955 - INFO - Added job "test_job" to job store "default"
+2026-09-26 13:25:13,955 - INFO - Scheduler started
+2026-09-26 13:25:14,102 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-09-26 13:25:14,103 - WARNING - Run time of job "run_scheduled_migration (trigger: date[2026-06-15 12:02:00 IST], next run at: 2026-06-15 12:02:00 IST)" was missed by 103 days, 1:23:14.103456
+2026-09-26 13:25:14,103 - INFO - Removed job job_17
+2026-09-26 13:25:14,104 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-09-26 13:25:14,104 - INFO - Removed job job_18
+2026-09-26 13:25:14,104 - WARNING - Run time of job "run_scheduled_migration (trigger: date[2026-06-15 12:07:00 IST], next run at: 2026-06-15 12:07:00 IST)" was missed by 103 days, 1:18:14.104843
+2026-09-26 13:25:14,121 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-09-26 13:25:14,122 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-09-26 13:25:14,123 - INFO - Removed job job_20
+2026-09-26 13:25:14,123 - WARNING - Run time of job "run_scheduled_migration (trigger: date[2026-06-15 12:45:00 IST], next run at: 2026-06-15 12:45:00 IST)" was missed by 103 days, 0:40:14.123411
+2026-09-26 13:25:58,944 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-09-26 13:25:58,947 - INFO - Added job "test_job" to job store "default"
+2026-09-26 13:25:58,947 - INFO - Scheduler started
+2026-09-26 13:25:59,190 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-09-26 13:25:59,191 - WARNING - Run time of job "run_scheduled_migration (trigger: date[2026-06-15 12:02:00 IST], next run at: 2026-06-15 12:02:00 IST)" was missed by 103 days, 1:23:59.191284
+2026-09-26 13:25:59,191 - INFO - Removed job job_17
+2026-09-26 13:25:59,192 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-09-26 13:25:59,192 - INFO - Removed job job_18
+2026-09-26 13:25:59,192 - WARNING - Run time of job "run_scheduled_migration (trigger: date[2026-06-15 12:07:00 IST], next run at: 2026-06-15 12:07:00 IST)" was missed by 103 days, 1:18:59.192794
+2026-09-26 13:25:59,201 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-09-26 13:25:59,206 - INFO - Added job "run_scheduled_migration" to job store "default"
+2026-09-26 13:25:59,206 - INFO - Removed job job_20
+2026-09-26 13:25:59,207 - WARNING - Run time of job "run_scheduled_migration (trigger: date[2026-06-15 12:45:00 IST], next run at: 2026-06-15 12:45:00 IST)" was missed by 103 days, 0:40:59.207066

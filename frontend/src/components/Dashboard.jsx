@@ -632,19 +632,12 @@ function Dashboard() {
             }}
         >
 
-            <div
-                style={{
-                    display: "grid",
-                    gridTemplateColumns: "repeat(4, 1fr)",
-                    gap: "20px",
-                    marginBottom: "30px"
-                }}
-            >
+            <div className="summary-grid">
 
                 <div className="kpi-card">
                     <h3
                         style={{
-                            fontSize: "32px",
+                            fontSize: "clamp(1rem, 1.5vw, 1.35rem)",
                             display: "flex",
                             alignItems: "center",
                             gap: "10px",
@@ -657,7 +650,7 @@ function Dashboard() {
 
                     <h1
                         style={{
-                            fontSize: "52px",
+                            fontSize: "clamp(1.6rem, 2.5vw, 2.5rem)",
                             marginTop: "10px",
                             color: "white"
                         }}
@@ -669,7 +662,7 @@ function Dashboard() {
                 <div className="kpi-card">
                     <h3
                         style={{
-                            fontSize: "32px",
+                            fontSize: "clamp(1rem, 1.5vw, 1.35rem)",
                             display: "flex",
                             alignItems: "center",
                             gap: "10px",
@@ -682,7 +675,7 @@ function Dashboard() {
 
                     <h1
                         style={{
-                            fontSize: "52px",
+                            fontSize: "clamp(1.6rem, 2.5vw, 2.5rem)",
                             marginTop: "10px",
                             color: "white"
                         }}
@@ -700,7 +693,7 @@ function Dashboard() {
                 <div className="kpi-card">
                     <h3
                         style={{
-                            fontSize: "32px",
+                            fontSize: "clamp(1rem, 1.5vw, 1.35rem)",
                             display: "flex",
                             alignItems: "center",
                             gap: "10px",
@@ -713,7 +706,7 @@ function Dashboard() {
 
                     <h1
                         style={{
-                            fontSize: "38px",
+                            fontSize: "clamp(1.3rem, 2vw, 2rem)",
                             marginTop: "10px",
                             color: "#22C55E"
                         }}
@@ -725,7 +718,7 @@ function Dashboard() {
                 <div className="kpi-card">
                     <h3
                         style={{
-                            fontSize: "32px",
+                            fontSize: "clamp(1rem, 1.5vw, 1.35rem)",
                             display: "flex",
                             alignItems: "center",
                             gap: "10px",
@@ -738,7 +731,7 @@ function Dashboard() {
 
                     <h1
                         style={{
-                            fontSize: "52px",
+                            fontSize: "clamp(1.6rem, 2.5vw, 2.5rem)",
                             marginTop: "10px",
                             color: "white"
                         }}
@@ -759,7 +752,7 @@ function Dashboard() {
                 <h1
                     style={{
                         textAlign: "center",
-                        fontSize: "52px",
+                        fontSize: "clamp(1.6rem, 3.5vw, 3rem)",
                         fontWeight: "800",
                         color: "white",
                         marginBottom: "30px",
@@ -771,24 +764,12 @@ function Dashboard() {
                 >
                     <FaChartLine
                         color="#38BDF8"
-                        size={42}
+                        size={36}
                     />
                     Migration Dashboard
                 </h1>
 
-                <div
-                    style={{
-                        display: "grid",
-                        gridTemplateColumns: "repeat(6, 1fr)",
-                        gap: "0px",
-                        background: "#13294B",
-                        borderRadius: "14px",
-                        overflow: "hidden",
-                        boxShadow:
-                            "0 4px 12px rgba(0,0,0,0.3)",
-                        marginBottom: "40px",
-                    }}
-                >
+                <div className="metric-grid">
 
                     <StatsCard
                         title={
@@ -882,7 +863,7 @@ function Dashboard() {
                 <h2
                     style={{
                         textAlign: "center",
-                        fontSize: "42px",
+                        fontSize: "clamp(1.4rem, 2.5vw, 2.2rem)",
                         fontWeight: "700",
                         marginBottom: "20px",
                         color: "white",
@@ -899,15 +880,7 @@ function Dashboard() {
                     progress={progressData?.progress || 0}
                 />
 
-                <div
-                    style={{
-                        display: "grid",
-                        gridTemplateColumns: "2fr 1fr",
-                        gap: "20px",
-                        marginTop: "38px",
-                        alignItems: "stretch"
-                    }}
-                >
+                <div className="audit-summary-grid">
 
                     {/* LEFT SIDE */}
 
@@ -924,7 +897,7 @@ function Dashboard() {
                             style={{
                                 textAlign: "center",
                                 marginBottom: "20px",
-                                fontSize: "38px",
+                                fontSize: "clamp(1.2rem, 2vw, 1.75rem)",
                                 fontWeight: "700",
                                 color: "white",
                                 display: "flex",
@@ -943,6 +916,7 @@ function Dashboard() {
                         </h2>
 
                         <div
+                            className="table-wrapper"
                             style={{
                                 maxHeight: "320px",
                                 overflowY: "auto",
@@ -968,8 +942,8 @@ function Dashboard() {
 
                                         <th
                                             style={{
-                                                padding: "16px",
-                                                fontSize: "32px",
+                                                padding: "12px",
+                                                fontSize: "clamp(0.85rem, 1.1vw, 1rem)",
                                                 fontWeight: "700"
                                             }}
                                         >
@@ -978,8 +952,8 @@ function Dashboard() {
 
                                         <th
                                             style={{
-                                                padding: "16px",
-                                                fontSize: "32px",
+                                                padding: "12px",
+                                                fontSize: "clamp(0.85rem, 1.1vw, 1rem)",
                                                 fontWeight: "700"
                                             }}
                                         >
@@ -988,8 +962,8 @@ function Dashboard() {
 
                                         <th
                                             style={{
-                                                padding: "16px",
-                                                fontSize: "32px",
+                                                padding: "12px",
+                                                fontSize: "clamp(0.85rem, 1.1vw, 1rem)",
                                                 fontWeight: "700"
                                             }}
                                         >
@@ -998,8 +972,8 @@ function Dashboard() {
 
                                         <th
                                             style={{
-                                                padding: "16px",
-                                                fontSize: "32px",
+                                                padding: "12px",
+                                                fontSize: "clamp(0.85rem, 1.1vw, 1rem)",
                                                 fontWeight: "700"
                                             }}
                                         >
@@ -1025,8 +999,8 @@ function Dashboard() {
 
                                                 <td
                                                     style={{
-                                                        padding: "16px",
-                                                        fontSize: "28px",
+                                                        padding: "10px",
+                                                        fontSize: "clamp(0.8rem, 1vw, 0.95rem)",
                                                         fontWeight: "500"
                                                     }}
                                                 >
@@ -1035,8 +1009,8 @@ function Dashboard() {
 
                                                 <td
                                                     style={{
-                                                        padding: "16px",
-                                                        fontSize: "28px",
+                                                        padding: "10px",
+                                                        fontSize: "clamp(0.8rem, 1vw, 0.95rem)",
                                                         fontWeight: "500"
                                                     }}
                                                 >
@@ -1045,8 +1019,8 @@ function Dashboard() {
 
                                                 <td
                                                     style={{
-                                                        padding: "16px",
-                                                        fontSize: "28px",
+                                                        padding: "10px",
+                                                        fontSize: "clamp(0.8rem, 1vw, 0.95rem)",
                                                         fontWeight: "500"
                                                     }}
                                                 >
@@ -1055,9 +1029,8 @@ function Dashboard() {
 
                                                 <td
                                                     style={{
-                                                        padding: "16px",
-                                                        fontSize: "28px",
-                                                        fontWeight: "500",
+                                                        padding: "10px",
+                                                        fontSize: "clamp(0.8rem, 1vw, 0.95rem)",
                                                         color:
                                                             item.validation_status ===
                                                                 "PASSED"
@@ -1101,7 +1074,7 @@ function Dashboard() {
                             style={{
                                 textAlign: "center",
                                 marginBottom: "20px",
-                                fontSize: "38px",
+                                fontSize: "clamp(1.2rem, 2vw, 1.75rem)",
                                 fontWeight: "700",
                                 color: "white",
                                 display: "flex",
@@ -1130,35 +1103,35 @@ function Dashboard() {
                                 style={{
                                     display: "flex",
                                     justifyContent: "space-between",
-                                    fontSize: "18px"
+                                    fontSize: "clamp(0.9rem, 1.2vw, 1.1rem)"
                                 }}
                             >
                                 <span
                                     style={{
-                                        fontSize: "32px",
+                                        fontSize: "clamp(0.95rem, 1.3vw, 1.15rem)",
                                         fontWeight: "600",
                                         marginBottom: "10px"
-                                    }} Migration >Total Migrations</span>
+                                    }}>Total Migrations</span>
                                 <strong
-                                    style={{ fontSize: "32px" }}>{migrationHistory.length}</strong>
+                                    style={{ fontSize: "clamp(0.95rem, 1.3vw, 1.15rem)" }}>{migrationHistory.length}</strong>
                             </div>
 
                             <div
                                 style={{
                                     display: "flex",
                                     justifyContent: "space-between",
-                                    fontSize: "18px"
+                                    fontSize: "clamp(0.9rem, 1.2vw, 1.1rem)"
                                 }}
                             >
                                 <span
                                     style={{
-                                        fontSize: "32px",
+                                        fontSize: "clamp(0.95rem, 1.3vw, 1.15rem)",
                                         fontWeight: "600",
                                         marginBottom: "10px"
                                     }}>Rows Migrated</span>
 
                                 <strong
-                                    style={{ fontSize: "32px" }}
+                                    style={{ fontSize: "clamp(0.95rem, 1.3vw, 1.15rem)" }}
                                 >
                                     {
                                         migrationHistory.reduce(
@@ -1174,12 +1147,12 @@ function Dashboard() {
                                 style={{
                                     display: "flex",
                                     justifyContent: "space-between",
-                                    fontSize: "18px"
+                                    fontSize: "clamp(0.9rem, 1.2vw, 1.1rem)"
                                 }}
                             >
                                 <span
                                     style={{
-                                        fontSize: "32px",
+                                        fontSize: "clamp(0.95rem, 1.3vw, 1.15rem)",
                                         fontWeight: "600",
                                         marginBottom: "10px"
                                     }}>Validation</span>
@@ -1187,7 +1160,7 @@ function Dashboard() {
                                 <strong
                                     style={{
                                         color: "#22c55e",
-                                        fontSize: "32px"
+                                        fontSize: "clamp(0.95rem, 1.3vw, 1.15rem)"
                                     }}
                                 >
                                     SUCCESS
@@ -1198,19 +1171,19 @@ function Dashboard() {
                                 style={{
                                     display: "flex",
                                     justifyContent: "space-between",
-                                    fontSize: "18px"
+                                    fontSize: "clamp(0.9rem, 1.2vw, 1.1rem)"
                                 }}
                             >
                                 <span
                                     style={{
-                                        fontSize: "32px",
+                                        fontSize: "clamp(0.95rem, 1.3vw, 1.15rem)",
                                         fontWeight: "600",
                                         marginBottom: "10px"
                                     }}> AI Risk</span>
 
                                 <strong
                                     style={{
-                                        fontSize: "32px",
+                                        fontSize: "clamp(0.95rem, 1.3vw, 1.15rem)",
                                         color:
                                             analysis?.risk_analysis?.overall_risk === "HIGH"
                                                 ? "#ef4444"
@@ -1230,18 +1203,18 @@ function Dashboard() {
                                 style={{
                                     display: "flex",
                                     justifyContent: "space-between",
-                                    fontSize: "18px"
+                                    fontSize: "clamp(0.9rem, 1.2vw, 1.1rem)"
                                 }}
                             >
                                 <span
                                     style={{
-                                        fontSize: "32px",
+                                        fontSize: "clamp(0.95rem, 1.3vw, 1.15rem)",
                                         fontWeight: "600",
                                         marginBottom: "10px"
                                     }}>Schedules</span>
 
                                 <strong
-                                    style={{ fontSize: "32px" }}>
+                                    style={{ fontSize: "clamp(0.95rem, 1.3vw, 1.15rem)" }}>
                                     {schedules.length}
                                 </strong>
                             </div>
@@ -1250,19 +1223,19 @@ function Dashboard() {
                                 style={{
                                     display: "flex",
                                     justifyContent: "space-between",
-                                    fontSize: "18px"
+                                    fontSize: "clamp(0.9rem, 1.2vw, 1.1rem)"
                                 }}
                             >
                                 <span
                                     style={{
-                                        fontSize: "32px",
+                                        fontSize: "clamp(0.95rem, 1.3vw, 1.15rem)",
                                         fontWeight: "600",
                                         marginBottom: "10px"
                                     }}>Status</span>
 
                                 <strong
                                     style={{
-                                        fontSize: "32px",
+                                        fontSize: "clamp(0.95rem, 1.3vw, 1.15rem)",
                                         color:
                                             progressData?.status === "COMPLETED"
                                                 ? "#22c55e"
@@ -1285,7 +1258,7 @@ function Dashboard() {
                 <div
                     style={{
                         display: "grid",
-                        gridTemplateColumns: "1fr 1fr 1fr",
+                        gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
                         gap: "20px",
                         marginTop: "38px",
                         alignItems: "start"
@@ -1311,7 +1284,7 @@ function Dashboard() {
                                     style={{
                                         textAlign: "center",
                                         marginBottom: "20px",
-                                        fontSize: "38px",
+                                        fontSize: "clamp(1.1rem, 1.6vw, 1.4rem)",
                                         fontWeight: "700",
                                         color: "white",
                                         display: "flex",
@@ -1333,7 +1306,7 @@ function Dashboard() {
                                     style={{
                                         textAlign: "center",
                                         marginBottom: "15px",
-                                        fontSize: "28px"
+                                        fontSize: "clamp(0.9rem, 1.3vw, 1.1rem)"
                                     }}
                                 >
                                     Overall Status:
@@ -1341,7 +1314,7 @@ function Dashboard() {
                                     <span
                                         style={{
                                             marginLeft: "8px",
-                                            fontSize: "28px",
+                                            fontSize: "clamp(0.9rem, 1.3vw, 1.1rem)",
                                             color:
                                                 validationReport.overall_status === "PASSED"
                                                     ? "#22c55e"
@@ -1354,122 +1327,123 @@ function Dashboard() {
 
                                 </div>
 
-                                <table
-                                    style={{
-                                        width: "100%",
-                                        color: "white",
-                                        borderCollapse: "collapse"
-                                    }}
-                                >
+                                <div className="table-wrapper">
+                                    <table
+                                        style={{
+                                            width: "100%",
+                                            color: "white",
+                                            borderCollapse: "collapse"
+                                        }}
+                                    >
 
-                                    <thead>
+                                        <thead>
 
-                                        <tr
-                                            style={{
-                                                background: "#1E3A5F"
-                                            }}
-                                        >
-
-                                            <th
+                                            <tr
                                                 style={{
-                                                    padding: "16px",
-                                                    fontSize: "32px",
-                                                    fontWeight: "700"
+                                                    background: "#1E3A5F"
                                                 }}
                                             >
-                                                Table
-                                            </th>
-                                            <th
-                                                style={{
-                                                    padding: "16px",
-                                                    fontSize: "32px",
-                                                    fontWeight: "700"
-                                                }}
-                                            >
-                                                Source
-                                            </th>
-                                            <th
-                                                style={{
-                                                    padding: "16px",
-                                                    fontSize: "32px",
-                                                    fontWeight: "700"
-                                                }}
-                                            >
-                                                Target
-                                            </th>
-                                            <th
-                                                style={{
-                                                    padding: "16px",
-                                                    fontSize: "32px",
-                                                    fontWeight: "700"
-                                                }}
-                                            >
-                                                Status
-                                            </th>
 
-                                        </tr>
-
-                                    </thead>
-
-                                    <tbody>
-
-                                        {
-                                            validationReport.tables.map(row => (
-
-                                                <tr
-                                                    key={row.table}
+                                                <th
                                                     style={{
-                                                        textAlign: "center"
+                                                        padding: "10px",
+                                                        fontSize: "clamp(0.85rem, 1.1vw, 1rem)",
+                                                        fontWeight: "700"
                                                     }}
                                                 >
+                                                    Table
+                                                </th>
+                                                <th
+                                                    style={{
+                                                        padding: "10px",
+                                                        fontSize: "clamp(0.85rem, 1.1vw, 1rem)",
+                                                        fontWeight: "700"
+                                                    }}
+                                                >
+                                                    Source
+                                                </th>
+                                                <th
+                                                    style={{
+                                                        padding: "10px",
+                                                        fontSize: "clamp(0.85rem, 1.1vw, 1rem)",
+                                                        fontWeight: "700"
+                                                    }}
+                                                >
+                                                    Target
+                                                </th>
+                                                <th
+                                                    style={{
+                                                        padding: "10px",
+                                                        fontSize: "clamp(0.85rem, 1.1vw, 1rem)",
+                                                        fontWeight: "700"
+                                                    }}
+                                                >
+                                                    Status
+                                                </th>
 
-                                                    <td
-                                                        style={{
-                                                            padding: "16px",
-                                                            fontSize: "28px",
-                                                            fontWeight: "500"
-                                                        }}
-                                                    >{row.table}</td>
+                                            </tr>
 
-                                                    <td
-                                                        style={{
-                                                            padding: "16px",
-                                                            fontSize: "28px",
-                                                            fontWeight: "500"
-                                                        }}
-                                                    >{row.source_rows}</td>
+                                        </thead>
 
-                                                    <td
-                                                        style={{
-                                                            padding: "16px",
-                                                            fontSize: "28px",
-                                                            fontWeight: "500"
-                                                        }}
-                                                    >{row.target_rows}</td>
+                                        <tbody>
 
-                                                    <td
+                                            {
+                                                validationReport.tables.map(row => (
+
+                                                    <tr
+                                                        key={row.table}
                                                         style={{
-                                                            padding: "16px",
-                                                            fontSize: "28px",
-                                                            fontWeight: "500",
-                                                            color:
-                                                                row.status === "PASSED"
-                                                                    ? "#22c55e"
-                                                                    : "#ef4444",
-                                                            fontWeight: "bold"
+                                                            textAlign: "center"
                                                         }}
                                                     >
-                                                        {row.status}
-                                                    </td>
 
-                                                </tr>
+                                                        <td
+                                                            style={{
+                                                                padding: "10px",
+                                                                fontSize: "clamp(0.8rem, 1vw, 0.95rem)",
+                                                                fontWeight: "500"
+                                                            }}
+                                                        >{row.table}</td>
 
-                                            ))
-                                        }
+                                                        <td
+                                                            style={{
+                                                                padding: "10px",
+                                                                fontSize: "clamp(0.8rem, 1vw, 0.95rem)",
+                                                                fontWeight: "500"
+                                                            }}
+                                                        >{row.source_rows}</td>
 
-                                    </tbody>
+                                                        <td
+                                                            style={{
+                                                                padding: "10px",
+                                                                fontSize: "clamp(0.8rem, 1vw, 0.95rem)",
+                                                                fontWeight: "500"
+                                                            }}
+                                                        >{row.target_rows}</td>
 
-                                </table>
+                                                        <td
+                                                            style={{
+                                                                padding: "10px",
+                                                                fontSize: "clamp(0.8rem, 1vw, 0.95rem)",
+                                                                color:
+                                                                    row.status === "PASSED"
+                                                                        ? "#22c55e"
+                                                                        : "#ef4444",
+                                                                fontWeight: "bold"
+                                                            }}
+                                                        >
+                                                            {row.status}
+                                                        </td>
+
+                                                    </tr>
+
+                                                ))
+                                            }
+
+                                        </tbody>
+
+                                    </table>
+                                </div>
 
                             </div>
 
@@ -1495,7 +1469,7 @@ function Dashboard() {
                                     style={{
                                         textAlign: "center",
                                         marginBottom: "20px",
-                                        fontSize: "38px",
+                                        fontSize: "clamp(1.1rem, 1.6vw, 1.4rem)",
                                         fontWeight: "700",
                                         color: "white",
                                         display: "flex",
@@ -1513,84 +1487,85 @@ function Dashboard() {
                                     Checksum Validation
                                 </h2>
 
-                                <table
-                                    style={{
-                                        width: "100%",
-                                        color: "white",
-                                        borderCollapse: "collapse"
-                                    }}
-                                >
+                                <div className="table-wrapper">
+                                    <table
+                                        style={{
+                                            width: "100%",
+                                            color: "white",
+                                            borderCollapse: "collapse"
+                                        }}
+                                    >
 
-                                    <thead>
+                                        <thead>
 
-                                        <tr
-                                            style={{
-                                                background: "#1E3A5F"
-                                            }}
-                                        >
-
-                                            <th
+                                            <tr
                                                 style={{
-                                                    padding: "16px",
-                                                    fontSize: "32px",
-                                                    fontWeight: "700"
+                                                    background: "#1E3A5F"
                                                 }}
-                                            >Table</th>
-                                            <th
-                                                style={{
-                                                    padding: "16px",
-                                                    fontSize: "32px",
-                                                    fontWeight: "700"
-                                                }}
-                                            >Status</th>
+                                            >
 
-                                        </tr>
-
-                                    </thead>
-
-                                    <tbody>
-
-                                        {
-                                            checksumReport.map(row => (
-
-                                                <tr
-                                                    key={row.table}
+                                                <th
                                                     style={{
-                                                        textAlign: "center"
+                                                        padding: "10px",
+                                                        fontSize: "clamp(0.85rem, 1.1vw, 1rem)",
+                                                        fontWeight: "700"
                                                     }}
-                                                >
+                                                >Table</th>
+                                                <th
+                                                    style={{
+                                                        padding: "10px",
+                                                        fontSize: "clamp(0.85rem, 1.1vw, 1rem)",
+                                                        fontWeight: "700"
+                                                    }}
+                                                >Status</th>
 
-                                                    <td
-                                                        style={{
-                                                            padding: "16px",
-                                                            fontSize: "28px",
-                                                            fontWeight: "500"
-                                                        }}
-                                                    >{row.table}</td>
+                                            </tr>
 
-                                                    <td
+                                        </thead>
+
+                                        <tbody>
+
+                                            {
+                                                checksumReport.map(row => (
+
+                                                    <tr
+                                                        key={row.table}
                                                         style={{
-                                                            padding: "16px",
-                                                            fontSize: "28px",
-                                                            fontWeight: "500",
-                                                            color:
-                                                                row.status === "PASS"
-                                                                    ? "#22c55e"
-                                                                    : "#ef4444",
-                                                            fontWeight: "bold"
+                                                            textAlign: "center"
                                                         }}
                                                     >
-                                                        {row.status}
-                                                    </td>
 
-                                                </tr>
+                                                        <td
+                                                            style={{
+                                                                padding: "10px",
+                                                                fontSize: "clamp(0.8rem, 1vw, 0.95rem)",
+                                                                fontWeight: "500"
+                                                            }}
+                                                        >{row.table}</td>
 
-                                            ))
-                                        }
+                                                        <td
+                                                            style={{
+                                                                padding: "10px",
+                                                                fontSize: "clamp(0.8rem, 1vw, 0.95rem)",
+                                                                color:
+                                                                    row.status === "PASS"
+                                                                        ? "#22c55e"
+                                                                        : "#ef4444",
+                                                                fontWeight: "bold"
+                                                            }}
+                                                        >
+                                                            {row.status}
+                                                        </td>
 
-                                    </tbody>
+                                                    </tr>
 
-                                </table>
+                                                ))
+                                            }
+
+                                        </tbody>
+
+                                    </table>
+                                </div>
 
                             </div>
 
@@ -1616,7 +1591,7 @@ function Dashboard() {
                                     style={{
                                         textAlign: "center",
                                         marginBottom: "20px",
-                                        fontSize: "38px",
+                                        fontSize: "clamp(1.1rem, 1.6vw, 1.4rem)",
                                         fontWeight: "700",
                                         color: "white",
                                         display: "flex",
@@ -1644,9 +1619,9 @@ function Dashboard() {
                                                 style={{
                                                     textAlign: "center",
                                                     color: "#22c55e",
-                                                    fontSize: "34px",
+                                                    fontSize: "clamp(1.2rem, 2vw, 1.6rem)",
                                                     fontWeight: "bold",
-                                                    marginTop: "150px"
+                                                    marginTop: "60px"
                                                 }}
                                             >
                                                 ✓ No Issues Found
@@ -1656,77 +1631,79 @@ function Dashboard() {
 
                                         : (
 
-                                            <table
-                                                style={{
-                                                    width: "100%",
-                                                    color: "white",
-                                                    borderCollapse: "collapse"
-                                                }}
-                                            >
+                                            <div className="table-wrapper">
+                                                <table
+                                                    style={{
+                                                        width: "100%",
+                                                        color: "white",
+                                                        borderCollapse: "collapse"
+                                                    }}
+                                                >
 
-                                                <thead>
+                                                    <thead>
 
-                                                    <tr
-                                                        style={{
-                                                            background: "#1E3A5F"
-                                                        }}
-                                                    >
-
-                                                        <th
+                                                        <tr
                                                             style={{
-                                                                padding: "16px",
-                                                                fontSize: "32px",
-                                                                fontWeight: "700"
+                                                                background: "#1E3A5F"
                                                             }}
-                                                        >Table</th>
-                                                        <th
-                                                            style={{
-                                                                padding: "16px",
-                                                                fontSize: "32px",
-                                                                fontWeight: "700"
-                                                            }}
-                                                        >Issue</th>
+                                                        >
 
-                                                    </tr>
+                                                            <th
+                                                                style={{
+                                                                    padding: "10px",
+                                                                    fontSize: "clamp(0.85rem, 1.1vw, 1rem)",
+                                                                    fontWeight: "700"
+                                                                }}
+                                                            >Table</th>
+                                                            <th
+                                                                style={{
+                                                                    padding: "10px",
+                                                                    fontSize: "clamp(0.85rem, 1.1vw, 1rem)",
+                                                                    fontWeight: "700"
+                                                                }}
+                                                            >Issue</th>
 
-                                                </thead>
+                                                        </tr>
 
-                                                <tbody>
+                                                    </thead>
 
-                                                    {
-                                                        reconciliationReport.map(row => (
+                                                    <tbody>
 
-                                                            <tr
-                                                                key={row.primary_key}
-                                                            >
+                                                        {
+                                                            reconciliationReport.map(row => (
 
-                                                                <td
-                                                                    style={{
-                                                                        padding: "16px",
-                                                                        fontSize: "28px",
-                                                                        fontWeight: "500"
-                                                                    }}
-                                                                >{row.table}</td>
-
-                                                                <td
-                                                                    style={{
-                                                                        padding: "16px",
-                                                                        fontSize: "28px",
-                                                                        fontWeight: "500",
-                                                                        color: "#ef4444"
-                                                                    }}
+                                                                <tr
+                                                                    key={row.primary_key}
                                                                 >
-                                                                    {row.issue}
-                                                                </td>
 
-                                                            </tr>
+                                                                    <td
+                                                                        style={{
+                                                                            padding: "10px",
+                                                                            fontSize: "clamp(0.8rem, 1vw, 0.95rem)",
+                                                                            fontWeight: "500"
+                                                                        }}
+                                                                    >{row.table}</td>
 
-                                                        ))
-                                                    }
+                                                                    <td
+                                                                        style={{
+                                                                            padding: "10px",
+                                                                            fontSize: "clamp(0.8rem, 1vw, 0.95rem)",
+                                                                            fontWeight: "500",
+                                                                            color: "#ef4444"
+                                                                        }}
+                                                                    >
+                                                                        {row.issue}
+                                                                    </td>
 
-                                                </tbody>
+                                                                </tr>
 
-                                            </table>
+                                                            ))
+                                                        }
+
+                                                    </tbody>
+
+                                                </table>
+                                            </div>
 
                                         )
                                 }
@@ -1738,12 +1715,10 @@ function Dashboard() {
 
                 </div>
 
-                <br />
-
                 <div
                     style={{
                         display: "grid",
-                        gridTemplateColumns: "1fr 1fr 1fr",
+                        gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
                         gap: "20px",
                         marginTop: "38px",
                         alignItems: "start"
@@ -1768,12 +1743,12 @@ function Dashboard() {
                                 gap: "10px",
                                 marginBottom: "25px",
                                 color: "white",
-                                fontSize: "38px",
+                                fontSize: "clamp(1.1rem, 1.6vw, 1.4rem)",
                                 fontWeight: "700"
                             }}
                         >
                             <FaCalendarAlt
-                                size={38}
+                                size={28}
                                 color="#60a5fa" />
                             Migration Scheduler
                         </h2>
@@ -1793,8 +1768,8 @@ function Dashboard() {
                                     setScheduleName(e.target.value)
                                 }
                                 style={{
-                                    padding: "16px",
-                                    fontSize: "20px",
+                                    padding: "12px",
+                                    fontSize: "16px",
                                     borderRadius: "8px",
                                     border: "none",
                                     background: "#1E3A5F",
@@ -1808,8 +1783,8 @@ function Dashboard() {
                                     setScheduleType(e.target.value)
                                 }
                                 style={{
-                                    padding: "16px",
-                                    fontSize: "20px",
+                                    padding: "12px",
+                                    fontSize: "16px",
                                     borderRadius: "8px",
                                     background: "#1E3A5F",
                                     color: "white"
@@ -1833,8 +1808,8 @@ function Dashboard() {
                                             setScheduledDate(e.target.value)
                                         }
                                         style={{
-                                            padding: "16px",
-                                            fontSize: "20px",
+                                            padding: "12px",
+                                            fontSize: "16px",
                                             fontWeight: "600",
                                             borderRadius: "8px",
                                             background: "#1E3A5F",
@@ -1852,8 +1827,8 @@ function Dashboard() {
                                         setWeekday(e.target.value)
                                     }
                                     style={{
-                                        padding: "16px",
-                                        fontSize: "20px",
+                                        padding: "12px",
+                                        fontSize: "16px",
                                         borderRadius: "8px",
                                         background: "#1E3A5F",
                                         color: "white"
@@ -1877,8 +1852,8 @@ function Dashboard() {
                                     setScheduledTime(e.target.value)
                                 }
                                 style={{
-                                    padding: "16px",
-                                    fontSize: "20px",
+                                    padding: "12px",
+                                    fontSize: "16px",
                                     fontWeight: "600",
                                     borderRadius: "8px",
                                     background: "#1E3A5F",
@@ -1896,8 +1871,8 @@ function Dashboard() {
                                     )
                                 }
                                 style={{
-                                    padding: "16px",
-                                    fontSize: "20px",
+                                    padding: "12px",
+                                    fontSize: "16px",
                                     borderRadius: "8px",
                                     background: "#1E3A5F",
                                     color: "white"
@@ -1925,8 +1900,8 @@ function Dashboard() {
                                     )
                                 }
                                 style={{
-                                    padding: "16px",
-                                    fontSize: "20px",
+                                    padding: "12px",
+                                    fontSize: "16px",
                                     borderRadius: "8px",
                                     background: "#1E3A5F",
                                     color: "white"
@@ -1941,13 +1916,13 @@ function Dashboard() {
                             <button
                                 onClick={handleScheduleMigration}
                                 style={{
-                                    padding: "18px",
+                                    padding: "14px",
                                     border: "none",
                                     borderRadius: "8px",
                                     background: "#22c55e",
                                     color: "white",
                                     fontWeight: "700",
-                                    fontSize: "30px",
+                                    fontSize: "clamp(0.95rem, 1.3vw, 1.2rem)",
                                     cursor: "pointer"
                                 }}
                             >
@@ -1974,17 +1949,18 @@ function Dashboard() {
                                 alignItems: "center",
                                 gap: "10px",
                                 color: "white",
-                                fontSize: "38px",
+                                fontSize: "clamp(1.1rem, 1.6vw, 1.4rem)",
                                 marginBottom: "20px"
                             }}
                         >
                             <FaClock
-                                size={38}
+                                size={28}
                                 color="#60a5fa" />
                             Scheduler Monitoring
                         </h2>
 
                         <div
+                            className="table-wrapper"
                             style={{
                                 height: "420px",
                                 overflowY: "auto"
@@ -1995,8 +1971,7 @@ function Dashboard() {
                                 style={{
                                     width: "100%",
                                     color: "white",
-                                    borderCollapse: "collapse",
-                                    fontSize: "30px"
+                                    borderCollapse: "collapse"
                                 }}
                             >
 
@@ -2007,10 +1982,10 @@ function Dashboard() {
                                             background: "#1E3A5F"
                                         }}
                                     >
-                                        <th style={{ padding: "16px" }}>ID</th>
-                                        <th style={{ padding: "16px" }}>Schedule</th>
-                                        <th style={{ padding: "16px" }}>Status</th>
-                                        <th style={{ padding: "16px" }}>Duration</th>
+                                        <th style={{ padding: "10px", fontSize: "clamp(0.85rem, 1.1vw, 1rem)" }}>ID</th>
+                                        <th style={{ padding: "10px", fontSize: "clamp(0.85rem, 1.1vw, 1rem)" }}>Schedule</th>
+                                        <th style={{ padding: "10px", fontSize: "clamp(0.85rem, 1.1vw, 1rem)" }}>Status</th>
+                                        <th style={{ padding: "10px", fontSize: "clamp(0.85rem, 1.1vw, 1rem)" }}>Duration</th>
                                     </tr>
 
                                 </thead>
@@ -2024,8 +1999,9 @@ function Dashboard() {
 
                                                 <td
                                                     style={{
-                                                        padding: "16px",
-                                                        textAlign: "center"
+                                                        padding: "10px",
+                                                        textAlign: "center",
+                                                        fontSize: "clamp(0.8rem, 1vw, 0.95rem)"
                                                     }}
                                                 >
                                                     {log.execution_id}
@@ -2033,8 +2009,9 @@ function Dashboard() {
 
                                                 <td
                                                     style={{
-                                                        padding: "16px",
-                                                        textAlign: "center"
+                                                        padding: "10px",
+                                                        textAlign: "center",
+                                                        fontSize: "clamp(0.8rem, 1vw, 0.95rem)"
                                                     }}
                                                 >
                                                     {log.schedule_id}
@@ -2042,13 +2019,14 @@ function Dashboard() {
 
                                                 <td
                                                     style={{
-                                                        padding: "16px",
+                                                        padding: "10px",
                                                         textAlign: "center",
                                                         color:
                                                             log.status === "SUCCESS"
                                                                 ? "#22c55e"
                                                                 : "#ef4444",
-                                                        fontWeight: "bold"
+                                                        fontWeight: "bold",
+                                                        fontSize: "clamp(0.8rem, 1vw, 0.95rem)"
                                                     }}
                                                 >
                                                     {log.status}
@@ -2056,8 +2034,9 @@ function Dashboard() {
 
                                                 <td
                                                     style={{
-                                                        padding: "16px",
-                                                        textAlign: "center"
+                                                        padding: "10px",
+                                                        textAlign: "center",
+                                                        fontSize: "clamp(0.8rem, 1vw, 0.95rem)"
                                                     }}
                                                 >
                                                     {log.duration_seconds} sec
@@ -2093,17 +2072,18 @@ function Dashboard() {
                                 alignItems: "center",
                                 gap: "10px",
                                 color: "white",
-                                fontSize: "38px",
+                                fontSize: "clamp(1.1rem, 1.6vw, 1.4rem)",
                                 marginBottom: "20px"
                             }}
                         >
                             <FaTasks
-                                size={38}
+                                size={28}
                                 color="#60a5fa" />
                             Scheduled Jobs
                         </h2>
 
                         <div
+                            className="table-wrapper"
                             style={{
                                 height: "420px",
                                 overflowY: "auto"
@@ -2114,8 +2094,7 @@ function Dashboard() {
                                 style={{
                                     width: "100%",
                                     borderCollapse: "collapse",
-                                    color: "white",
-                                    fontSize: "30px"
+                                    color: "white"
                                 }}
                             >
 
@@ -2126,12 +2105,12 @@ function Dashboard() {
                                             background: "#1E3A5F"
                                         }}
                                     >
-                                        <th style={{ padding: "16px" }}>ID</th>
-                                        <th style={{ padding: "16px" }}>Name</th>
-                                        <th style={{ padding: "16px" }}>Type</th>
-                                        <th style={{ padding: "16px" }}>Time</th>
-                                        <th style={{ padding: "16px" }}>Status</th>
-                                        <th style={{ padding: "16px" }}>Actions</th>
+                                        <th style={{ padding: "10px", fontSize: "clamp(0.85rem, 1.1vw, 1rem)" }}>ID</th>
+                                        <th style={{ padding: "10px", fontSize: "clamp(0.85rem, 1.1vw, 1rem)" }}>Name</th>
+                                        <th style={{ padding: "10px", fontSize: "clamp(0.85rem, 1.1vw, 1rem)" }}>Type</th>
+                                        <th style={{ padding: "10px", fontSize: "clamp(0.85rem, 1.1vw, 1rem)" }}>Time</th>
+                                        <th style={{ padding: "10px", fontSize: "clamp(0.85rem, 1.1vw, 1rem)" }}>Status</th>
+                                        <th style={{ padding: "10px", fontSize: "clamp(0.85rem, 1.1vw, 1rem)" }}>Actions</th>
                                     </tr>
 
                                 </thead>
@@ -2145,8 +2124,9 @@ function Dashboard() {
 
                                                 <td
                                                     style={{
-                                                        padding: "16px",
-                                                        textAlign: "center"
+                                                        padding: "10px",
+                                                        textAlign: "center",
+                                                        fontSize: "clamp(0.8rem, 1vw, 0.95rem)"
                                                     }}
                                                 >
                                                     {schedule.schedule_id}
@@ -2154,8 +2134,9 @@ function Dashboard() {
 
                                                 <td
                                                     style={{
-                                                        padding: "16px",
-                                                        textAlign: "center"
+                                                        padding: "10px",
+                                                        textAlign: "center",
+                                                        fontSize: "clamp(0.8rem, 1vw, 0.95rem)"
                                                     }}
                                                 >
                                                     {schedule.schedule_name}
@@ -2163,8 +2144,9 @@ function Dashboard() {
 
                                                 <td
                                                     style={{
-                                                        padding: "16px",
-                                                        textAlign: "center"
+                                                        padding: "10px",
+                                                        textAlign: "center",
+                                                        fontSize: "clamp(0.8rem, 1vw, 0.95rem)"
                                                     }}
                                                 >
                                                     {schedule.schedule_type}
@@ -2172,8 +2154,9 @@ function Dashboard() {
 
                                                 <td
                                                     style={{
-                                                        padding: "16px",
-                                                        textAlign: "center"
+                                                        padding: "10px",
+                                                        textAlign: "center",
+                                                        fontSize: "clamp(0.8rem, 1vw, 0.95rem)"
                                                     }}
                                                 >
                                                     {schedule.scheduled_time}
@@ -2181,13 +2164,14 @@ function Dashboard() {
 
                                                 <td
                                                     style={{
-                                                        padding: "16px",
+                                                        padding: "10px",
                                                         textAlign: "center",
                                                         color:
                                                             schedule.is_active
                                                                 ? "#22c55e"
                                                                 : "#ef4444",
-                                                        fontWeight: "bold"
+                                                        fontWeight: "bold",
+                                                        fontSize: "clamp(0.8rem, 1vw, 0.95rem)"
                                                     }}
                                                 >
                                                     {
@@ -2215,7 +2199,7 @@ function Dashboard() {
                                                             style={{
                                                                 display: "flex",
                                                                 justifyContent: "center",
-                                                                gap: "10px"
+                                                                gap: "8px"
                                                             }}
                                                         >
 
@@ -2226,18 +2210,17 @@ function Dashboard() {
                                                                     background: "#F59E0B",
                                                                     border: "none",
                                                                     color: "white",
-                                                                    width: "40px",
-                                                                    height: "40px",
-                                                                    borderRadius: "8px",
+                                                                    width: "32px",
+                                                                    height: "32px",
+                                                                    borderRadius: "6px",
                                                                     cursor: "pointer",
                                                                     display: "flex",
                                                                     alignItems: "center",
                                                                     justifyContent: "center",
-                                                                    fontSize: "18px",
                                                                     boxShadow: "0 2px 8px rgba(0,0,0,0.3)"
                                                                 }}
                                                             >
-                                                                <MdPauseCircleFilled size={40} />
+                                                                <MdPauseCircleFilled size={24} />
                                                             </button>
 
                                                             <button
@@ -2247,18 +2230,17 @@ function Dashboard() {
                                                                     background: "#EF4444",
                                                                     border: "none",
                                                                     color: "white",
-                                                                    width: "40px",
-                                                                    height: "40px",
-                                                                    borderRadius: "8px",
+                                                                    width: "32px",
+                                                                    height: "32px",
+                                                                    borderRadius: "6px",
                                                                     cursor: "pointer",
                                                                     display: "flex",
                                                                     alignItems: "center",
                                                                     justifyContent: "center",
-                                                                    fontSize: "18px",
                                                                     boxShadow: "0 2px 8px rgba(0,0,0,0.3)"
                                                                 }}
                                                             >
-                                                                <MdDeleteForever size={40} />
+                                                                <MdDeleteForever size={24} />
                                                             </button>
 
                                                         </div>
@@ -2298,7 +2280,7 @@ function Dashboard() {
                             justifyContent: "center",
                             alignItems: "center",
                             gap: "12px",
-                            fontSize: "38px",
+                            fontSize: "clamp(1.2rem, 2vw, 1.75rem)",
                             fontWeight: "700",
                             color: "white",
                             marginBottom: "20px"
@@ -2311,36 +2293,36 @@ function Dashboard() {
                     <div
                         style={{
                             display: "grid",
-                            gridTemplateColumns: "repeat(4,1fr)",
+                            gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))",
                             gap: "20px",
                             textAlign: "center"
                         }}
                     >
 
                         <div>
-                            <div style={{ fontSize: "32px" }}>🔗</div>
-                            <div style={{ fontSize: "30px", marginTop: "8px" }}>
+                            <div style={{ fontSize: "clamp(1.5rem, 2vw, 2rem)" }}>🔗</div>
+                            <div style={{ fontSize: "clamp(0.9rem, 1.2vw, 1.1rem)", marginTop: "8px" }}>
                                 Foreign Keys Detected
                             </div>
                         </div>
 
                         <div>
-                            <div style={{ fontSize: "32px" }}>✏️</div>
-                            <div style={{ fontSize: "30px", marginTop: "8px" }}>
+                            <div style={{ fontSize: "clamp(1.5rem, 2vw, 2rem)" }}>✏️</div>
+                            <div style={{ fontSize: "clamp(0.9rem, 1.2vw, 1.1rem)", marginTop: "8px" }}>
                                 Rename Suggestions
                             </div>
                         </div>
 
                         <div>
-                            <div style={{ fontSize: "32px" }}>✅</div>
-                            <div style={{ fontSize: "30px", marginTop: "8px" }}>
+                            <div style={{ fontSize: "clamp(1.5rem, 2vw, 2rem)" }}>✅</div>
+                            <div style={{ fontSize: "clamp(0.9rem, 1.2vw, 1.1rem)", marginTop: "8px" }}>
                                 Schema Safe
                             </div>
                         </div>
 
                         <div>
-                            <div style={{ fontSize: "32px" }}>🚀</div>
-                            <div style={{ fontSize: "30px", marginTop: "8px" }}>
+                            <div style={{ fontSize: "clamp(1.5rem, 2vw, 2rem)" }}>🚀</div>
+                            <div style={{ fontSize: "clamp(0.9rem, 1.2vw, 1.1rem)", marginTop: "8px" }}>
                                 Ready For Migration
                             </div>
                         </div>
@@ -2354,7 +2336,7 @@ function Dashboard() {
                 <div
                     style={{
                         display: "grid",
-                        gridTemplateColumns: "1fr 1fr",
+                        gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
                         gap: "20px",
                         marginTop: "38px"
                     }}
@@ -2376,7 +2358,7 @@ function Dashboard() {
                                 display: "flex",
                                 alignItems: "center",
                                 gap: "10px",
-                                fontSize: "38px",
+                                fontSize: "clamp(1.2rem, 2vw, 1.75rem)",
                                 fontWeight: "700",
                                 color: "white",
                                 marginBottom: "20px"
@@ -2391,7 +2373,7 @@ function Dashboard() {
                                 ? (
                                     <p
                                         style={{
-                                            fontSize: "30px"
+                                            fontSize: "clamp(0.9rem, 1.2vw, 1.1rem)"
                                         }}
                                     >
                                         No foreign keys detected
@@ -2404,7 +2386,7 @@ function Dashboard() {
                                             <p
                                                 key={index}
                                                 style={{
-                                                    fontSize: "30px",
+                                                    fontSize: "clamp(0.85rem, 1.1vw, 1rem)",
                                                     marginBottom: "12px",
                                                     lineHeight: "1.7"
                                                 }}
@@ -2437,7 +2419,7 @@ function Dashboard() {
                                 display: "flex",
                                 alignItems: "center",
                                 gap: "10px",
-                                fontSize: "38px",
+                                fontSize: "clamp(1.2rem, 2vw, 1.75rem)",
                                 fontWeight: "700",
                                 color: "white",
                                 marginBottom: "20px"
@@ -2452,7 +2434,7 @@ function Dashboard() {
                                 ? (
                                     <p
                                         style={{
-                                            fontSize: "30px"
+                                            fontSize: "clamp(0.9rem, 1.2vw, 1.1rem)"
                                         }}
                                     >
                                         No rename suggestions
@@ -2465,7 +2447,7 @@ function Dashboard() {
                                             <p
                                                 key={index}
                                                 style={{
-                                                    fontSize: "30px",
+                                                    fontSize: "clamp(0.85rem, 1.1vw, 1rem)",
                                                     marginBottom: "12px",
                                                     lineHeight: "1.7"
                                                 }}
@@ -2491,7 +2473,7 @@ function Dashboard() {
                 <div
                     style={{
                         display: "grid",
-                        gridTemplateColumns: "1fr 1fr",
+                        gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
                         gap: "20px",
                         marginTop: "38px"
                     }}
@@ -2505,7 +2487,7 @@ function Dashboard() {
 
             </div>
 
-        </div >
+        </div>
 
     );
 

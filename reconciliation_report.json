@@ -1,6 +1,23 @@
 [
     {
-        "status": "PASS",
-        "message": "No reconciliation issues detected"
+        "table": "employees",
+        "primary_key": 1,
+        "column": "is_active",
+        "source_value": "True",
+        "target_value": "true"
+    },
+    {
+        "table": "employees",
+        "primary_key": 2,
+        "column": "is_active",
+        "source_value": "True",
+        "target_value": "true"
+    },
+    {
+        "table": "employees",
+        "primary_key": 3,
+        "column": "is_active",
+        "source_value": "False",
+        "target_value": "false"
     }
 ]

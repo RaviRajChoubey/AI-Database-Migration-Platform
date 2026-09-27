@@ -6,7 +6,7 @@ import logging
 import hashlib
 from datetime import datetime
 from adapters.factory import get_adapter
-from config import SOURCE_DB, TARGET_DB
+from config import SOURCE_DB, TARGET_DB, ENABLE_CUSTOM_MAPPING, TABLE_MAPPING, COLUMN_MAPPING
 
 # Logging Configuration
 logging.basicConfig(
@@ -18,21 +18,29 @@ logging.basicConfig(
 
 class MigrationTool:
 
-    def __init__(self,config):
+    def __init__(self, config=None):
+
+        if config is None:
+            config = {
+                "sourceType": SOURCE_DB["type"]
+            }
 
         self.config = config
 
-        self.pg_conn = psycopg2.connect(
-            host=TARGET_DB["host"],
-            port=TARGET_DB["port"],
-            database=TARGET_DB["database"],
-            user=TARGET_DB["user"],
-            password=TARGET_DB["password"],
-            sslmode="require"
-        )
+        connect_kwargs = {
+            "host": TARGET_DB["host"],
+            "port": TARGET_DB["port"],
+            "database": TARGET_DB["database"],
+            "user": TARGET_DB["user"],
+            "password": TARGET_DB["password"]
+        }
+        if "sslmode" in TARGET_DB and TARGET_DB["sslmode"]:
+            connect_kwargs["sslmode"] = TARGET_DB["sslmode"]
+
+        self.pg_conn = psycopg2.connect(**connect_kwargs)
 
         self.source = get_adapter(
-            config["sourceType"]
+            self.config["sourceType"]
         )
 
         import os
@@ -49,10 +57,54 @@ class MigrationTool:
         self.report = []
         self.rollback_statements = []
 
+        from backend.ai_translator import SelfHealingAgent, RoutineTranslator
+        from backend.data_quality import DataQualityScorer
+        self.self_healing_agent = SelfHealingAgent()
+        self.routine_translator = RoutineTranslator()
+
         logging.info(
             f"Migration initialized: "
             f"{SOURCE_DB['type']} -> PostgreSQL"
         )
+
+    def execute_sql_with_self_healing(self, query: str, context: str = "") -> bool:
+        cur = self.pg_conn.cursor()
+        try:
+            cur.execute("SAVEPOINT self_healing_sp;")
+            cur.execute(query)
+            cur.execute("RELEASE SAVEPOINT self_healing_sp;")
+            cur.close()
+            return True
+        except Exception as e:
+            try:
+                cur.execute("ROLLBACK TO SAVEPOINT self_healing_sp;")
+            except Exception:
+                pass
+            error_msg = str(e)
+            repair_result = self.self_healing_agent.repair_sql(
+                query, error_msg, self.config.get("sourceType", "mysql")
+            )
+            if repair_result["success"]:
+                try:
+                    repaired_query = repair_result["repaired_sql"]
+                    cur.execute("SAVEPOINT self_healing_sp;")
+                    cur.execute(repaired_query)
+                    cur.execute("RELEASE SAVEPOINT self_healing_sp;")
+                    cur.close()
+                    print(f"Self-Healing Agent auto-repaired query ({context}): {repair_result['rule_learned']}")
+                    logging.info(f"Self-Healing Agent auto-repaired query ({context}): {repair_result['rule_learned']}")
+                    return True
+                except Exception as retry_e:
+                    try:
+                        cur.execute("ROLLBACK TO SAVEPOINT self_healing_sp;")
+                    except Exception:
+                        pass
+                    cur.close()
+                    logging.error(f"Self-Healing retry failed for {context}: {retry_e}")
+                    raise retry_e
+            else:
+                cur.close()
+                raise e
     
     def generate_risk_analysis(
         self,
@@ -208,6 +260,7 @@ class MigrationTool:
 
     def create_table(self, table):
 
+        target_table = TABLE_MAPPING.get(table, table) if ENABLE_CUSTOM_MAPPING else table
         columns = self.source.get_columns(table)
 
         column_defs = []
@@ -216,7 +269,10 @@ class MigrationTool:
 
         for col in columns:
 
-            col_name = col["Field"]
+            source_col_name = col["Field"]
+            col_name = source_col_name
+            if ENABLE_CUSTOM_MAPPING and table in COLUMN_MAPPING:
+                col_name = COLUMN_MAPPING[table].get(source_col_name, source_col_name)
 
             pg_type = self.convert_type(
                 col["Type"]
@@ -256,10 +312,25 @@ class MigrationTool:
 
         for fk in foreign_keys:
 
+            source_fk_col = fk["COLUMN_NAME"]
+            target_fk_col = source_fk_col
+            if ENABLE_CUSTOM_MAPPING and table in COLUMN_MAPPING:
+                target_fk_col = COLUMN_MAPPING[table].get(source_fk_col, source_fk_col)
+
+            ref_table = fk["REFERENCED_TABLE_NAME"]
+            target_ref_table = ref_table
+            if ENABLE_CUSTOM_MAPPING:
+                target_ref_table = TABLE_MAPPING.get(ref_table, ref_table)
+
+            ref_col = fk["REFERENCED_COLUMN_NAME"]
+            target_ref_col = ref_col
+            if ENABLE_CUSTOM_MAPPING and ref_table in COLUMN_MAPPING:
+                target_ref_col = COLUMN_MAPPING[ref_table].get(ref_col, ref_col)
+
             fk_clauses.append(
-                f'FOREIGN KEY ("{fk["COLUMN_NAME"]}") '
-                f'REFERENCES "{fk["REFERENCED_TABLE_NAME"]}" '
-                f'("{fk["REFERENCED_COLUMN_NAME"]}")'
+                f'FOREIGN KEY ("{target_fk_col}") '
+                f'REFERENCES "{target_ref_table}" '
+                f'("{target_ref_col}")'
             )
 
         all_constraints = []
@@ -280,7 +351,7 @@ class MigrationTool:
         )
 
         query = f'''
-        CREATE TABLE IF NOT EXISTS "{table}" (
+        CREATE TABLE IF NOT EXISTS "{target_table}" (
             {",".join(column_defs)}
             {"," if all_constraints else ""}
             {",".join(all_constraints)}
@@ -296,15 +367,15 @@ class MigrationTool:
             self.pg_conn.commit()
 
             print(
-                f"Created table: {table}"
+                f"Created table: {target_table}"
             )
 
             logging.info(
-                f"Created table: {table}"
+                f"Created table: {target_table}"
             )
 
             self.rollback_statements.append(
-                f'DROP TABLE IF EXISTS "{table}" CASCADE;'
+                f'DROP TABLE IF EXISTS "{target_table}" CASCADE;'
             )
 
         except Exception as e:
@@ -324,12 +395,16 @@ class MigrationTool:
 
     def migrate_data(self, table):
 
+        target_table = TABLE_MAPPING.get(table, table) if ENABLE_CUSTOM_MAPPING else table
         columns = self.source.get_columns(table)
 
-        column_names = [
-            col["Field"]
-            for col in columns
-        ]
+        column_names = []
+        for col in columns:
+            source_col_name = col["Field"]
+            col_name = source_col_name
+            if ENABLE_CUSTOM_MAPPING and table in COLUMN_MAPPING:
+                col_name = COLUMN_MAPPING[table].get(source_col_name, source_col_name)
+            column_names.append(col_name)
 
         source_cur = self.source.get_connection().cursor()
 
@@ -340,22 +415,18 @@ class MigrationTool:
         pg_cur = self.pg_conn.cursor()
 
         pg_cur.execute(
-            f'TRUNCATE TABLE "{table}" CASCADE'
+            f'TRUNCATE TABLE "{target_table}" CASCADE'
         )
 
         batch_size = 10000
-
         total_rows = 0
 
         column_list = ",".join(
             [f'"{col}"' for col in column_names]
         )
 
-        insert_sql = f'''
-        INSERT INTO "{table}"
-        ({column_list})
-        VALUES %s
-        '''
+        import io
+        use_copy = True
 
         while True:
 
@@ -366,17 +437,36 @@ class MigrationTool:
             if not rows:
                 break
 
-            execute_values(
-                pg_cur,
-                insert_sql,
-                rows,
-                page_size=batch_size
-            )
+            if use_copy:
+                try:
+                    tsv_output = io.StringIO()
+                    for row in rows:
+                        formatted_row = []
+                        for val in row:
+                            if val is None:
+                                formatted_row.append("\\N")
+                            else:
+                                s_val = str(val).replace("\\", "\\\\").replace("\t", "\\t").replace("\n", "\\n").replace("\r", "\\r")
+                                formatted_row.append(s_val)
+                        tsv_output.write("\t".join(formatted_row) + "\n")
+
+                    tsv_output.seek(0)
+                    copy_sql = f'COPY "{target_table}" ({column_list}) FROM STDIN WITH (FORMAT text, NULL \'\\N\')'
+                    pg_cur.copy_expert(copy_sql, tsv_output)
+                except Exception as copy_err:
+                    logging.warning(f"COPY streaming failed for batch in {table}, falling back to execute_values: {copy_err}")
+                    use_copy = False
+                    self.pg_conn.rollback()
+                    insert_sql = f'INSERT INTO "{target_table}" ({column_list}) VALUES %s'
+                    execute_values(pg_cur, insert_sql, rows, page_size=batch_size)
+            else:
+                insert_sql = f'INSERT INTO "{target_table}" ({column_list}) VALUES %s'
+                execute_values(pg_cur, insert_sql, rows, page_size=batch_size)
 
             total_rows += len(rows)
 
             print(
-                f"{table}: {total_rows} rows migrated"
+                f"{table}: {total_rows} rows migrated (COPY Protocol: {use_copy})"
             )
 
         self.pg_conn.commit()
@@ -388,6 +478,8 @@ class MigrationTool:
             f"Migrated {total_rows} rows from {table}"
         )
 
+        return total_rows
+
         logging.info(
             f"Migrated {total_rows} rows from {table}"
         )
@@ -395,6 +487,8 @@ class MigrationTool:
         return total_rows
 
     def validate(self, table):
+
+        target_table = TABLE_MAPPING.get(table, table) if ENABLE_CUSTOM_MAPPING else table
 
         source_cur = self.source.get_connection().cursor()
 
@@ -407,7 +501,7 @@ class MigrationTool:
         pg_cur = self.pg_conn.cursor()
 
         pg_cur.execute(
-            f'SELECT COUNT(*) FROM "{table}"'
+            f'SELECT COUNT(*) FROM "{target_table}"'
         )
 
         pg_count = pg_cur.fetchone()[0]
@@ -551,6 +645,7 @@ class MigrationTool:
 
     def create_check_constraints(self, table):
 
+        target_table = TABLE_MAPPING.get(table, table) if ENABLE_CUSTOM_MAPPING else table
         constraints = self.source.get_check_constraints(
             table
         )
@@ -567,6 +662,11 @@ class MigrationTool:
                 "CHECK_CLAUSE"
             ]
 
+            if clause is None:
+
+                continue
+
+            # MSSQL-specific cleanup
             if SOURCE_DB["type"] == "mssql":
 
                 clause = clause.replace(
@@ -579,13 +679,8 @@ class MigrationTool:
                     ""
                 )
 
-
-            if clause is None:
-
-                continue
-
             # MySQL-specific cleanup
-            if SOURCE_DB["type"] == "mysql":
+            elif SOURCE_DB["type"] == "mysql":
 
                 clause = clause.replace(
                     "`",
@@ -597,13 +692,17 @@ class MigrationTool:
                     "'"
                 )
 
-            if SOURCE_DB["type"] == "mssql":
-
-                clause = clause.replace("[", "")
-                clause = clause.replace("]", "")
+            # Rename columns inside the check clause if column mapping is active
+            if ENABLE_CUSTOM_MAPPING and table in COLUMN_MAPPING:
+                import re
+                for old_col, new_col in COLUMN_MAPPING[table].items():
+                    clause = clause.replace(f'"{old_col}"', f'"{new_col}"')
+                    clause = clause.replace(f'`{old_col}`', f'"{new_col}"')
+                    clause = clause.replace(f'[{old_col}]', f'"{new_col}"')
+                    clause = re.sub(rf'\b{old_col}\b', f'"{new_col}"', clause)
 
             query = f'''
-            ALTER TABLE "{table}"
+            ALTER TABLE "{target_table}"
 
             ADD CONSTRAINT "{name}"
 
@@ -627,11 +726,11 @@ class MigrationTool:
                 else:
 
                     print(
-                        f"CHECK ERROR {table}: {e}"
+                        f"CHECK ERROR {target_table}: {e}"
                     )
 
                     logging.error(
-                        f"CHECK ERROR {table}: {e}"
+                        f"CHECK ERROR {target_table}: {e}"
                     )
 
         self.pg_conn.commit()
@@ -639,51 +738,48 @@ class MigrationTool:
         cur.close()
 
         print(
-            f"Check constraints created for {table}"
+            f"Check constraints created for {target_table}"
         )
 
         logging.info(
-            f"Check constraints created for {table}"
+            f"Check constraints created for {target_table}"
         )
 
     def export_triggers(self):
-
         try:
-
             triggers = self.source.get_triggers()
+            translated_triggers = []
+            for trg in triggers:
+                name = trg.get("TRIGGER_NAME") or trg.get("name") or "trigger"
+                definition = trg.get("ACTION_STATEMENT") or trg.get("definition") or str(trg)
+                translated = self.routine_translator.translate_trigger(name, definition, self.config.get("sourceType", "mysql"))
+                
+                try:
+                    cur = self.pg_conn.cursor()
+                    cur.execute(translated["translated_sql"])
+                    self.pg_conn.commit()
+                    cur.close()
+                    translated["execution_status"] = "SUCCESS"
+                except Exception as ex:
+                    self.pg_conn.rollback()
+                    translated["execution_status"] = "FAILED"
+                    translated["execution_error"] = str(ex)
 
-            with open(
-                "trigger_report.json",
-                "w"
-            ) as f:
+                translated_triggers.append(translated)
 
-                json.dump(
-                    triggers,
-                    f,
-                    indent=4,
-                    default=str
-                )
+            with open("trigger_report.json", "w", encoding="utf-8") as f:
+                json.dump(translated_triggers, f, indent=4, default=str)
 
-            print(
-                f"Exported {len(triggers)} triggers"
-            )
-
-            logging.info(
-                f"Exported {len(triggers)} triggers"
-            )
+            print(f"Exported & translated {len(translated_triggers)} triggers")
+            logging.info(f"Exported & translated {len(translated_triggers)} triggers")
 
         except Exception as e:
-
-            logging.error(
-                f"Trigger export failed: {e}"
-            )
-
-            print(
-                f"Trigger export failed: {e}"
-            )
+            logging.error(f"Trigger export failed: {e}")
+            print(f"Trigger export failed: {e}")
 
     def create_default_values(self, table):
 
+        target_table = TABLE_MAPPING.get(table, table) if ENABLE_CUSTOM_MAPPING else table
         defaults = self.source.get_default_values(
             table
         )
@@ -696,6 +792,10 @@ class MigrationTool:
                 "COLUMN_NAME"
             ]
 
+            target_column = column_name
+            if ENABLE_CUSTOM_MAPPING and table in COLUMN_MAPPING:
+                target_column = COLUMN_MAPPING[table].get(column_name, column_name)
+
             default_value = item[
                 "COLUMN_DEFAULT"
             ]
@@ -707,6 +807,18 @@ class MigrationTool:
             default_value = str(
                 default_value
             ).strip()
+
+            if SOURCE_DB["type"] == "mssql":
+                while default_value.startswith("(") and default_value.endswith(")"):
+                    default_value = default_value[1:-1]
+                
+                if default_value.upper() in ("GETDATE()", "GETUTCDATE()", "CURRENT_TIMESTAMP"):
+                    default_value = "CURRENT_TIMESTAMP"
+                
+                if default_value.startswith("N'") and default_value.endswith("'"):
+                    default_value = default_value[2:-1]
+                elif default_value.startswith("'") and default_value.endswith("'"):
+                    default_value = default_value[1:-1]
 
             # CURRENT_TIMESTAMP
             if default_value.upper() == \
@@ -744,9 +856,9 @@ class MigrationTool:
                 )
 
             query = f'''
-            ALTER TABLE "{table}"
+            ALTER TABLE "{target_table}"
 
-            ALTER COLUMN "{column_name}"
+            ALTER COLUMN "{target_column}"
 
             SET DEFAULT {default_sql};
             '''
@@ -760,11 +872,11 @@ class MigrationTool:
                 self.pg_conn.rollback()
 
                 print(
-                    f"DEFAULT ERROR {table}: {e}"
+                    f"DEFAULT ERROR {target_table}: {e}"
                 )
 
                 logging.error(
-                    f"DEFAULT ERROR {table}: {e}"
+                    f"DEFAULT ERROR {target_table}: {e}"
                 )
 
         self.pg_conn.commit()
@@ -772,15 +884,16 @@ class MigrationTool:
         cur.close()
 
         print(
-            f"Default values created for {table}"
+            f"Default values created for {target_table}"
         )
 
         logging.info(
-            f"Default values created for {table}"
+            f"Default values created for {target_table}"
         )
 
     def create_indexes(self, table):
 
+        target_table = TABLE_MAPPING.get(table, table) if ENABLE_CUSTOM_MAPPING else table
         indexes = self.source.get_indexes(table)
 
         grouped_indexes = {}
@@ -799,8 +912,12 @@ class MigrationTool:
                     "unique": idx["Non_unique"] == 0
                 }
 
+            col_name = idx["Column_name"]
+            if ENABLE_CUSTOM_MAPPING and table in COLUMN_MAPPING:
+                col_name = COLUMN_MAPPING[table].get(col_name, col_name)
+
             grouped_indexes[index_name]["columns"].append(
-                idx["Column_name"]
+                col_name
             )
 
         cur = self.pg_conn.cursor()
@@ -822,7 +939,7 @@ class MigrationTool:
             query = f'''
             CREATE {unique_clause} INDEX IF NOT EXISTS
             "{index_name}"
-            ON "{table}"
+            ON "{target_table}"
             ({column_list});
             '''
             try:
@@ -834,11 +951,11 @@ class MigrationTool:
                 self.pg_conn.rollback()
 
                 print(
-                    f"INDEX ERROR {table}: {e}"
+                    f"INDEX ERROR {target_table}: {e}"
                 )
 
                 logging.error(
-                    f"INDEX ERROR {table}: {e}"
+                    f"INDEX ERROR {target_table}: {e}"
                 )
 
         self.pg_conn.commit()
@@ -846,68 +963,44 @@ class MigrationTool:
         cur.close()
 
         print(
-            f"Indexes created for {table}"
+            f"Indexes created for {target_table}"
         )
 
         logging.info(
-            f"Indexes created for {table}"
+            f"Indexes created for {target_table}"
         )
 
     def export_procedures(self):
-
-        procedures = self.source.get_procedures()
-
-        with open(
-            "procedure_report.json",
-            "w"
-        ) as f:
-
-            json.dump(
-                procedures,
-                f,
-                indent=4,
-                default=str
-            )
-
-        print(
-            f"Exported {len(procedures)} procedures"
-        )
-
-    def export_procedures(self):
-
         try:
-
             procedures = self.source.get_procedures()
+            translated_reports = []
+            for proc in procedures:
+                name = proc.get("name") or proc.get("ROUTINE_NAME") or proc.get("SPECIFIC_NAME") or "procedure"
+                definition = proc.get("definition") or proc.get("ROUTINE_DEFINITION") or str(proc)
+                res = self.routine_translator.translate_procedure(name, definition, self.config.get("sourceType", "mysql"))
+                
+                try:
+                    cur = self.pg_conn.cursor()
+                    cur.execute(res["translated_sql"])
+                    self.pg_conn.commit()
+                    cur.close()
+                    res["execution_status"] = "SUCCESS"
+                except Exception as ex:
+                    self.pg_conn.rollback()
+                    res["execution_status"] = "FAILED"
+                    res["execution_error"] = str(ex)
 
-            with open(
-                "procedure_report.json",
-                "w"
-            ) as f:
+                translated_reports.append(res)
 
-                json.dump(
-                    procedures,
-                    f,
-                    indent=4,
-                    default=str
-                )
+            with open("procedure_report.json", "w", encoding="utf-8") as f:
+                json.dump(translated_reports, f, indent=4, default=str)
 
-            print(
-                f"Exported {len(procedures)} procedures"
-            )
-
-            logging.info(
-                f"Exported {len(procedures)} procedures"
-            )
+            print(f"Exported & translated {len(translated_reports)} procedures")
+            logging.info(f"Exported & translated {len(translated_reports)} procedures")
 
         except Exception as e:
-
-            logging.error(
-                f"Procedure export failed: {e}"
-            )
-
-            print(
-                f"Procedure export failed: {e}"
-            )
+            logging.error(f"Procedure export failed: {e}")
+            print(f"Procedure export failed: {e}")
 
     def compare_data(self, table):
 
@@ -2049,19 +2142,26 @@ class MigrationTool:
 
                 id SERIAL PRIMARY KEY,
 
-                source_db VARCHAR(100),
+                source VARCHAR(100),
 
-                target_db VARCHAR(100),
-
-                tables_count INTEGER,
-
-                rows_count INTEGER,
+                target VARCHAR(100),
 
                 status VARCHAR(50),
 
-                migration_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+                rows_migrated BIGINT,
 
-            )
+                started_at TIMESTAMP,
+
+                completed_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+
+            );
+
+            ALTER TABLE migration_history ADD COLUMN IF NOT EXISTS source VARCHAR(100);
+            ALTER TABLE migration_history ADD COLUMN IF NOT EXISTS target VARCHAR(100);
+            ALTER TABLE migration_history ADD COLUMN IF NOT EXISTS status VARCHAR(50);
+            ALTER TABLE migration_history ADD COLUMN IF NOT EXISTS rows_migrated BIGINT;
+            ALTER TABLE migration_history ADD COLUMN IF NOT EXISTS started_at TIMESTAMP;
+            ALTER TABLE migration_history ADD COLUMN IF NOT EXISTS completed_at TIMESTAMP;
         """)
 
         self.pg_conn.commit()
@@ -2140,32 +2240,36 @@ class MigrationTool:
             cur.close()
 
     def export_functions(self):
-
         try:
-
             functions = self.source.get_functions()
+            translated_functions = []
+            for fn in functions:
+                name = fn.get("name") or fn.get("ROUTINE_NAME") or "function"
+                definition = fn.get("definition") or fn.get("ROUTINE_DEFINITION") or str(fn)
+                res = self.routine_translator.translate_procedure(name, definition, self.config.get("sourceType", "mysql"))
+                
+                try:
+                    cur = self.pg_conn.cursor()
+                    cur.execute(res["translated_sql"])
+                    self.pg_conn.commit()
+                    cur.close()
+                    res["execution_status"] = "SUCCESS"
+                except Exception as ex:
+                    self.pg_conn.rollback()
+                    res["execution_status"] = "FAILED"
+                    res["execution_error"] = str(ex)
 
-            with open(
-                "function_report.json",
-                "w"
-            ) as f:
+                translated_functions.append(res)
 
-                json.dump(
-                    functions,
-                    f,
-                    indent=4,
-                    default=str
-                )
+            with open("function_report.json", "w", encoding="utf-8") as f:
+                json.dump(translated_functions, f, indent=4, default=str)
 
-            print(
-                f"Exported {len(functions)} functions"
-            )
+            print(f"Exported & translated {len(translated_functions)} functions")
+            logging.info(f"Exported & translated {len(translated_functions)} functions")
 
         except Exception as e:
-
-            print(
-                f"Function export failed: {e}"
-            )
+            logging.error(f"Function export failed: {e}")
+            print(f"Function export failed: {e}")
 
     from datetime import datetime
 
@@ -2206,6 +2310,7 @@ class MigrationTool:
 
     def create_unique_constraints(self, table):
 
+        target_table = TABLE_MAPPING.get(table, table) if ENABLE_CUSTOM_MAPPING else table
         constraints = self.source.get_unique_constraints(
             table
         )
@@ -2221,6 +2326,9 @@ class MigrationTool:
             column_name = item[
                 "COLUMN_NAME"
             ]
+
+            if ENABLE_CUSTOM_MAPPING and table in COLUMN_MAPPING:
+                column_name = COLUMN_MAPPING[table].get(column_name, column_name)
 
             if constraint_name not in grouped:
 
@@ -2243,7 +2351,7 @@ class MigrationTool:
                 )
 
                 query = f'''
-                ALTER TABLE "{table}"
+                ALTER TABLE "{target_table}"
 
                 ADD CONSTRAINT "{constraint_name}"
 
@@ -2268,22 +2376,22 @@ class MigrationTool:
 
                         logging.error(
                             f"UNIQUE CONSTRAINT ERROR "
-                            f"{table}: {e}"
+                            f"{target_table}: {e}"
                         )
 
                         print(
                             f"UNIQUE CONSTRAINT ERROR "
-                            f"{table}: {e}"
+                            f"{target_table}: {e}"
                         )
 
             self.pg_conn.commit()
 
             print(
-                f"Unique constraints created for {table}"
+                f"Unique constraints created for {target_table}"
             )
 
             logging.info(
-                f"Unique constraints created for {table}"
+                f"Unique constraints created for {target_table}"
             )
 
         except Exception as e:
@@ -2292,7 +2400,7 @@ class MigrationTool:
 
             logging.error(
                 f"Failed creating unique constraints "
-                f"for {table}: {e}"
+                f"for {target_table}: {e}"
             )
 
             raise
@@ -2973,6 +3081,20 @@ class MigrationTool:
         self.generate_rollback_script()
         self.generate_report()
         
+        # Phase 3 AI Intelligence Reports
+        try:
+            with open("self_healing_report.json", "w", encoding="utf-8") as f:
+                json.dump(self.self_healing_agent.healing_history, f, indent=4, default=str)
+        except Exception as e:
+            logging.error(f"Self-healing report export failed: {e}")
+
+        try:
+            from backend.data_quality import DataQualityScorer
+            dq_scorer = DataQualityScorer(self.source, self.pg_conn)
+            dq_scorer.generate_report(tables, "data_quality_report.json")
+            print("Data Quality Report generated successfully.")
+        except Exception as dq_err:
+            logging.error(f"Data Quality report generation failed: {dq_err}")
 
         try:
             validation_status = self.validate_migration()

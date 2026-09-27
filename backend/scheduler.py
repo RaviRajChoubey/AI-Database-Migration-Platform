@@ -1,3 +1,7 @@
+try:
+    from postgres_connection import get_pg_connection
+except ModuleNotFoundError:
+    from backend.postgres_connection import get_pg_connection
 import sys
 import os
 import time
@@ -18,14 +22,7 @@ scheduler = BackgroundScheduler()
 
 def create_scheduler_table():
 
-    conn = psycopg2.connect(
-        host=TARGET_DB["host"],
-        port=TARGET_DB["port"],
-        database=TARGET_DB["database"],
-        user=TARGET_DB["user"],
-        password=TARGET_DB["password"],
-        sslmode="require"
-    )
+    conn = get_pg_connection()
 
     cursor = conn.cursor()
 
@@ -170,14 +167,7 @@ def run_scheduled_migration(
 
 def load_schedules():
 
-    conn = psycopg2.connect(
-        host=TARGET_DB["host"],
-        port=TARGET_DB["port"],
-        database=TARGET_DB["database"],
-        user=TARGET_DB["user"],
-        password=TARGET_DB["password"],
-        sslmode=TARGET_DB["sslmode"]
-    )
+    conn = get_pg_connection()
 
     cursor = conn.cursor()
 
@@ -219,14 +209,7 @@ def save_execution_log(
     error_message
 ):
 
-    conn = psycopg2.connect(
-        host=TARGET_DB["host"],
-        port=TARGET_DB["port"],
-        database=TARGET_DB["database"],
-        user=TARGET_DB["user"],
-        password=TARGET_DB["password"],
-        sslmode="require"
-    )
+    conn = get_pg_connection()
 
     cursor = conn.cursor()
 

@@ -304,14 +304,7 @@ def get_progress():
 @router.get("/history")
 def get_history():
 
-    conn = psycopg2.connect(
-        host=TARGET_DB["host"],
-        port=TARGET_DB["port"],
-        database=TARGET_DB["database"],
-        user=TARGET_DB["user"],
-        password=TARGET_DB["password"],
-        sslmode="require"
-    )
+    conn = get_pg_connection()
 
     cursor = conn.cursor()
 
@@ -389,14 +382,7 @@ def reset_table(table_name: str):
 
     try:
 
-        conn=psycopg2.connect(
-            host=TARGET_DB["host"],
-            port=TARGET_DB["port"],
-            database=TARGET_DB["database"],
-            user=TARGET_DB["user"],
-            password=TARGET_DB["password"],
-            sslmode="require"
-        )
+        conn = get_pg_connection()
 
         cursor = conn.cursor()
 
@@ -517,12 +503,17 @@ def get_validation_report():
 @router.get("/metrics-report")
 def get_metrics_report():
 
-    with open(
-        "metrics_report.json",
-        "r"
-    ) as f:
-
-        return json.load(f)
+    try:
+        with open("metrics_report.json", "r") as f:
+            return json.load(f)
+    except Exception:
+        return {
+            "migration_duration_seconds": 0,
+            "rows_migrated": 0,
+            "tables_processed": 0,
+            "failed_tables": 0,
+            "rows_per_second": 0
+        }
     
 @router.get("/audit-report")
 def get_audit_report():
@@ -715,14 +706,7 @@ def create_schedule(
     request: ScheduleRequest
 ):
 
-    conn = psycopg2.connect(
-        host=TARGET_DB["host"],
-        port=TARGET_DB["port"],
-        database=TARGET_DB["database"],
-        user=TARGET_DB["user"],
-        password=TARGET_DB["password"],
-        sslmode="require"
-    )
+    conn = get_pg_connection()
 
     cursor = conn.cursor()
 
@@ -780,14 +764,7 @@ def create_schedule(
 @router.get("/schedules")
 def get_schedules():
 
-    conn = psycopg2.connect(
-        host=TARGET_DB["host"],
-        port=TARGET_DB["port"],
-        database=TARGET_DB["database"],
-        user=TARGET_DB["user"],
-        password=TARGET_DB["password"],
-        sslmode="require"
-    )
+    conn = get_pg_connection()
 
     cursor = conn.cursor()
 
@@ -836,14 +813,7 @@ def delete_schedule(
 
 ):
 
-    conn = psycopg2.connect(
-        host=TARGET_DB["host"],
-        port=TARGET_DB["port"],
-        database=TARGET_DB["database"],
-        user=TARGET_DB["user"],
-        password=TARGET_DB["password"],
-        sslmode="require"
-    )
+    conn = get_pg_connection()
 
     cursor = conn.cursor()
 
@@ -880,14 +850,7 @@ def toggle_schedule(
 
 ):
 
-    conn = psycopg2.connect(
-        host=TARGET_DB["host"],
-        port=TARGET_DB["port"],
-        database=TARGET_DB["database"],
-        user=TARGET_DB["user"],
-        password=TARGET_DB["password"],
-        sslmode="require"
-    )
+    conn = get_pg_connection()
 
     cursor = conn.cursor()
 
@@ -926,14 +889,7 @@ def save_profile(
 
 ):
 
-    conn = psycopg2.connect(
-        host=TARGET_DB["host"],
-        port=TARGET_DB["port"],
-        database=TARGET_DB["database"],
-        user=TARGET_DB["user"],
-        password=TARGET_DB["password"],
-        sslmode="require"
-    )
+    conn = get_pg_connection()
 
     cursor = conn.cursor()
 
@@ -1000,14 +956,7 @@ def save_profile(
 @router.get("/scheduler/logs")
 def get_scheduler_logs():
 
-    conn = psycopg2.connect(
-        host=TARGET_DB["host"],
-        port=TARGET_DB["port"],
-        database=TARGET_DB["database"],
-        user=TARGET_DB["user"],
-        password=TARGET_DB["password"],
-        sslmode="require"
-    )
+    conn = get_pg_connection()
 
     cursor = conn.cursor()
 
@@ -1043,14 +992,7 @@ def get_scheduler_logs():
 @router.get("/profiles")
 def get_profiles():
 
-    conn = psycopg2.connect(
-        host=TARGET_DB["host"],
-        port=TARGET_DB["port"],
-        database=TARGET_DB["database"],
-        user=TARGET_DB["user"],
-        password=TARGET_DB["password"],
-        sslmode="require"
-    )
+    conn = get_pg_connection()
 
     cursor = conn.cursor()
 
@@ -1093,3 +1035,44 @@ def get_profiles():
     conn.close()
 
     return result
+
+@router.get("/self-healing-report")
+def get_self_healing_report():
+    file_path = os.path.join(PROJECT_ROOT, "self_healing_report.json")
+    if os.path.exists(file_path):
+        with open(file_path, "r", encoding="utf-8") as f:
+            return json.load(f)
+    return []
+
+@router.get("/data-quality-report")
+def get_data_quality_report():
+    file_path = os.path.join(PROJECT_ROOT, "data_quality_report.json")
+    if os.path.exists(file_path):
+        with open(file_path, "r", encoding="utf-8") as f:
+            return json.load(f)
+    return {"overall_score": 100.0, "total_tables_evaluated": 0, "tables": []}
+
+@router.get("/schema-memory")
+def get_schema_memory():
+    file_path = os.path.join(PROJECT_ROOT, "mappings", "schema_memory.json")
+    if os.path.exists(file_path):
+        with open(file_path, "r", encoding="utf-8") as f:
+            return json.load(f)
+    return {}
+
+@router.post("/translate-routines")
+def translate_routines():
+    try:
+        tool = MigrationTool()
+        tool.export_procedures()
+        tool.export_triggers()
+        tool.export_functions()
+        return {
+            "status": "SUCCESS",
+            "message": "Stored procedures, triggers, and functions translated to PL/pgSQL & deployed to target database."
+        }
+    except Exception as e:
+        return {
+            "status": "ERROR",
+            "message": f"Routine translation failed: {str(e)}"
+        }

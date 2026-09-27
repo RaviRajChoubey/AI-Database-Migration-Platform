@@ -26,5 +26,12 @@
         "target_rows": 1,
         "difference": 0,
         "audit_status": "PASS"
+    },
+    {
+        "table": "employees",
+        "source_rows": 3,
+        "target_rows": 3,
+        "difference": 0,
+        "audit_status": "PASS"
     }
 ]

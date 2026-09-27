@@ -19,7 +19,7 @@ function LogViewer({ logs }) {
                     color: "white",
                     textAlign: "center",
                     marginBottom: "15px",
-                    fontSize: "36px",
+                    fontSize: "clamp(1.2rem, 2vw, 1.75rem)",
                     fontWeight: "700",
                     display: "flex",
                     justifyContent: "center",
@@ -63,10 +63,11 @@ function LogViewer({ logs }) {
                                     key={index}
                                     style={{
                                         margin: "8px 0",
-                                        fontSize: "24px",
+                                        fontSize: "clamp(0.8rem, 1.1vw, 1rem)",
                                         fontFamily: "monospace",
                                         lineHeight: "1.6",
-                                        textAlign: "left"
+                                        textAlign: "left",
+                                        wordBreak: "break-word"
                                     }}
                                 >
                                     {log}

@@ -272,7 +272,7 @@ function MigrationForm() {
 
                 <h1
                     style={{
-                        fontSize: "64px",
+                        fontSize: "clamp(1.8rem, 4vw, 3.5rem)",
                         fontWeight: "800",
                         color: "#FFFFFF",
                         marginBottom: "10px"
@@ -280,7 +280,7 @@ function MigrationForm() {
                 >
                     <FaRobot
                         color="#38BDF8"
-                        size={55}
+                        size={45}
                     />
 
                     {" "}
@@ -291,7 +291,7 @@ function MigrationForm() {
                 <h3
                     style={{
                         color: "#94A3B8",
-                        fontSize: "22px",
+                        fontSize: "clamp(1rem, 1.8vw, 1.35rem)",
                         fontWeight: "500"
                     }}
                 >
@@ -302,7 +302,8 @@ function MigrationForm() {
                 <h3
                     style={{
                         color: "#94a3b8",
-                        marginTop: "0"
+                        marginTop: "5px",
+                        fontSize: "clamp(0.9rem, 1.5vw, 1.1rem)"
                     }}
                 >
                     National Informatics Centre (NIC)
@@ -313,12 +314,11 @@ function MigrationForm() {
             <div
                 style={{
                     display: "grid",
-                    gridTemplateColumns: "repeat(4,1fr)",
-                    gap: "20px",
+                    gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))",
+                    gap: "15px",
                     marginBottom: "40px",
                     maxWidth: "1100px",
-                    margin: "0 auto 40px auto",
-                    fontSize: "30px"
+                    margin: "0 auto 40px auto"
                 }}
             >
 
@@ -340,13 +340,11 @@ function MigrationForm() {
 
             </div>
 
-            <br />
-
             <div
                 style={{
                     display: "grid",
-                    gridTemplateColumns: "1fr 1fr",
-                    gap: "40px",
+                    gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+                    gap: "30px",
                     maxWidth: "1100px",
                     margin: "0 auto"
                 }}
@@ -366,16 +364,16 @@ function MigrationForm() {
                         border:
                             "1px solid rgba(255,255,255,0.1)",
 
-                        padding: "25px",
+                        padding: "clamp(20px, 3vw, 40px)",
                         borderRadius: "12px",
-                        width: "500px",
-                        padding: "45px"
+                        width: "100%",
+                        boxSizing: "border-box"
                     }}
                 >
 
                     <h2
                         style={{
-                            fontSize: "28px",
+                            fontSize: "clamp(1.2rem, 2vw, 1.75rem)",
                             marginBottom: "20px",
                             color: "#60A5FA"
                         }}
@@ -393,7 +391,7 @@ function MigrationForm() {
 
                             padding: "14px",
 
-                            fontSize: "18px",
+                            fontSize: "16px",
 
                             borderRadius: "10px",
 
@@ -491,16 +489,16 @@ function MigrationForm() {
 
                         border: "1px solid rgba(255,255,255,0.1)",
 
-                        padding: "25px",
+                        padding: "clamp(20px, 3vw, 40px)",
                         borderRadius: "12px",
-                        width: "500px",
-                        padding: "45px"
+                        width: "100%",
+                        boxSizing: "border-box"
                     }}
                 >
 
                     <h2
                         style={{
-                            fontSize: "28px",
+                            fontSize: "clamp(1.2rem, 2vw, 1.75rem)",
                             marginBottom: "20px",
                             color: "#22C55E"
                         }}
@@ -565,94 +563,102 @@ function MigrationForm() {
 
             </div>
 
-            <br /><br />
-
-            <button
-                onClick={handleTestConnection}
+            <div
                 style={{
-                    testButtonStyle,
-                    background: "blue",
-                    color: "white",
-                    border: "none",
-                    padding: "16px 30px",
-                    borderRadius: "80px",
-                    marginLeft: "10px",
-                    fontSize: "28px"
+                    display: "flex",
+                    flexWrap: "wrap",
+                    justifyContent: "center",
+                    gap: "15px",
+                    margin: "35px 0"
                 }}
             >
-                <FaPlug />
-                {" "}
-                Test Connection
-            </button>
+                <button
+                    onClick={handleTestConnection}
+                    style={{
+                        background: "#1e40af",
+                        color: "white",
+                        border: "none",
+                        padding: "14px 28px",
+                        borderRadius: "80px",
+                        fontSize: "clamp(1rem, 1.4vw, 1.25rem)",
+                        cursor: "pointer",
+                        fontWeight: "600"
+                    }}
+                >
+                    <FaPlug />
+                    {" "}
+                    Test Connection
+                </button>
 
-            <button
-                onClick={handleStartMigration}
-                style={{
-                    startButtonStyle,
-                    background: "green",
-                    color: "white",
-                    border: "none",
-                    padding: "16px 30px",
-                    borderRadius: "80px",
-                    marginLeft: "10px",
-                    fontSize: "28px"
-                }}
-            >
-                <FaPlay />
-                {" "}
-                Start Migration
-            </button>
+                <button
+                    onClick={handleStartMigration}
+                    style={{
+                        background: "#15803d",
+                        color: "white",
+                        border: "none",
+                        padding: "14px 28px",
+                        borderRadius: "80px",
+                        fontSize: "clamp(1rem, 1.4vw, 1.25rem)",
+                        cursor: "pointer",
+                        fontWeight: "600"
+                    }}
+                >
+                    <FaPlay />
+                    {" "}
+                    Start Migration
+                </button>
 
-            <button
-                onClick={handleResumeMigration}
-                style={{
-                    background: "#f59e0b",
-                    color: "white",
-                    border: "none",
-                    padding: "16px 30px",
-                    borderRadius: "80px",
-                    marginLeft: "10px",
-                    fontSize: "28px"
-                }}
-            >
-                <FaRedo />
-                {" "}
-                Resume Migration
-            </button>
+                <button
+                    onClick={handleResumeMigration}
+                    style={{
+                        background: "#f59e0b",
+                        color: "white",
+                        border: "none",
+                        padding: "14px 28px",
+                        borderRadius: "80px",
+                        fontSize: "clamp(1rem, 1.4vw, 1.25rem)",
+                        cursor: "pointer",
+                        fontWeight: "600"
+                    }}
+                >
+                    <FaRedo />
+                    {" "}
+                    Resume Migration
+                </button>
+            </div>
 
             {/* FEATURE SECTION */}
 
             <div
                 style={{
                     display: "grid",
-                    gridTemplateColumns: "repeat(3,1fr)",
+                    gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
                     gap: "20px",
                     maxWidth: "1200px",
-                    margin: "40px auto",
-                    fontSize: "25px"
+                    margin: "40px auto"
                 }}
             >
 
                 <div className="highlight-card">
-                    <h3>🚀 Fast Migration</h3>
+                    <h3 style={{ fontSize: "clamp(1.1rem, 1.5vw, 1.4rem)", marginBottom: "8px" }}>🚀 Fast Migration</h3>
 
-                    <p>
+                    <p style={{ fontSize: "clamp(0.85rem, 1.1vw, 1rem)", margin: 0 }}>
                         Migrate millions of records efficiently.
                     </p>
                 </div>
 
                 <div className="highlight-card">
-                    <h3>🛡 Data Validation</h3>
+                    <h3 style={{ fontSize: "clamp(1.1rem, 1.5vw, 1.4rem)", marginBottom: "8px" }}>🛡 Data Validation</h3>
 
-                    <p>
+                    <p style={{ fontSize: "clamp(0.85rem, 1.1vw, 1rem)", margin: 0 }}>
                         Automatic validation and checksum reports.
                     </p>
                 </div>
 
                 <div className="highlight-card">
-                    <h3>🤖 AI Recommendations</h3>
+                    <h3 style={{ fontSize: "clamp(1.1rem, 1.5vw, 1.4rem)", marginBottom: "8px" }}>🤖 AI Recommendations</h3>
 
-                    <p>
+                    <p style={{ fontSize: "clamp(0.85rem, 1.1vw, 1rem)", margin: 0 }}>
                         Intelligent schema analysis and suggestions.
                     </p>
                 </div>
@@ -662,9 +668,9 @@ function MigrationForm() {
             <div
                 style={{
                     display: "grid",
-                    gridTemplateColumns: "repeat(4,1fr)",
+                    gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
                     gap: "20px",
-                    marginTop: "60px",
+                    marginTop: "40px",
                     maxWidth: "1200px",
                     marginLeft: "auto",
                     marginRight: "auto"
@@ -673,34 +679,34 @@ function MigrationForm() {
 
                 <div style={featureCardStyle}>
                     <FaBrain
-                        size={40}
+                        size={36}
                         color="#A855F7"
                     />
-                    <h3>AI Schema Analysis</h3>
+                    <h3 style={{ fontSize: "clamp(1rem, 1.3vw, 1.2rem)", marginTop: "10px" }}>AI Schema Analysis</h3>
                 </div>
 
                 <div style={featureCardStyle}>
                     <FaExchangeAlt
-                        size={40}
+                        size={36}
                         color="#22C55E"
                     />
-                    <h3>Auto Migration</h3>
+                    <h3 style={{ fontSize: "clamp(1rem, 1.3vw, 1.2rem)", marginTop: "10px" }}>Auto Migration</h3>
                 </div>
 
                 <div style={featureCardStyle}>
                     <FaClipboardCheck
-                        size={40}
+                        size={36}
                         color="#F59E0B"
                     />
-                    <h3>Validation Reports</h3>
+                    <h3 style={{ fontSize: "clamp(1rem, 1.3vw, 1.2rem)", marginTop: "10px" }}>Validation Reports</h3>
                 </div>
 
                 <div style={featureCardStyle}>
                     <FaChartLine
-                        size={40}
+                        size={36}
                         color="#38BDF8"
                     />
-                    <h3>Real-Time Monitoring</h3>
+                    <h3 style={{ fontSize: "clamp(1rem, 1.3vw, 1.2rem)", marginTop: "10px" }}>Real-Time Monitoring</h3>
                 </div>
 
             </div>
@@ -716,7 +722,7 @@ function MigrationForm() {
                 <h2
                     style={{
                         color: "#38BDF8",
-                        fontSize: "36px"
+                        fontSize: "clamp(1.4rem, 2.5vw, 2.2rem)"
                     }}
                 >
                     Migration Workflow
@@ -725,38 +731,38 @@ function MigrationForm() {
                 <div
                     style={{
                         display: "flex",
+                        flexWrap: "wrap",
                         justifyContent: "center",
-                        gap: "25px",
+                        gap: "15px",
                         marginTop: "25px",
-                        fontSize: "30px",
+                        fontSize: "clamp(1rem, 1.8vw, 1.5rem)",
                         color: "white"
                     }}
                 >
 
-                    🔌 Connect
+                    <span>🔌 Connect</span>
 
-                    ➜
+                    <span>➜</span>
 
-                    🤖 Analyze
+                    <span>🤖 Analyze</span>
 
-                    ➜
+                    <span>➜</span>
 
-                    🚀 Migrate
+                    <span>🚀 Migrate</span>
 
-                    ➜
+                    <span>➜</span>
 
-                    ✅ Validate
+                    <span>✅ Validate</span>
 
-                    ➜
+                    <span>➜</span>
 
-                    📊 Reports
+                    <span>📊 Reports</span>
 
                 </div>
 
             </div>
 
-        </div >
-
+        </div>
 
     );
 
