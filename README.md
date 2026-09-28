@@ -30,7 +30,7 @@ Error recovery
 
 Migration monitoring
 
-The AI Database Migration Platform automates these processes through a modular migration engine combined with AI-assisted schema intelligence and validation.
+The AI Database Migration Platform automates these processes through a modular migration engine, AI-assisted schema intelligence, and automated validation.
 
 Supported Migration Paths
 
@@ -212,7 +212,7 @@ Better performance for large datasets
 
 Performance
 
-The migration engine has achieved a benchmark of:
+Performance Benchmark
 
 50,000+ rows/sec
 
@@ -360,11 +360,11 @@ NUMERIC
 
 ---
 
-## 7. Responsive Dashboard
+## **7. Responsive Dashboard**
 
 The frontend has been refactored to support different screen sizes.
 
-#### Supported Viewport Range
+#### **Supported Viewport Range**
 
 
 320px ─────────────────────────────── 1920px
@@ -404,9 +404,9 @@ StatsCard.jsx
 
 ---
 
-## Phase 3 — AI Intelligence
+## **Phase 3 — AI Intelligence**
 
-## 8. Self-Healing Schema Engine
+## **8. Self-Healing Schema Engine**
 
 The platform includes a self-healing schema engine implemented in:
 
@@ -418,7 +418,7 @@ The engine intercepts PostgreSQL execution errors during schema migration and at
 
 ---
 
-### Self-Healing Workflow
+### **Self-Healing Workflow**
 
 
 Source SQL
@@ -454,13 +454,13 @@ Continue Migration
 
 ---
 
-## 9. Self-Healing SQL Rules
+## **9. Self-Healing SQL Rules**
 
 The engine can handle common database dialect differences.
 
 Examples include:
 
-#### SQL Server
+#### **SQL Server**
 
 
 GETDATE()
@@ -468,7 +468,7 @@ GETDATE()
 CURRENT_TIMESTAMP
 
 
-#### SQL Server
+#### **SQL Server**
 
 
 DATETIME2
@@ -476,7 +476,7 @@ DATETIME2
 TIMESTAMP
 
 
-#### MySQL
+#### **MySQL**
 
 
 AUTO_INCREMENT
@@ -484,7 +484,7 @@ AUTO_INCREMENT
 GENERATED ALWAYS AS IDENTITY
 
 
-#### MySQL Identifier Syntax
+#### **MySQL Identifier Syntax**
 
 
 customer_id
@@ -500,7 +500,7 @@ The engine can use:
 
 ---
 
-## 10. Schema Memory
+## **10. Schema Memory**
 
 Learned or successfully applied migration rules are stored in:
 
@@ -533,7 +533,7 @@ Automatic Rule Reuse
 
 ---
 
-## 11. Self-Healing Audit Report
+## **11. Self-Healing Audit Report**
 
 Self-healing actions are recorded in:
 
@@ -552,7 +552,7 @@ This improves:
 
 ---
 
-## 12. AI Routine Translator
+## **12. AI Routine Translator**
 
 The platform includes a `RoutineTranslator` in:
 
@@ -570,7 +570,7 @@ Supported routine categories include:
 
 ---
 
-### Routine Translation
+### **Routine Translation**
 
 
 MSSQL T-SQL
@@ -598,7 +598,7 @@ Translated routines can be deployed directly to the PostgreSQL target database.
 
 ---
 
-## 13. Routine Reports
+## **13. Routine Reports**
 
 The platform generates JSON reports for translated database routines.
 
@@ -612,7 +612,7 @@ These reports provide visibility into routine migration and deployment.
 
 ---
 
-## 14. Automated Data Quality Scoring
+## **14. Automated Data Quality Scoring**
 
 The platform includes:
 
@@ -636,7 +636,7 @@ The result is converted into a composite score from:
 
 ---
 
-### Data Quality Classification
+### **Data Quality Classification**
 
 | Score / Result         | Classification |
 | ---------------------- | -------------- |
@@ -652,11 +652,11 @@ data_quality_report.json
 
 ---
 
-## 15. New AI & Data Quality APIs
+## **15. New AI & Data Quality APIs**
 
 The platform exposes additional APIs for the new intelligence layer.
 
-#### Self-Healing Report
+#### **Self-Healing Report**
 
 
 GET /migration/self-healing-report
@@ -666,7 +666,7 @@ Returns the self-healing execution report.
 
 ---
 
-#### Data Quality Report
+#### **Data Quality Report**
 
 
 GET /migration/data-quality-report
@@ -676,7 +676,7 @@ Returns the calculated data quality report.
 
 ---
 
-#### Schema Memory
+#### **Schema Memory**
 
 
 GET /migration/schema-memory
@@ -686,7 +686,7 @@ Returns learned schema transformation rules.
 
 ---
 
-#### Routine Translation
+#### **Routine Translation**
 
 
 POST /migration/translate-routines
@@ -696,9 +696,9 @@ Translates supported database routines into PostgreSQL-compatible routines.
 
 ---
 
-## Key Features
+## **Key Features**
 
-### Database Migration
+### **Database Migration**
 
 - MSSQL → PostgreSQL
 - MySQL → PostgreSQL
@@ -715,7 +715,7 @@ Translates supported database routines into PostgreSQL-compatible routines.
 
 ---
 
-## AI-Powered Analysis
+## **AI-Powered Analysis**
 
 - Foreign key detection
 - Schema risk analysis
@@ -730,7 +730,7 @@ Translates supported database routines into PostgreSQL-compatible routines.
 
 ---
 
-## High-Performance Migration
+## **High-Performance Migration**
 
 - PostgreSQL `COPY` protocol
 - Streaming data loading
@@ -743,7 +743,7 @@ Translates supported database routines into PostgreSQL-compatible routines.
 
 ---
 
-## Validation Engine
+## **Validation Engine**
 
 - Row count validation
 - Source vs target verification
@@ -756,7 +756,7 @@ Translates supported database routines into PostgreSQL-compatible routines.
 
 ---
 
-## Monitoring & Tracking
+## **Monitoring & Tracking**
 
 - Real-time migration progress
 - Migration status
@@ -770,7 +770,7 @@ Translates supported database routines into PostgreSQL-compatible routines.
 
 ---
 
-## Reporting
+## **Reporting**
 
 The platform generates:
 
@@ -789,7 +789,7 @@ The platform generates:
 
 ---
 
-## Scheduler
+## **Scheduler**
 
 The platform provides automated migration scheduling.
 
@@ -812,9 +812,9 @@ Additional scheduler capabilities:
 
 ---
 
-## Technology Stack
+## **Technology Stack**
 
-### Backend
+### **Backend**
 
 - Python 3.13
 - FastAPI
@@ -828,7 +828,7 @@ Additional scheduler capabilities:
 
 ---
 
-### Frontend
+### **Frontend**
 
 - React
 - Vite
@@ -840,21 +840,21 @@ Additional scheduler capabilities:
 
 ---
 
-### Databases
+### **Databases**
 
-#### Source
+#### **Source**
 
 - Microsoft SQL Server
 - MySQL
 - Oracle
 
-#### Target
+#### **Target**
 
 - PostgreSQL
 
 ---
 
-### AI Components
+### **AI Components**
 
 - AI Schema Analyzer
 - Foreign Key Detection Engine
@@ -867,7 +867,7 @@ Additional scheduler capabilities:
 
 ---
 
-## Project Structure
+## **Project Structure**
 
 
 AI-Database-Migration-Platform/
@@ -935,13 +935,13 @@ AI-Database-Migration-Platform/
 
 ---
 
-## Database Tables
+## **Database Tables**
 
 The platform maintains internal PostgreSQL tables for migration management and monitoring.
 
 ---
 
-### migration_profiles
+### **migration_profiles**
 
 Stores reusable migration configurations.
 
@@ -962,7 +962,7 @@ created_at
 
 ---
 
-### migration_scheduler
+### **migration_scheduler**
 
 Stores scheduled migration jobs.
 
@@ -979,7 +979,7 @@ created_at
 
 ---
 
-### scheduler_execution_log
+### **scheduler_execution_log**
 
 Stores scheduler execution history.
 
@@ -994,7 +994,7 @@ error_message
 
 ---
 
-### migration_history
+### **migration_history**
 
 Stores completed migration executions.
 
@@ -1010,7 +1010,7 @@ completed_at
 
 ---
 
-### migration_audit_trail
+### **migration_audit_trail**
 
 Stores detailed migration audit records.
 
@@ -1032,9 +1032,9 @@ report_generated
 
 ---
 
-## Configuration
+## **Configuration**
 
-### MSSQL Source Configuration
+### **MSSQL Source Configuration**
 
 Example:
 
@@ -1048,7 +1048,7 @@ Password         : <your_password>
 
 ---
 
-### MySQL Source Configuration
+### **MySQL Source Configuration**
 
 
 Source Type      : MySQL
@@ -1060,7 +1060,7 @@ Password         : <your_password>
 
 ---
 
-### Oracle Source Configuration
+### **Oracle Source Configuration**
 
 
 Source Type      : Oracle
@@ -1073,7 +1073,7 @@ Password         : <oracle_password>
 
 ---
 
-## PostgreSQL Target Configuration
+## **PostgreSQL Target Configuration**
 
 Example:
 
@@ -1098,7 +1098,7 @@ Password         : <postgres_password>
 
 ---
 
-## Environment Variables
+## **Environment Variables**
 
 Create a `.env` file:
 
@@ -1116,7 +1116,7 @@ Never commit real credentials or API keys to GitHub.
 
 ---
 
-## Migration Profile Example
+## **Migration Profile Example**
 
 
 {
@@ -1135,11 +1135,11 @@ Never commit real credentials or API keys to GitHub.
 
 ---
 
-## API Endpoints
+## **API Endpoints**
 
-### Connection & Migration
+### **Connection & Migration**
 
-#### Test Connection
+#### **Test Connection**
 
 
 POST /migration/test-connection
@@ -1149,7 +1149,7 @@ Tests source and target database connectivity.
 
 ---
 
-#### Start Migration
+#### **Start Migration**
 
 
 POST /migration/start
@@ -1159,7 +1159,7 @@ Starts a database migration.
 
 ---
 
-#### Resume Migration
+#### **Resume Migration**
 
 
 POST /migration/resume
@@ -1169,9 +1169,9 @@ Resumes an interrupted migration.
 
 ---
 
-## Migration Profiles
+## **Migration Profiles**
 
-#### Create Profile
+#### **Create Profile**
 
 
 POST /migration/profile
@@ -1179,7 +1179,7 @@ POST /migration/profile
 
 ---
 
-#### Get Profiles
+#### **Get Profiles**
 
 
 GET /migration/profiles
@@ -1187,9 +1187,9 @@ GET /migration/profiles
 
 ---
 
-## Progress
+## **Progress**
 
-#### Migration Progress
+#### **Migration Progress**
 
 
 GET /migration/progress
@@ -1199,9 +1199,9 @@ Returns current migration progress.
 
 ---
 
-## Analysis
+## **Analysis**
 
-#### Schema Analysis
+#### **Schema Analysis**
 
 
 GET /migration/schema-analysis
@@ -1211,7 +1211,7 @@ Provides AI-powered schema analysis.
 
 ---
 
-#### Validation Report
+#### **Validation Report**
 
 
 GET /migration/validation-report
@@ -1221,9 +1221,9 @@ Returns validation results.
 
 ---
 
-## Audit
+## **Audit**
 
-#### Audit Trail
+#### **Audit Trail**
 
 
 GET /migration/audit-trail
@@ -1231,7 +1231,7 @@ GET /migration/audit-trail
 
 ---
 
-#### Migration History
+#### **Migration History**
 
 
 GET /migration/migration-history
@@ -1239,9 +1239,9 @@ GET /migration/migration-history
 
 ---
 
-## Scheduler
+## **Scheduler**
 
-#### Create Schedule
+#### **Create Schedule**
 
 
 POST /migration/schedule
@@ -1249,7 +1249,7 @@ POST /migration/schedule
 
 ---
 
-#### Get Schedules
+#### **Get Schedules**
 
 
 GET /migration/schedules
@@ -1257,7 +1257,7 @@ GET /migration/schedules
 
 ---
 
-#### Scheduler Logs
+#### **Scheduler Logs**
 
 
 GET /migration/scheduler/logs
@@ -1265,9 +1265,9 @@ GET /migration/scheduler/logs
 
 ---
 
-## AI Intelligence APIs
+## **AI Intelligence APIs**
 
-#### Self-Healing Report
+#### **Self-Healing Report**
 
 
 GET /migration/self-healing-report
@@ -1275,7 +1275,7 @@ GET /migration/self-healing-report
 
 ---
 
-#### Data Quality Report
+#### **Data Quality Report**
 
 
 GET /migration/data-quality-report
@@ -1283,7 +1283,7 @@ GET /migration/data-quality-report
 
 ---
 
-#### Schema Memory
+#### **Schema Memory**
 
 
 GET /migration/schema-memory
@@ -1291,7 +1291,7 @@ GET /migration/schema-memory
 
 ---
 
-#### Translate Routines
+#### **Translate Routines**
 
 
 POST /migration/translate-routines
@@ -1299,9 +1299,9 @@ POST /migration/translate-routines
 
 ---
 
-## Download APIs
+## **Download APIs**
 
-#### Validation Report
+#### **Validation Report**
 
 
 GET /download/validation
@@ -1309,7 +1309,7 @@ GET /download/validation
 
 ---
 
-#### Audit Report
+#### **Audit Report**
 
 
 GET /download/audit
@@ -1317,7 +1317,7 @@ GET /download/audit
 
 ---
 
-#### Checksum Report
+#### **Checksum Report**
 
 
 GET /download/checksum
@@ -1325,7 +1325,7 @@ GET /download/checksum
 
 ---
 
-#### Reconciliation Report
+#### **Reconciliation Report**
 
 
 GET /download/reconciliation
@@ -1333,9 +1333,9 @@ GET /download/reconciliation
 
 ---
 
-## Core Migration Functions
+## **Core Migration Functions**
 
-### start_migration()
+### **start_migration()**
 
 Starts the complete migration workflow.
 
@@ -1363,13 +1363,13 @@ Responsibilities:
 
 ---
 
-### resume_migration()
+### **resume_migration()**
 
 Resumes an interrupted migration from the last completed migration stage.
 
 ---
 
-### migrate_table()
+### **migrate_table()**
 
 Migrates table structure and data.
 
@@ -1389,33 +1389,33 @@ when required.
 
 ---
 
-### migrate_views()
+### **migrate_views()**
 
 Migrates database views.
 
 ---
 
-### migrate_procedures()
+### **migrate_procedures()**
 
 Migrates stored procedures.
 
 ---
 
-### migrate_functions()
+### **migrate_functions()**
 
 Migrates database functions.
 
 ---
 
-### migrate_triggers()
+### **migrate_triggers()**
 
 Migrates database triggers.
 
 ---
 
-## Self-Healing Engine
+## **Self-Healing Engine**
 
-### SelfHealingAgent
+### **SelfHealingAgent**
 
 The `SelfHealingAgent` detects migration-related PostgreSQL errors and attempts to generate corrected SQL.
 
@@ -1433,9 +1433,9 @@ Responsibilities include:
 
 ---
 
-## Routine Translation Engine
+## **Routine Translation Engine**
 
-### RoutineTranslator
+### **RoutineTranslator**
 
 The `RoutineTranslator` handles conversion of source database routines into PostgreSQL-compatible PL/pgSQL.
 
@@ -1465,9 +1465,9 @@ Routine Report
 
 ---
 
-## Data Quality Engine
+## **Data Quality Engine**
 
-### DataQualityScorer
+### **DataQualityScorer**
 
 The Data Quality Engine evaluates migrated data using:
 
@@ -1496,21 +1496,21 @@ data_quality_report.json
 
 ---
 
-## Validation Engine
+## **Validation Engine**
 
-### validate_counts()
+### **validate_counts()**
 
 Validates source and target row counts.
 
 ---
 
-### generate_checksum_report()
+### **generate_checksum_report()**
 
 Generates SHA-256 checksum validation results.
 
 ---
 
-### generate_reconciliation_report()
+### **generate_reconciliation_report()**
 
 Compares source and target records and identifies:
 
@@ -1521,49 +1521,49 @@ Compares source and target records and identifies:
 
 ---
 
-## Audit Engine
+## **Audit Engine**
 
-### save_audit_trail()
+### **save_audit_trail()**
 
 Stores detailed migration audit information.
 
 ---
 
-### save_history()
+### **save_history()**
 
 Stores migration execution history.
 
 ---
 
-### generate_rollback_script()
+### **generate_rollback_script()**
 
 Generates SQL required to reverse migration operations where supported.
 
 ---
 
-## Scheduler Engine
+## **Scheduler Engine**
 
-### schedule_migration()
+### **schedule_migration()**
 
 Creates scheduled migration jobs.
 
 ---
 
-### run_scheduled_migration()
+### **run_scheduled_migration()**
 
 Executes scheduled migrations.
 
 ---
 
-### save_execution_log()
+### **save_execution_log()**
 
 Stores scheduler execution details.
 
 ---
 
-## Reports Generated
+## **Reports Generated**
 
-### Validation Report
+### **Validation Report**
 
 Contains:
 
@@ -1573,7 +1573,7 @@ Contains:
 
 ---
 
-### Audit Report
+### **Audit Report**
 
 Contains:
 
@@ -1585,7 +1585,7 @@ Contains:
 
 ---
 
-### Checksum Report
+### **Checksum Report**
 
 Contains:
 
@@ -1595,7 +1595,7 @@ Contains:
 
 ---
 
-### Reconciliation Report
+### **Reconciliation Report**
 
 Contains:
 
@@ -1606,13 +1606,13 @@ Contains:
 
 ---
 
-### Rollback Script
+### **Rollback Script**
 
 Contains SQL scripts required to revert supported migration operations.
 
 ---
 
-### Procedure Report
+### **Procedure Report**
 
 Contains:
 
@@ -1622,19 +1622,19 @@ Contains:
 
 ---
 
-### Trigger Report
+### **Trigger Report**
 
 Contains trigger translation and deployment information.
 
 ---
 
-### Function Report
+### **Function Report**
 
 Contains function translation and deployment information.
 
 ---
 
-### Self-Healing Report
+### **Self-Healing Report**
 
 Contains:
 
@@ -1646,7 +1646,7 @@ Contains:
 
 ---
 
-### Data Quality Report
+### **Data Quality Report**
 
 Contains:
 
@@ -1657,7 +1657,7 @@ Contains:
 
 ---
 
-## Dashboard
+## **Dashboard**
 
 The frontend provides a centralized migration dashboard.
 
@@ -1720,9 +1720,9 @@ Migration History
 
 ---
 
-## Running the Project
+## **Running the Project**
 
-### Backend
+### **Backend**
 
 
 cd backend
@@ -1740,7 +1740,7 @@ http://localhost:8000
 
 ---
 
-## Swagger Documentation
+## **Swagger Documentation**
 
 Open:
 
@@ -1752,7 +1752,7 @@ FastAPI automatically provides interactive API documentation.
 
 ---
 
-## Frontend
+## **Frontend**
 
 
 cd frontend
@@ -1770,7 +1770,7 @@ http://localhost:5173
 
 ---
 
-## Migration Workflow
+## **Migration Workflow**
 
 
 Configure Source Database
@@ -1850,11 +1850,11 @@ Migration History
 
 ---
 
-## Enterprise Reliability Features
+## **Enterprise Reliability Features**
 
 The platform is designed around four major reliability principles.
 
-### 1. Validation
+### **1. Validation**
 
 Every migration can be verified through:
 
@@ -1870,7 +1870,7 @@ Data Quality
 
 ---
 
-### 2. Recoverability
+### **2. Recoverability**
 
 The platform provides:
 
@@ -1884,7 +1884,7 @@ Rollback Generation
 
 ---
 
-### 3. Observability
+### **3. Observability**
 
 Migration activity can be tracked through:
 
@@ -1902,7 +1902,7 @@ Scheduler Logs
 
 ---
 
-### 4. Intelligent Error Handling
+### **4. Intelligent Error Handling**
 
 The AI layer provides:
 
@@ -1920,7 +1920,7 @@ Schema Memory
 
 ---
 
-## Current Capabilities
+## **Current Capabilities**
 
 
 ✔ MSSQL → PostgreSQL
@@ -1958,7 +1958,7 @@ Schema Memory
 
 ---
 
-## Security Considerations
+## **Security Considerations**
 
 The platform is designed to support secure database migration workflows.
 
@@ -1985,7 +1985,7 @@ Do not replace these placeholders with real production credentials in the reposi
 
 ---
 
-## Performance Considerations
+## **Performance Considerations**
 
 For large migrations, performance depends on:
 
@@ -2005,11 +2005,11 @@ For binary-heavy tables, the system can automatically use the safer batched inse
 
 ---
 
-## Future Scope
+## **Future Scope**
 
 Potential future improvements include:
 
-### Infrastructure
+### **Infrastructure**
 
 - Dockerized deployment
 - Kubernetes deployment
@@ -2019,7 +2019,7 @@ Potential future improvements include:
 
 ---
 
-### Database Support
+### **Database Support**
 
 - MongoDB migration
 - MariaDB migration
@@ -2029,7 +2029,7 @@ Potential future improvements include:
 
 ---
 
-### AI & Automation
+### **AI & Automation**
 
 - AI-generated ETL pipelines
 - Automatic conflict resolution
@@ -2040,7 +2040,7 @@ Potential future improvements include:
 
 ---
 
-### Enterprise Platform
+### **Enterprise Platform**
 
 - User authentication
 - Role-Based Access Control
@@ -2053,7 +2053,7 @@ Potential future improvements include:
 
 ---
 
-## Known Limitations
+## **Known Limitations**
 
 - Migration performance depends on source, target, network, and dataset characteristics.
 - Binary-heavy tables may use the batched insertion fallback instead of `COPY`.
@@ -2065,7 +2065,7 @@ Potential future improvements include:
 
 ---
 
-## Project Use Case
+## **Project Use Case**
 
 The platform is designed for organizations that need to migrate legacy or heterogeneous databases into PostgreSQL while maintaining:
 
@@ -2097,7 +2097,7 @@ Typical use cases include:
 
 ---
 
-## Project Outcomes
+## **Project Outcomes**
 
 The platform aims to reduce manual migration effort by combining:
 
@@ -2137,9 +2137,9 @@ Monitor
 
 ---
 
-## Contributors
+## **Contributors**
 
-### Ravi Raj Choubey
+### **Ravi Raj Choubey**
 
 B.Tech Data Science
 
@@ -2147,14 +2147,14 @@ VIT Chennai
 
 ---
 
-## Project
+## **Project**
 
-### AI Database Migration Platform
+### **AI Database Migration Platform**
 
-#### Enterprise Database Migration, Validation, Performance Optimization and AI-Powered Schema Intelligence
+#### **Enterprise Database Migration, Validation, Performance Optimization and AI-Powered Schema Intelligence**
 
 ---
 
-## License
+## **License**
 
 This project is intended for educational, research, and enterprise database migration purposes.
