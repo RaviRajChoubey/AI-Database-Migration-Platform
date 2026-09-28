@@ -34,11 +34,7 @@ The AI Database Migration Platform automates these processes through a modular m
 
 Supported Migration Paths
 
-MSSQL   ───────────────┐
-                       │
-MySQL   ───────────────┼──> AI Migration Engine ──> PostgreSQL
-                       │
-Oracle  ───────────────┘
+MSSQL ───────────────┐ │ MySQL ───────────────┼──> AI Migration Engine ──> PostgreSQL │ Oracle ───────────────┘
 
 Key Highlights
 
@@ -104,78 +100,79 @@ Swagger API documentation
 
 Project Architecture
 
-                         ┌──────────────────────┐
-                         │   Source Databases   │
-                         │                      │
-                         │ MSSQL / MySQL /      │
-                         │ Oracle               │
-                         └──────────┬───────────┘
-                                    │
-                                    ▼
-                         ┌──────────────────────┐
-                         │ Database Adapters    │
-                         │                      │
-                         │ MSSQL Adapter        │
-                         │ MySQL Adapter        │
-                         │ Oracle Adapter       │
-                         └──────────┬───────────┘
-                                    │
-                                    ▼
-                    ┌──────────────────────────────┐
-                    │    AI Schema Analysis        │
-                    │                              │
-                    │ • FK Detection               │
-                    │ • Risk Analysis              │
-                    │ • Type Mapping               │
-                    │ • Rename Suggestions         │
-                    │ • Migration Readiness        │
-                    └──────────────┬───────────────┘
-                                   │
-                                   ▼
-                    ┌──────────────────────────────┐
-                    │   Self-Healing AI Engine     │
-                    │                              │
-                    │ • DDL Error Recovery         │
-                    │ • SQL Translation             │
-                    │ • Schema Memory               │
-                    │ • Automatic Rule Learning     │
-                    └──────────────┬───────────────┘
-                                   │
-                                   ▼
-                    ┌──────────────────────────────┐
-                    │    Migration Engine          │
-                    │                              │
-                    │ • Schema Migration            │
-                    │ • COPY Streaming              │
-                    │ • Batch Fallback              │
-                    │ • Incremental Migration       │
-                    │ • Resume Migration            │
-                    └──────────────┬───────────────┘
-                                   │
-                                   ▼
-                         ┌──────────────────────┐
-                         │ PostgreSQL Target    │
-                         └──────────┬───────────┘
-                                    │
-                 ┌──────────────────┼──────────────────┐
-                 ▼                  ▼                  ▼
-        ┌────────────────┐ ┌────────────────┐ ┌────────────────┐
-        │ Validation     │ │ Reconciliation │ │ Data Quality   │
-        │ Engine         │ │ Engine         │ │ Engine         │
-        └────────────────┘ └────────────────┘ └────────────────┘
-                 │                  │                  │
-                 └──────────────────┼──────────────────┘
-                                    ▼
-                         ┌──────────────────────┐
-                         │ Reporting & Audit    │
-                         │                      │
-                         │ • Validation Report  │
-                         │ • Checksum Report    │
-                         │ • Audit Report       │
-                         │ • Reconciliation     │
-                         │ • Rollback           │
-                         │ • Migration History  │
-                         └──────────────────────┘
+                     ┌──────────────────────┐
+                     │   Source Databases   │
+                     │                      │
+                     │ MSSQL / MySQL /      │
+                     │ Oracle               │
+                     └──────────┬───────────┘
+                                │
+                                ▼
+                     ┌──────────────────────┐
+                     │ Database Adapters    │
+                     │                      │
+                     │ MSSQL Adapter        │
+                     │ MySQL Adapter        │
+                     │ Oracle Adapter       │
+                     └──────────┬───────────┘
+                                │
+                                ▼
+                ┌──────────────────────────────┐
+                │    AI Schema Analysis        │
+                │                              │
+                │ • FK Detection               │
+                │ • Risk Analysis              │
+                │ • Type Mapping               │
+                │ • Rename Suggestions         │
+                │ • Migration Readiness        │
+                └──────────────┬───────────────┘
+                               │
+                               ▼
+                ┌──────────────────────────────┐
+                │   Self-Healing AI Engine     │
+                │                              │
+                │ • DDL Error Recovery         │
+                │ • SQL Translation             │
+                │ • Schema Memory               │
+                │ • Automatic Rule Learning     │
+                └──────────────┬───────────────┘
+                               │
+                               ▼
+                ┌──────────────────────────────┐
+                │    Migration Engine          │
+                │                              │
+                │ • Schema Migration            │
+                │ • COPY Streaming              │
+                │ • Batch Fallback              │
+                │ • Incremental Migration       │
+                │ • Resume Migration            │
+                └──────────────┬───────────────┘
+                               │
+                               ▼
+                     ┌──────────────────────┐
+                     │ PostgreSQL Target    │
+                     └──────────┬───────────┘
+                                │
+             ┌──────────────────┼──────────────────┐
+             ▼                  ▼                  ▼
+    ┌────────────────┐ ┌────────────────┐ ┌────────────────┐
+    │ Validation     │ │ Reconciliation │ │ Data Quality   │
+    │ Engine         │ │ Engine         │ │ Engine         │
+    └────────────────┘ └────────────────┘ └────────────────┘
+             │                  │                  │
+             └──────────────────┼──────────────────┘
+                                ▼
+                     ┌──────────────────────┐
+                     │ Reporting & Audit    │
+                     │                      │
+                     │ • Validation Report  │
+                     │ • Checksum Report    │
+                     │ • Audit Report       │
+                     │ • Reconciliation     │
+                     │ • Rollback           │
+                     │ • Migration History  │
+                     └──────────────────────┘
+
 
 Phase 1 — High-Performance Core Engine & Validation
 
@@ -185,21 +182,13 @@ The migration engine uses PostgreSQL's COPY protocol for high-throughput data lo
 
 Instead of relying only on:
 
-INSERT
-execute_values()
+INSERT execute_values()
 
 the platform can stream data using:
 
-copy_expert()
-        ↓
-io.StringIO
-        ↓
-TSV Streaming
-        ↓
-PostgreSQL COPY
+copy_expert() ↓ io.StringIO ↓ TSV Streaming ↓ PostgreSQL COPY
 
 Benefits
-
 High-throughput bulk loading
 
 Reduced SQL statement overhead
@@ -211,9 +200,7 @@ Efficient memory usage through buffered streaming
 Better performance for large datasets
 
 Performance
-
 Performance Benchmark
-
 50,000+ rows/sec
 
 for supported bulk-loading workloads.
@@ -226,15 +213,16 @@ Some tables may contain binary / bytea data.
 
 For such tables, the migration engine automatically falls back from COPY streaming to the safer batched insertion mechanism.
 
-                Migration
-                    │
-                    ▼
-             Binary Columns?
-              /           \
-            YES            NO
-             │              │
-             ▼              ▼
-      execute_values()   COPY Protocol
+            Migration
+                │
+                ▼
+         Binary Columns?
+          /           \
+        YES            NO
+         │              │
+         ▼              ▼
+  execute_values()   COPY Protocol
+
 
 This allows the system to maintain compatibility while still using high-performance streaming wherever possible.
 
@@ -242,27 +230,11 @@ This allows the system to maintain compatibility while still using high-performa
 
 The platform generates SHA-256 based row-content hashes for source and target records.
 
-Source Row
-    │
-    ▼
-Canonical Row Representation
-    │
-    ▼
-SHA-256 Hash
-    │
-    ▼
-Source Checksum
+Source Row │ ▼ Canonical Row Representation │ ▼ SHA-256 Hash │ ▼ Source Checksum
 
 The same process is performed on the PostgreSQL target.
 
-Source Checksum
-       │
-       │ Compare
-       ▼
-Target Checksum
-       │
-       ▼
-Validation Result
+Source Checksum │ │ Compare ▼ Target Checksum │ ▼ Validation Result
 
 Validation helps identify
 
@@ -282,10 +254,7 @@ The reconciliation engine performs detailed comparison between source and target
 
 It identifies:
 
-Matched Records
-Missing Records
-Extra Records
-Mismatched Values
+Matched Records Missing Records Extra Records Mismatched Values
 
 The generated reconciliation report provides detailed information about migration discrepancies.
 
@@ -345,1385 +314,942 @@ BYTEA
 
 Example:
 
-Oracle
-VARCHAR2
-    ↓
-PostgreSQL
-VARCHAR
+Oracle VARCHAR2 ↓ PostgreSQL VARCHAR
 
-Oracle
-NUMBER
-↓
-PostgreSQL
-NUMERIC
+Oracle NUMBER ↓ PostgreSQL NUMERIC
 
-
----
-
-## **7. Responsive Dashboard**
+7. Responsive Dashboard
 
 The frontend has been refactored to support different screen sizes.
 
-#### **Supported Viewport Range**
+Supported Viewport Range
 
-
-320px ─────────────────────────────── 1920px
-Mobile          Tablet              Desktop
-
+320px ─────────────────────────────── 1920px Mobile Tablet Desktop
 
 Responsive improvements include:
 
-- Fluid layouts
-- Dynamic CSS grids
-- `clamp()` based typography
-- Auto-fitting cards
-- Responsive tables
-- Flexible dashboard sections
-- Mobile-friendly forms
-- Reduced horizontal overflow
-- Improved dashboard spacing
+Fluid layouts
+
+Dynamic CSS grids
+
+clamp() based typography
+
+Auto-fitting cards
+
+Responsive tables
+
+Flexible dashboard sections
+
+Mobile-friendly forms
+
+Reduced horizontal overflow
+
+Improved dashboard spacing
 
 Example responsive grid:
 
-
-grid-template-columns:
-repeat(auto-fit, minmax(280px, 1fr));
-
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 
 The UI has been refactored across:
 
+Dashboard.jsx MigrationForm.jsx Header.jsx LogViewer.jsx DownloadCenter.jsx MigrationHistory.jsx StatsCard.jsx
 
-Dashboard.jsx
-MigrationForm.jsx
-Header.jsx
-LogViewer.jsx
-DownloadCenter.jsx
-MigrationHistory.jsx
-StatsCard.jsx
+Phase 3 — AI Intelligence
 
-
----
-
-## **Phase 3 — AI Intelligence**
-
-## **8. Self-Healing Schema Engine**
+8. Self-Healing Schema Engine
 
 The platform includes a self-healing schema engine implemented in:
 
-
 backend/ai_translator.py
-
 
 The engine intercepts PostgreSQL execution errors during schema migration and attempts to automatically repair incompatible SQL.
 
----
+Self-Healing Workflow
 
-### **Self-Healing Workflow**
+Source SQL │ ▼ PostgreSQL Execution │ ▼ Error Detected? / NO YES │ │ │ ▼ │ AI / Heuristic Analysis │ │ │ ▼ │ Generate Corrected SQL │ │ │ ▼ │ Validate using SAVEPOINT │ │ │ ▼ │ Successful? │ / │ YES NO │ │ │ │ ▼ ▼ │ Commit Retry / Report │ ▼ Continue Migration
 
-
-Source SQL
-│
-▼
-PostgreSQL Execution
-│
-▼
-Error Detected?
-/ 
-NO   YES
-│     │
-│     ▼
-│  AI / Heuristic Analysis
-│     │
-│     ▼
-│  Generate Corrected SQL
-│     │
-│     ▼
-│  Validate using SAVEPOINT
-│     │
-│     ▼
-│  Successful?
-│    / 
-│  YES  NO
-│   │    │
-│   ▼    ▼
-│ Commit Retry / Report
-│
-▼
-Continue Migration
-
-
----
-
-## **9. Self-Healing SQL Rules**
+9. Self-Healing SQL Rules
 
 The engine can handle common database dialect differences.
 
 Examples include:
 
-#### **SQL Server**
+SQL Server
 
+GETDATE() ↓ CURRENT_TIMESTAMP
 
-GETDATE()
-↓
-CURRENT_TIMESTAMP
+SQL Server
 
+DATETIME2 ↓ TIMESTAMP
 
-#### **SQL Server**
+MySQL
 
+AUTO_INCREMENT ↓ GENERATED ALWAYS AS IDENTITY
 
-DATETIME2
-↓
-TIMESTAMP
+MySQL Identifier Syntax
 
-
-#### **MySQL**
-
-
-AUTO_INCREMENT
-↓
-GENERATED ALWAYS AS IDENTITY
-
-
-#### **MySQL Identifier Syntax**
-
-
-customer_id
-↓
-"customer_id"
-
+customer_id ↓ "customer_id"
 
 The engine can use:
 
-- AI models
-- Built-in heuristic rules
-- Previously learned schema mappings
+AI models
 
----
+Built-in heuristic rules
 
-## **10. Schema Memory**
+Previously learned schema mappings
+
+10. Schema Memory
 
 Learned or successfully applied migration rules are stored in:
 
-
 mappings/schema_memory.json
-
 
 This allows the migration engine to reuse previously learned mappings in future migrations.
 
 Conceptually:
 
+Migration Error │ ▼ Repair Rule │ ▼ Validation │ ▼ schema_memory.json │ ▼ Future Migration │ ▼ Automatic Rule Reuse
 
-Migration Error
-│
-▼
-Repair Rule
-│
-▼
-Validation
-│
-▼
-schema_memory.json
-│
-▼
-Future Migration
-│
-▼
-Automatic Rule Reuse
-
-
----
-
-## **11. Self-Healing Audit Report**
+11. Self-Healing Audit Report
 
 Self-healing actions are recorded in:
 
-
 self_healing_report.json
-
 
 The report provides traceability for automatically repaired schema operations.
 
 This improves:
 
-- Debugging
-- Auditability
-- Migration transparency
-- Operational monitoring
+Debugging
 
----
+Auditability
 
-## **12. AI Routine Translator**
+Migration transparency
 
-The platform includes a `RoutineTranslator` in:
+Operational monitoring
 
+12. AI Routine Translator
+
+The platform includes a RoutineTranslator in:
 
 backend/ai_translator.py
-
 
 It translates database routines into PostgreSQL-compatible PL/pgSQL.
 
 Supported routine categories include:
 
-- Stored procedures
-- Functions
-- Triggers
+Stored procedures
 
----
+Functions
 
-### **Routine Translation**
+Triggers
 
+Routine Translation
 
-MSSQL T-SQL
-│
-▼
-AI Routine Translator
-│
-▼
-PostgreSQL PL/pgSQL
-
+MSSQL T-SQL │ ▼ AI Routine Translator │ ▼ PostgreSQL PL/pgSQL
 
 Example target structure:
 
-
-CREATE OR REPLACE FUNCTION function_name(...)
-RETURNS ...
-AS $$
-BEGIN
-...
-END;
-$$ LANGUAGE plpgsql;
-
+CREATE OR REPLACE FUNCTION function_name(...) RETURNS ... AS $$ BEGIN ... END; $$ LANGUAGE plpgsql;
 
 Translated routines can be deployed directly to the PostgreSQL target database.
 
----
-
-## **13. Routine Reports**
+13. Routine Reports
 
 The platform generates JSON reports for translated database routines.
-
-
-procedure_report.json
-trigger_report.json
-function_report.json
-
+procedure_report.json trigger_report.json function_report.json
 
 These reports provide visibility into routine migration and deployment.
 
----
-
-## **14. Automated Data Quality Scoring**
+14. Automated Data Quality Scoring
 
 The platform includes:
 
-
 backend/data_quality.py
 
-
-which implements the `DataQualityScorer`.
+which implements the DataQualityScorer.
 
 The system evaluates data quality using factors such as:
 
-- Row completeness
-- Schema completeness
-- Column null ratios
+Row completeness
+
+Schema completeness
+
+Column null ratios
 
 The result is converted into a composite score from:
 
-
 0% ─────────────────────────────── 100%
 
+Data Quality Classification
 
----
+Score / Result
 
-### **Data Quality Classification**
+Classification
 
-| Score / Result         | Classification |
-| ---------------------- | -------------- |
-| High quality           | EXCELLENT      |
-| Acceptable quality     | GOOD           |
-| Requires investigation | NEEDS_REVIEW   |
+High quality
+
+EXCELLENT
+
+Acceptable quality
+
+GOOD
+
+Requires investigation
+
+NEEDS_REVIEW
 
 The generated report is:
 
-
 data_quality_report.json
 
-
----
-
-## **15. New AI & Data Quality APIs**
+15. New AI & Data Quality APIs
 
 The platform exposes additional APIs for the new intelligence layer.
 
-#### **Self-Healing Report**
-
+Self-Healing Report
 
 GET /migration/self-healing-report
 
-
 Returns the self-healing execution report.
 
----
-
-#### **Data Quality Report**
-
+Data Quality Report
 
 GET /migration/data-quality-report
 
-
 Returns the calculated data quality report.
 
----
-
-#### **Schema Memory**
-
+Schema Memory
 
 GET /migration/schema-memory
 
-
 Returns learned schema transformation rules.
 
----
-
-#### **Routine Translation**
-
+Routine Translation
 
 POST /migration/translate-routines
 
-
 Translates supported database routines into PostgreSQL-compatible routines.
 
----
+Key Features
 
-## **Key Features**
+Database Migration
 
-### **Database Migration**
+MSSQL → PostgreSQL
 
-- MSSQL → PostgreSQL
-- MySQL → PostgreSQL
-- Oracle → PostgreSQL
-- Table migration
-- View migration
-- Index migration
-- Constraint migration
-- Stored procedure migration
-- Function migration
-- Trigger migration
-- Incremental migration
-- Resume interrupted migration
+MySQL → PostgreSQL
 
----
+Oracle → PostgreSQL
 
-## **AI-Powered Analysis**
+Table migration
 
-- Foreign key detection
-- Schema risk analysis
-- Migration readiness assessment
-- Column rename suggestions
-- Automatic type mapping
-- AI migration summary
-- Self-healing schema correction
-- Schema memory
-- AI routine translation
-- Data quality scoring
+View migration
 
----
+Index migration
 
-## **High-Performance Migration**
+Constraint migration
 
-- PostgreSQL `COPY` protocol
-- Streaming data loading
-- TSV buffer processing
-- `io.StringIO`
-- Automatic binary-column fallback
-- Batched `execute_values()` fallback
-- Large dataset optimization
-- 50,000+ rows/sec benchmark for supported workloads
+Stored procedure migration
 
----
+Function migration
 
-## **Validation Engine**
+Trigger migration
 
-- Row count validation
-- Source vs target verification
-- SHA-256 checksums
-- Cell-by-cell reconciliation
-- Missing record detection
-- Extra record detection
-- Data integrity checks
-- Data quality scoring
+Incremental migration
 
----
+Resume interrupted migration
 
-## **Monitoring & Tracking**
+AI-Powered Analysis
 
-- Real-time migration progress
-- Migration status
-- Audit trail
-- Migration history
-- Scheduler monitoring
-- Scheduled jobs
-- Execution logs
-- Self-healing logs
-- Routine translation reports
+Foreign key detection
 
----
+Schema risk analysis
 
-## **Reporting**
+Migration readiness assessment
+
+Column rename suggestions
+
+Automatic type mapping
+
+AI migration summary
+
+Self-healing schema correction
+
+Schema memory
+
+AI routine translation
+
+Data quality scoring
+
+High-Performance Migration
+
+PostgreSQL COPY protocol
+
+Streaming data loading
+
+TSV buffer processing
+
+io.StringIO
+
+Automatic binary-column fallback
+
+Batched execute_values() fallback
+
+Large dataset optimization
+
+50,000+ rows/sec benchmark for supported workloads
+
+Validation Engine
+
+Row count validation
+
+Source vs target verification
+
+SHA-256 checksums
+
+Cell-by-cell reconciliation
+
+Missing record detection
+
+Extra record detection
+
+Data integrity checks
+
+Data quality scoring
+
+Monitoring & Tracking
+
+Real-time migration progress
+
+Migration status
+
+Audit trail
+
+Migration history
+
+Scheduler monitoring
+
+Scheduled jobs
+
+Execution logs
+
+Self-healing logs
+
+Routine translation reports
+
+Reporting
 
 The platform generates:
 
-- Validation Report
-- Audit Report
-- Checksum Report
-- Reconciliation Report
-- Migration Report
-- Rollback Script
-- Procedure Report
-- Trigger Report
-- Function Report
-- Self-Healing Report
-- Data Quality Report
-- Schema Memory
+Validation Report
 
----
+Audit Report
 
-## **Scheduler**
+Checksum Report
+
+Reconciliation Report
+
+Migration Report
+
+Rollback Script
+
+Procedure Report
+
+Trigger Report
+
+Function Report
+
+Self-Healing Report
+
+Data Quality Report
+
+Schema Memory
+
+Scheduler
 
 The platform provides automated migration scheduling.
 
 Supported scheduling modes include:
 
-- One-time migration
-- Daily migration
-- Weekly migration
-- Monthly migration
-- Yearly migration
+One-time migration
+
+Daily migration
+
+Weekly migration
+
+Monthly migration
+
+Yearly migration
 
 Additional scheduler capabilities:
 
-- Retry mechanism
-- Execution tracking
-- Failure logging
-- Scheduler monitoring
-- Enable / disable scheduled jobs
-- Scheduled migration history
+Retry mechanism
 
----
+Execution tracking
 
-## **Technology Stack**
+Failure logging
 
-### **Backend**
+Scheduler monitoring
 
-- Python 3.13
-- FastAPI
-- APScheduler
-- Psycopg2
-- PyODBC
-- SQLAlchemy
-- Pandas
-- Oracle database connectivity
-- PostgreSQL COPY protocol
+Enable / disable scheduled jobs
 
----
+Scheduled migration history
 
-### **Frontend**
+Technology Stack
 
-- React
-- Vite
-- Axios
-- React Icons
-- CSS
-- Responsive CSS Grid
-- Responsive Forms
+Backend
 
----
+Python 3.13
 
-### **Databases**
+FastAPI
 
-#### **Source**
+APScheduler
 
-- Microsoft SQL Server
-- MySQL
-- Oracle
+Psycopg2
 
-#### **Target**
+PyODBC
 
-- PostgreSQL
+SQLAlchemy
 
----
+Pandas
 
-### **AI Components**
+Oracle database connectivity
 
-- AI Schema Analyzer
-- Foreign Key Detection Engine
-- Rename Recommendation Engine
-- Migration Risk Assessment
-- Self-Healing Schema Engine
-- Routine Translation Engine
-- Schema Memory
-- Data Quality Scoring Engine
+PostgreSQL COPY protocol
 
----
+Frontend
 
-## **Project Structure**
+React
 
+Vite
 
-AI-Database-Migration-Platform/
-│
-├── backend/
-│   │
-│   ├── adapters/
-│   │   └── oracle_adapter.py
-│   │
-│   ├── routes/
-│   │   └── migration.py
-│   │
-│   ├── ai_translator.py
-│   ├── data_quality.py
-│   ├── scheduler.py
-│   ├── migration_tool.py
-│   ├── postgres_connector.py
-│   ├── config.py
-│   └── main.py
-│
-├── mappings/
-│   ├── mysql_to_postgres.json
-│   ├── mssql_to_postgres.json
-│   ├── oracle_to_postgres.json
-│   └── schema_memory.json
-│
-├── frontend/
-│   ├── src/
-│   │   ├── components/
-│   │   │   ├── Dashboard.jsx
-│   │   │   ├── MigrationForm.jsx
-│   │   │   ├── Header.jsx
-│   │   │   ├── LogViewer.jsx
-│   │   │   ├── DownloadCenter.jsx
-│   │   │   ├── MigrationHistory.jsx
-│   │   │   └── StatsCard.jsx
-│   │   │
-│   │   ├── services/
-│   │   │   └── api.js
-│   │   │
-│   │   ├── App.jsx
-│   │   ├── App.css
-│   │   └── index.css
-│   │
-│   ├── package.json
-│   └── vite.config.js
-│
-├── reports/
-│   ├── validation_report.json
-│   ├── checksum_report.json
-│   ├── reconciliation_report.json
-│   ├── audit_report.json
-│   ├── procedure_report.json
-│   ├── trigger_report.json
-│   ├── function_report.json
-│   ├── self_healing_report.json
-│   └── data_quality_report.json
-│
-├── rollback/
-│
-├── requirements.txt
-│
-└── README.md
+Axios
 
+React Icons
 
----
+CSS
 
-## **Database Tables**
+Responsive CSS Grid
+
+Responsive Forms
+
+Databases
+
+Source
+
+Microsoft SQL Server
+
+MySQL
+
+Oracle
+
+Target
+
+PostgreSQL
+
+AI Components
+
+AI Schema Analyzer
+
+Foreign Key Detection Engine
+
+Rename Recommendation Engine
+
+Migration Risk Assessment
+
+Self-Healing Schema Engine
+
+Routine Translation Engine
+
+Schema Memory
+
+Data Quality Scoring Engine
+
+Project Structure
+
+AI-Database-Migration-Platform/ │ ├── backend/ │ │ │ ├── adapters/ │ │ └── oracle_adapter.py │ │ │ ├── routes/ │ │ └── migration.py │ │ │ ├── ai_translator.py │ ├── data_quality.py │ ├── scheduler.py │ ├── migration_tool.py │ ├── postgres_connector.py │ ├── config.py │ └── main.py │ ├── mappings/ │ ├── mysql_to_postgres.json │ ├── mssql_to_postgres.json │ ├── oracle_to_postgres.json │ └── schema_memory.json │ ├── frontend/ │ ├── src/ │ │ ├── components/ │ │ │ ├── Dashboard.jsx │ │ │ ├── MigrationForm.jsx │ │ │ ├── Header.jsx │ │ │ ├── LogViewer.jsx │ │ │ ├── DownloadCenter.jsx │ │ │ ├── MigrationHistory.jsx │ │ │ └── StatsCard.jsx │ │ │ │ │ ├── services/ │ │ │ └── api.js │ │ │ │ │ ├── App.jsx │ │ ├── App.css │ │ └── index.css │ │ │ ├── package.json │ └── vite.config.js │ ├── reports/ │ ├── validation_report.json │ ├── checksum_report.json │ ├── reconciliation_report.json │ ├── audit_report.json │ ├── procedure_report.json │ ├── trigger_report.json │ ├── function_report.json │ ├── self_healing_report.json │ └── data_quality_report.json │ ├── rollback/ │ ├── requirements.txt │ └── README.md
+
+Database Tables
 
 The platform maintains internal PostgreSQL tables for migration management and monitoring.
 
----
-
-### **migration_profiles**
+migration_profiles
 
 Stores reusable migration configurations.
 
+profile_id profile_name source_type source_server source_database source_user source_password target_host target_database target_user target_password created_at
 
-profile_id
-profile_name
-source_type
-source_server
-source_database
-source_user
-source_password
-target_host
-target_database
-target_user
-target_password
-created_at
-
-
----
-
-### **migration_scheduler**
+migration_scheduler
 
 Stores scheduled migration jobs.
 
+schedule_id schedule_name scheduled_time weekday retry_count profile_id is_active created_at
 
-schedule_id
-schedule_name
-scheduled_time
-weekday
-retry_count
-profile_id
-is_active
-created_at
-
-
----
-
-### **scheduler_execution_log**
+scheduler_execution_log
 
 Stores scheduler execution history.
 
+execution_id schedule_id execution_time status duration_seconds error_message
 
-execution_id
-schedule_id
-execution_time
-status
-duration_seconds
-error_message
-
-
----
-
-### **migration_history**
+migration_history
 
 Stores completed migration executions.
 
+id source target status rows_migrated started_at completed_at
 
-id
-source
-target
-status
-rows_migrated
-started_at
-completed_at
-
-
----
-
-### **migration_audit_trail**
+migration_audit_trail
 
 Stores detailed migration audit records.
 
+audit_id started_at completed_at source_db target_db tables_processed rows_processed validation_status audit_status checksum_status reconciliation_status rollback_generated report_generated
 
-audit_id
-started_at
-completed_at
-source_db
-target_db
-tables_processed
-rows_processed
-validation_status
-audit_status
-checksum_status
-reconciliation_status
-rollback_generated
-report_generated
+Configuration
 
-
----
-
-## **Configuration**
-
-### **MSSQL Source Configuration**
+MSSQL Source Configuration
 
 Example:
 
+Source Type : MSSQL Source Server : localhost\MSSQLSERVER01 Source Database : source_mssql Username : <your_username> Password : <your_password>
 
-Source Type      : MSSQL
-Source Server    : localhost\MSSQLSERVER01
-Source Database  : source_mssql
-Username         : <your_username>
-Password         : <your_password>
+MySQL Source Configuration
 
+Source Type : MySQL Source Server : localhost Source Database : source_mysql Username : <your_username> Password : <your_password>
 
----
+Oracle Source Configuration
 
-### **MySQL Source Configuration**
+Source Type : Oracle Source Server : <oracle_host> Port : 1521 Service Name : <service_name> Username : <oracle_username> Password : <oracle_password>
 
-
-Source Type      : MySQL
-Source Server    : localhost
-Source Database  : source_mysql
-Username         : <your_username>
-Password         : <your_password>
-
-
----
-
-### **Oracle Source Configuration**
-
-
-Source Type      : Oracle
-Source Server    : <oracle_host>
-Port             : 1521
-Service Name     : <service_name>
-Username         : <oracle_username>
-Password         : <oracle_password>
-
-
----
-
-## **PostgreSQL Target Configuration**
+PostgreSQL Target Configuration
 
 Example:
 
-
-Host             : <postgres_host>
-Port             : 5432
-Database         : <database>
-Username         : <postgres_user>
-Password         : <postgres_password>
-SSL Mode         : require
-
+Host : <postgres_host> Port : 5432 Database : Username : <postgres_user> Password : <postgres_password> SSL Mode : require
 
 For local PostgreSQL:
 
+Host : localhost Port : 5432 Database : target_db Username : postgres Password : <postgres_password>
 
-Host             : localhost
-Port             : 5432
-Database         : target_db
-Username         : postgres
-Password         : <postgres_password>
+Environment Variables
 
+Create a .env file:
 
----
-
-## **Environment Variables**
-
-Create a `.env` file:
-
-
-POSTGRES_HOST=<host>
-POSTGRES_PORT=5432
-POSTGRES_DB=<database>
-POSTGRES_USER=<user>
-POSTGRES_PASSWORD=<password>
+POSTGRES_HOST= POSTGRES_PORT=5432 POSTGRES_DB= POSTGRES_USER= POSTGRES_PASSWORD=
 
 OPENAI_API_KEY=<api_key>
 
-
 Never commit real credentials or API keys to GitHub.
 
----
+Migration Profile Example
 
-## **Migration Profile Example**
+{ "profileName": "MSSQL_to_PostgreSQL", "sourceType": "mssql", "sourceServer": "localhost\MSSQLSERVER01", "sourceDatabase": "source_mssql", "sourceUser": "", "sourcePassword": "", "targetHost": "<postgres_host>", "targetDatabase": "target_db", "targetUser": "<postgres_user>", "targetPassword": "<postgres_password>" }
 
+API Endpoints
 
-{
-"profileName": "MSSQL_to_PostgreSQL",
-"sourceType": "mssql",
-"sourceServer": "localhost\MSSQLSERVER01",
-"sourceDatabase": "source_mssql",
-"sourceUser": "<username>",
-"sourcePassword": "<password>",
-"targetHost": "<postgres_host>",
-"targetDatabase": "target_db",
-"targetUser": "<postgres_user>",
-"targetPassword": "<postgres_password>"
-}
+Connection & Migration
 
-
----
-
-## **API Endpoints**
-
-### **Connection & Migration**
-
-#### **Test Connection**
-
+Test Connection
 
 POST /migration/test-connection
 
-
 Tests source and target database connectivity.
 
----
-
-#### **Start Migration**
-
+Start Migration
 
 POST /migration/start
 
-
 Starts a database migration.
 
----
-
-#### **Resume Migration**
-
+Resume Migration
 
 POST /migration/resume
 
-
 Resumes an interrupted migration.
 
----
+Migration Profiles
 
-## **Migration Profiles**
-
-#### **Create Profile**
-
+Create Profile
 
 POST /migration/profile
 
-
----
-
-#### **Get Profiles**
-
+Get Profiles
 
 GET /migration/profiles
 
+Progress
 
----
-
-## **Progress**
-
-#### **Migration Progress**
-
+Migration Progress
 
 GET /migration/progress
 
-
 Returns current migration progress.
 
----
+Analysis
 
-## **Analysis**
-
-#### **Schema Analysis**
-
+Schema Analysis
 
 GET /migration/schema-analysis
 
-
 Provides AI-powered schema analysis.
 
----
-
-#### **Validation Report**
-
+Validation Report
 
 GET /migration/validation-report
 
-
 Returns validation results.
 
----
+Audit
 
-## **Audit**
-
-#### **Audit Trail**
-
+Audit Trail
 
 GET /migration/audit-trail
 
-
----
-
-#### **Migration History**
-
+Migration History
 
 GET /migration/migration-history
 
+Scheduler
 
----
-
-## **Scheduler**
-
-#### **Create Schedule**
-
+Create Schedule
 
 POST /migration/schedule
 
-
----
-
-#### **Get Schedules**
-
+Get Schedules
 
 GET /migration/schedules
 
-
----
-
-#### **Scheduler Logs**
-
+Scheduler Logs
 
 GET /migration/scheduler/logs
 
+AI Intelligence APIs
 
----
-
-## **AI Intelligence APIs**
-
-#### **Self-Healing Report**
-
+Self-Healing Report
 
 GET /migration/self-healing-report
 
-
----
-
-#### **Data Quality Report**
-
+Data Quality Report
 
 GET /migration/data-quality-report
 
-
----
-
-#### **Schema Memory**
-
+Schema Memory
 
 GET /migration/schema-memory
 
-
----
-
-#### **Translate Routines**
-
+Translate Routines
 
 POST /migration/translate-routines
 
+Download APIs
 
----
-
-## **Download APIs**
-
-#### **Validation Report**
-
+Validation Report
 
 GET /download/validation
 
-
----
-
-#### **Audit Report**
-
+Audit Report
 
 GET /download/audit
 
-
----
-
-#### **Checksum Report**
-
+Checksum Report
 
 GET /download/checksum
 
-
----
-
-#### **Reconciliation Report**
-
+Reconciliation Report
 
 GET /download/reconciliation
 
+Core Migration Functions
 
----
-
-## **Core Migration Functions**
-
-### **start_migration()**
+start_migration()
 
 Starts the complete migration workflow.
 
 Responsibilities:
 
-- Connect to source database
-- Connect to PostgreSQL
-- Extract schema metadata
-- Analyze source schema
-- Generate mappings
-- Create target schema
-- Migrate tables
-- Migrate data
-- Migrate views
-- Migrate indexes
-- Migrate constraints
-- Migrate procedures
-- Migrate functions
-- Migrate triggers
-- Validate migration
-- Generate checksums
-- Generate reconciliation report
-- Generate rollback scripts
-- Generate audit records
+Connect to source database
 
----
+Connect to PostgreSQL
 
-### **resume_migration()**
+Extract schema metadata
+
+Analyze source schema
+
+Generate mappings
+
+Create target schema
+
+Migrate tables
+
+Migrate data
+
+Migrate views
+
+Migrate indexes
+
+Migrate constraints
+
+Migrate procedures
+
+Migrate functions
+
+Migrate triggers
+
+Validate migration
+
+Generate checksums
+
+Generate reconciliation report
+
+Generate rollback scripts
+
+Generate audit records
+
+resume_migration()
 
 Resumes an interrupted migration from the last completed migration stage.
 
----
-
-### **migrate_table()**
+migrate_table()
 
 Migrates table structure and data.
 
 The function supports high-performance PostgreSQL loading through:
 
-
 COPY
-
 
 with fallback to:
 
-
 execute_values()
-
 
 when required.
 
----
-
-### **migrate_views()**
+migrate_views()
 
 Migrates database views.
 
----
-
-### **migrate_procedures()**
+migrate_procedures()
 
 Migrates stored procedures.
 
----
-
-### **migrate_functions()**
+migrate_functions()
 
 Migrates database functions.
 
----
-
-### **migrate_triggers()**
+migrate_triggers()
 
 Migrates database triggers.
 
----
+Self-Healing Engine
 
-## **Self-Healing Engine**
+SelfHealingAgent
 
-### **SelfHealingAgent**
-
-The `SelfHealingAgent` detects migration-related PostgreSQL errors and attempts to generate corrected SQL.
+The SelfHealingAgent detects migration-related PostgreSQL errors and attempts to generate corrected SQL.
 
 Responsibilities include:
 
-- DDL error detection
-- Constraint error handling
-- View translation
-- Default expression translation
-- Data type conversion
-- SQL dialect correction
-- Rule reuse through schema memory
-- Savepoint-based SQL validation
-- Self-healing audit logging
+DDL error detection
 
----
+Constraint error handling
 
-## **Routine Translation Engine**
+View translation
 
-### **RoutineTranslator**
+Default expression translation
 
-The `RoutineTranslator` handles conversion of source database routines into PostgreSQL-compatible PL/pgSQL.
+Data type conversion
+
+SQL dialect correction
+
+Rule reuse through schema memory
+
+Savepoint-based SQL validation
+
+Self-healing audit logging
+
+Routine Translation Engine
+
+RoutineTranslator
+
+The RoutineTranslator handles conversion of source database routines into PostgreSQL-compatible PL/pgSQL.
 
 Workflow:
+Source Routine │ ▼ Dialect Detection │ ▼ AI Translation │ ▼ PL/pgSQL Generation │ ▼ PostgreSQL Validation │ ▼ Deployment │ ▼ Routine Report
 
+Data Quality Engine
 
-Source Routine
-│
-▼
-Dialect Detection
-│
-▼
-AI Translation
-│
-▼
-PL/pgSQL Generation
-│
-▼
-PostgreSQL Validation
-│
-▼
-Deployment
-│
-▼
-Routine Report
-
-
----
-
-## **Data Quality Engine**
-
-### **DataQualityScorer**
+DataQualityScorer
 
 The Data Quality Engine evaluates migrated data using:
 
-- Row completeness
-- Schema completeness
-- Null ratio analysis
-- Migration consistency
+Row completeness
+
+Schema completeness
+
+Null ratio analysis
+
+Migration consistency
 
 Output:
-
-
-Data Quality Score
-│
-▼
-0 – 100%
-│
-▼
-Classification
-
+Data Quality Score │ ▼ 0 – 100% │ ▼ Classification
 
 Generated report:
 
-
 data_quality_report.json
 
+Validation Engine
 
----
-
-## **Validation Engine**
-
-### **validate_counts()**
+validate_counts()
 
 Validates source and target row counts.
 
----
-
-### **generate_checksum_report()**
+generate_checksum_report()
 
 Generates SHA-256 checksum validation results.
 
----
-
-### **generate_reconciliation_report()**
+generate_reconciliation_report()
 
 Compares source and target records and identifies:
 
-- Matching records
-- Missing records
-- Extra records
-- Data mismatches
+Matching records
 
----
+Missing records
 
-## **Audit Engine**
+Extra records
 
-### **save_audit_trail()**
+Data mismatches
+
+Audit Engine
+
+save_audit_trail()
 
 Stores detailed migration audit information.
 
----
-
-### **save_history()**
+save_history()
 
 Stores migration execution history.
 
----
-
-### **generate_rollback_script()**
+generate_rollback_script()
 
 Generates SQL required to reverse migration operations where supported.
 
----
+Scheduler Engine
 
-## **Scheduler Engine**
-
-### **schedule_migration()**
+schedule_migration()
 
 Creates scheduled migration jobs.
 
----
-
-### **run_scheduled_migration()**
+run_scheduled_migration()
 
 Executes scheduled migrations.
 
----
-
-### **save_execution_log()**
+save_execution_log()
 
 Stores scheduler execution details.
 
----
+Reports Generated
 
-## **Reports Generated**
-
-### **Validation Report**
+Validation Report
 
 Contains:
 
-- Source row counts
-- Target row counts
-- Validation status
+Source row counts
 
----
+Target row counts
 
-### **Audit Report**
+Validation status
 
-Contains:
-
-- Migration metadata
-- Execution timestamps
-- Source database
-- Target database
-- Status information
-
----
-
-### **Checksum Report**
+Audit Report
 
 Contains:
 
-- Source checksum
-- Target checksum
-- Verification result
+Migration metadata
 
----
+Execution timestamps
 
-### **Reconciliation Report**
+Source database
+
+Target database
+
+Status information
+
+Checksum Report
 
 Contains:
 
-- Matching records
-- Missing records
-- Extra records
-- Validation summary
+Source checksum
 
----
+Target checksum
 
-### **Rollback Script**
+Verification result
+
+Reconciliation Report
+
+Contains:
+
+Matching records
+
+Missing records
+
+Extra records
+
+Validation summary
+
+Rollback Script
 
 Contains SQL scripts required to revert supported migration operations.
 
----
-
-### **Procedure Report**
+Procedure Report
 
 Contains:
 
-- Source procedure information
-- Translated PostgreSQL procedure/function
-- Deployment status
+Source procedure information
 
----
+Translated PostgreSQL procedure/function
 
-### **Trigger Report**
+Deployment status
+
+Trigger Report
 
 Contains trigger translation and deployment information.
 
----
-
-### **Function Report**
+Function Report
 
 Contains function translation and deployment information.
 
----
-
-### **Self-Healing Report**
+Self-Healing Report
 
 Contains:
 
-- Detected errors
-- Applied corrections
-- Corrected SQL
-- Validation status
-- Migration context
+Detected errors
 
----
+Applied corrections
 
-### **Data Quality Report**
+Corrected SQL
+
+Validation status
+
+Migration context
+
+Data Quality Report
 
 Contains:
 
-- Data quality score
-- Completeness metrics
-- Null-ratio analysis
-- Classification
+Data quality score
 
----
+Completeness metrics
 
-## **Dashboard**
+Null-ratio analysis
+
+Classification
+
+Dashboard
 
 The frontend provides a centralized migration dashboard.
 
 Major dashboard sections include:
 
+KPI Cards │ ├── Total Migrations ├── Rows Migrated ├── Validation Status └── Scheduled Jobs │ ▼ Migration Dashboard │ ├── Tables ├── Rows ├── Views ├── Procedures ├── Functions └── AI Risk │ ▼ Migration Progress │ ▼ Audit Trail + Migration Summary │ ▼ Validation Summary │ ▼ Checksum Validation │ ▼ Reconciliation Report │ ▼ Migration Scheduler │ ├── Scheduler Monitoring └── Scheduled Jobs │ ▼ AI Summary │ ├── Foreign Keys └── Rename Suggestions │ ▼ Download Center │ ▼ Logs │ ▼ Migration History
 
-KPI Cards
-│
-├── Total Migrations
-├── Rows Migrated
-├── Validation Status
-└── Scheduled Jobs
-│
-▼
-Migration Dashboard
-│
-├── Tables
-├── Rows
-├── Views
-├── Procedures
-├── Functions
-└── AI Risk
-│
-▼
-Migration Progress
-│
-▼
-Audit Trail + Migration Summary
-│
-▼
-Validation Summary
-│
-▼
-Checksum Validation
-│
-▼
-Reconciliation Report
-│
-▼
-Migration Scheduler
-│
-├── Scheduler Monitoring
-└── Scheduled Jobs
-│
-▼
-AI Summary
-│
-├── Foreign Keys
-└── Rename Suggestions
-│
-▼
-Download Center
-│
-▼
-Logs
-│
-▼
-Migration History
+Running the Project
 
-
----
-
-## **Running the Project**
-
-### **Backend**
-
+Backend
 
 cd backend
 
@@ -1731,29 +1257,19 @@ pip install -r requirements.txt
 
 uvicorn main --reload
 
-
 Backend:
-
 
 http://localhost:8000
 
-
----
-
-## **Swagger Documentation**
+Swagger Documentation
 
 Open:
 
-
 http://localhost:8000/docs
-
 
 FastAPI automatically provides interactive API documentation.
 
----
-
-## **Frontend**
-
+Frontend
 
 cd frontend
 
@@ -1761,400 +1277,264 @@ npm install
 
 npm run dev
 
-
 Frontend:
-
 
 http://localhost:5173
 
+Migration Workflow
 
----
+Configure Source Database | V
 
-## **Migration Workflow**
+Configure PostgreSQL Target | V
 
+Test Connection | V
 
-Configure Source Database
-|
-V
+Extract Database Metadata | V
 
-Configure PostgreSQL Target
-|
-V
+AI Schema Analysis | V
 
-Test Connection
-|
-V
+Automatic Type Mapping | V
 
-Extract Database Metadata
-|
-V
+Foreign Key Detection | V
 
-AI Schema Analysis
-|
-V
+Schema Risk Assessment | V
 
-Automatic Type Mapping
-|
-V
+Self-Healing / SQL Translation | V
 
-Foreign Key Detection
-|
-V
+Create Target Schema | V
 
-Schema Risk Assessment
-|
-V
+High-Performance Data Migration | V
 
-Self-Healing / SQL Translation
-|
-V
+Routine Migration | V
 
-Create Target Schema
-|
-V
+Validation | V
 
-High-Performance Data Migration
-|
-V
+SHA-256 Checksum Verification | V
 
-Routine Migration
-|
-V
+Cell-by-Cell Reconciliation | V
 
-Validation
-|
-V
+Data Quality Scoring | V
 
-SHA-256 Checksum Verification
-|
-V
+Report Generation | V
 
-Cell-by-Cell Reconciliation
-|
-V
-
-Data Quality Scoring
-|
-V
-
-Report Generation
-|
-V
-
-Audit Logging
-|
-V
+Audit Logging | V
 
 Migration History
 
-
----
-
-## **Enterprise Reliability Features**
+Enterprise Reliability Features
 
 The platform is designed around four major reliability principles.
 
-### **1. Validation**
+1. Validation
 
 Every migration can be verified through:
 
+Row Counts + Checksums + Reconciliation + Data Quality
 
-Row Counts
-+
-Checksums
-+
-Reconciliation
-+
-Data Quality
-
-
----
-
-### **2. Recoverability**
+2. Recoverability
 
 The platform provides:
 
+Resume Migration + Incremental Migration + Rollback Generation
 
-Resume Migration
-+
-Incremental Migration
-+
-Rollback Generation
-
-
----
-
-### **3. Observability**
+3. Observability
 
 Migration activity can be tracked through:
 
+Real-Time Progress + Logs + Audit Trail + Migration History + Scheduler Logs
 
-Real-Time Progress
-+
-Logs
-+
-Audit Trail
-+
-Migration History
-+
-Scheduler Logs
-
-
----
-
-### **4. Intelligent Error Handling**
+4. Intelligent Error Handling
 
 The AI layer provides:
 
+Schema Analysis + Automatic Mapping + Self-Healing + Routine Translation + Schema Memory
 
-Schema Analysis
-+
-Automatic Mapping
-+
-Self-Healing
-+
-Routine Translation
-+
-Schema Memory
+Current Capabilities
 
+✔ MSSQL → PostgreSQL ✔ MySQL → PostgreSQL ✔ Oracle → PostgreSQL ✔ PostgreSQL COPY Streaming ✔ 50,000+ rows/sec benchmark ✔ Binary Column Fallback ✔ AI Schema Analysis ✔ Foreign Key Detection ✔ Schema Risk Analysis ✔ Column Rename Suggestions ✔ Automatic Type Mapping ✔ Self-Healing Schema Engine ✔ Schema Memory ✔ AI Routine Translation ✔ Procedure Translation ✔ Function Translation ✔ Trigger Translation ✔ SHA-256 Checksum Verification ✔ Cell-by-Cell Reconciliation ✔ Data Quality Scoring ✔ Validation Reports ✔ Audit Reports ✔ Reconciliation Reports ✔ Rollback Generation ✔ Resume Migration ✔ Incremental Migration ✔ Migration Scheduler ✔ Retry Mechanism ✔ Scheduler Monitoring ✔ Real-Time Migration Monitoring ✔ Responsive Dashboard
 
----
-
-## **Current Capabilities**
-
-
-✔ MSSQL → PostgreSQL
-✔ MySQL → PostgreSQL
-✔ Oracle → PostgreSQL
-✔ PostgreSQL COPY Streaming
-✔ 50,000+ rows/sec benchmark
-✔ Binary Column Fallback
-✔ AI Schema Analysis
-✔ Foreign Key Detection
-✔ Schema Risk Analysis
-✔ Column Rename Suggestions
-✔ Automatic Type Mapping
-✔ Self-Healing Schema Engine
-✔ Schema Memory
-✔ AI Routine Translation
-✔ Procedure Translation
-✔ Function Translation
-✔ Trigger Translation
-✔ SHA-256 Checksum Verification
-✔ Cell-by-Cell Reconciliation
-✔ Data Quality Scoring
-✔ Validation Reports
-✔ Audit Reports
-✔ Reconciliation Reports
-✔ Rollback Generation
-✔ Resume Migration
-✔ Incremental Migration
-✔ Migration Scheduler
-✔ Retry Mechanism
-✔ Scheduler Monitoring
-✔ Real-Time Migration Monitoring
-✔ Responsive Dashboard
-
-
----
-
-## **Security Considerations**
+Security Considerations
 
 The platform is designed to support secure database migration workflows.
 
 Recommended practices:
 
-- Store credentials in environment variables
-- Never commit passwords to Git
-- Never commit API keys
-- Use encrypted database connections where supported
-- Restrict database users to required permissions
-- Use PostgreSQL SSL for remote deployments
-- Protect generated reports containing sensitive information
-- Restrict access to migration logs
-- Use separate credentials for development and production
+Store credentials in environment variables
+
+Never commit passwords to Git
+
+Never commit API keys
+
+Use encrypted database connections where supported
+
+Restrict database users to required permissions
+
+Use PostgreSQL SSL for remote deployments
+
+Protect generated reports containing sensitive information
+
+Restrict access to migration logs
+
+Use separate credentials for development and production
 
 Example:
 
-
-POSTGRES_PASSWORD=<password>
-OPENAI_API_KEY=<api_key>
-
+POSTGRES_PASSWORD= OPENAI_API_KEY=<api_key>
 
 Do not replace these placeholders with real production credentials in the repository.
 
----
-
-## **Performance Considerations**
+Performance Considerations
 
 For large migrations, performance depends on:
 
-- Source database performance
-- Target PostgreSQL performance
-- Network bandwidth
-- Row size
-- Number of columns
-- Number of indexes
-- Constraint complexity
-- Binary data
-- Transformation complexity
+Source database performance
 
-The platform uses PostgreSQL `COPY` streaming where applicable to maximize bulk-loading performance.
+Target PostgreSQL performance
+
+Network bandwidth
+
+Row size
+
+Number of columns
+
+Number of indexes
+
+Constraint complexity
+
+Binary data
+
+Transformation complexity
+
+The platform uses PostgreSQL COPY streaming where applicable to maximize bulk-loading performance.
 
 For binary-heavy tables, the system can automatically use the safer batched insertion path.
 
----
-
-## **Future Scope**
+Future Scope
 
 Potential future improvements include:
 
-### **Infrastructure**
+Infrastructure
 
-- Dockerized deployment
-- Kubernetes deployment
-- Horizontal scaling
-- Distributed migration workers
-- Cloud-native deployment
+Dockerized deployment
 
----
+Kubernetes deployment
 
-### **Database Support**
+Horizontal scaling
 
-- MongoDB migration
-- MariaDB migration
-- AWS RDS migration
-- Azure SQL migration
-- Additional Oracle migration enhancements
+Distributed migration workers
 
----
+Cloud-native deployment
 
-### **AI & Automation**
+Database Support
 
-- AI-generated ETL pipelines
-- Automatic conflict resolution
-- Advanced schema evolution
-- Intelligent migration planning
-- Predictive migration failure detection
-- Advanced anomaly detection
+MongoDB migration
 
----
+MariaDB migration
 
-### **Enterprise Platform**
+AWS RDS migration
 
-- User authentication
-- Role-Based Access Control
-- Multi-tenant architecture
-- Team workspaces
-- Email notifications
-- Slack integration
-- Microsoft Teams integration
-- Centralized migration management
+Azure SQL migration
 
----
+Additional Oracle migration enhancements
 
-## **Known Limitations**
+AI & Automation
 
-- Migration performance depends on source, target, network, and dataset characteristics.
-- Binary-heavy tables may use the batched insertion fallback instead of `COPY`.
-- Complex database-specific procedures may require manual review after translation.
-- Complex functions may require manual review.
-- Self-healing rules are dependent on the type and context of the migration error.
-- Local scheduler deployment is currently the primary deployment model.
-- Production deployments require additional authentication and access-control layers.
+AI-generated ETL pipelines
 
----
+Automatic conflict resolution
 
-## **Project Use Case**
+Advanced schema evolution
+
+Intelligent migration planning
+
+Predictive migration failure detection
+
+Advanced anomaly detection
+
+Enterprise Platform
+
+User authentication
+
+Role-Based Access Control
+
+Multi-tenant architecture
+
+Team workspaces
+
+Email notifications
+
+Slack integration
+
+Microsoft Teams integration
+
+Centralized migration management
+
+Known Limitations
+
+Migration performance depends on source, target, network, and dataset characteristics.
+
+Binary-heavy tables may use the batched insertion fallback instead of COPY.
+
+Complex database-specific procedures may require manual review after translation.
+
+Complex functions may require manual review.
+
+Self-healing rules are dependent on the type and context of the migration error.
+
+Local scheduler deployment is currently the primary deployment model.
+
+Production deployments require additional authentication and access-control layers.
+
+Project Use Case
 
 The platform is designed for organizations that need to migrate legacy or heterogeneous databases into PostgreSQL while maintaining:
 
-
-Data Integrity
-+
-Validation
-+
-Auditability
-+
-Recoverability
-+
-Performance
-+
-Automation
-
+Data Integrity + Validation + Auditability + Recoverability + Performance + Automation
 
 Typical use cases include:
 
-- Legacy database modernization
-- SQL Server → PostgreSQL migration
-- MySQL → PostgreSQL migration
-- Oracle → PostgreSQL migration
-- Enterprise database consolidation
-- Database modernization projects
-- Development and staging migrations
-- Large-scale data migration
-- Schema compatibility analysis
+Legacy database modernization
 
----
+SQL Server → PostgreSQL migration
 
-## **Project Outcomes**
+MySQL → PostgreSQL migration
+
+Oracle → PostgreSQL migration
+
+Enterprise database consolidation
+
+Database modernization projects
+
+Development and staging migrations
+
+Large-scale data migration
+
+Schema compatibility analysis
+
+Project Outcomes
 
 The platform aims to reduce manual migration effort by combining:
 
-
-Database Engineering
-+
-AI
-+
-Automation
-+
-Validation
-+
-Observability
-
+Database Engineering + AI + Automation + Validation + Observability
 
 Instead of treating database migration as a simple data-copy operation, the platform treats migration as a complete lifecycle:
 
+Analyze ↓ Plan ↓ Map ↓ Migrate ↓ Validate ↓ Reconcile ↓ Score ↓ Audit ↓ Monitor
 
-Analyze
-↓
-Plan
-↓
-Map
-↓
-Migrate
-↓
-Validate
-↓
-Reconcile
-↓
-Score
-↓
-Audit
-↓
-Monitor
+Contributors
 
-
----
-
-## **Contributors**
-
-### **Ravi Raj Choubey**
+Ravi Raj Choubey
 
 B.Tech Data Science
 
 VIT Chennai
 
----
+Project
 
-## **Project**
+AI Database Migration Platform
 
-### **AI Database Migration Platform**
+Enterprise Database Migration, Validation, Performance Optimization and AI-Powered Schema Intelligence
 
-#### **Enterprise Database Migration, Validation, Performance Optimization and AI-Powered Schema Intelligence**
-
----
-
-## **License**
+License
 
 This project is intended for educational, research, and enterprise database migration purposes.
